@@ -1,0 +1,35 @@
+{
+  "kind": "univ4_hook",
+  "hook": {
+    "contract": "V4Market",
+    "constructorArgs": [
+      "$poolManager",
+      "$token",
+      "12500",
+      "60",
+      "$factory",
+      "0x5cb0686a4475d1f8a6c6e5240579080a4a05b609",
+      "0x11ed7438974e96ecc962201e9c46422c7bf239d725876863fa25a56c734b20d3"
+    ],
+    "permissions": [
+      "afterInitialize",
+      "beforeSwap",
+      "afterSwap",
+      "beforeSwapReturnDelta",
+      "afterSwapReturnDelta"
+    ]
+  },
+  "token": {
+    "contract": "LaunchToken",
+    "name": "BLACKOUT",
+    "symbol": "BLACKOUT",
+    "decimals": 18
+  },
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "notes": "BLACKOUT (https://playblackout.xyz) uses the existing V4Market hook and LaunchToken on Robinhood Chain (4663). LaunchToken has no constructor arguments and uses plain ERC-20 transfers without ownership, subsequent minting, burn hooks, transfer fees, pause or blacklist. V4Market has no owner. Its permissions encode 0x10cc. The pool key is (native ETH, $token, 12500, 60, the deployed V4Market). afterInitialize restricts initialization to $factory; every hook callback checks the PoolManager and the configured pool. Only exact-input swaps are accepted. Total buy tax is 90% during minutes 0-10, 50% during minutes 10-20, 25% during minutes 20-30, then 1%; sells pay a 1% rewards share plus a progressive surcharge, with the total sell charge capped at 15%. These hook charges are separate from the 1.25% LP fee. Buys require sqrtPriceLimitX96 4295128740 or revert PriceLimitedBuy; afterSwap reverts PartialFill unless the pool consumes the entire input remaining after tax. ETH charges accumulate until SwarmDesk binds and bindFeeRouter proves the rewards router; flushFees then forwards them. Accepted limitations: buy charges draw on PoolManager float before settlement, and held fees are unrecoverable if the Desk never binds. The designated binder 0x6d51cbe774aeae4dd40bca2560e9bc2695a0d007 binds after L3. Launch-window sells are recorded gross; the first swap after an idle gap uses more gas. The project wallet's planned transfer of 200,000,000 BLACKOUT to EndowmentEscrow 0x11947494c0ba91508eb7409648193818c36521fb from L1 launch 1628 is a separate post-launch action. Supply and allocations are governed by launch policy. The listed initialPrice is the required reference value; the deployer derives the opening price from policy's 10 ETH opening market cap and the deployed token address."
+}
