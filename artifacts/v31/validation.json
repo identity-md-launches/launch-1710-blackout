@@ -1,0 +1,250 @@
+{
+  "dateUTC": "2026-10-11",
+  "compiler": "0.8.26",
+  "configurationChanged": false,
+  "forgeBuild": "pass",
+  "forgeTest": {
+    "passed": 123,
+    "failed": 0,
+    "skipped": 1,
+    "skipReason": "optional Robinhood fork test is offline by default"
+  },
+  "forgeFmtCheck": "pass",
+  "moduleCreationPins": "all ten match",
+  "pythonTests": {
+    "unittest": 14,
+    "simulationSelfChecks": 5
+  },
+  "fuzzRuns": 256,
+  "invariantRuns": 128,
+  "invariantDepth": 64,
+  "protectedPathChanges": [],
+  "contracts": [
+    {
+      "name": "Params",
+      "runtimeBytes": 1763,
+      "constructorArgs": [
+        {
+          "name": "swarm_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "heartbeatBps_",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "heartbeatCap_",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "name": "GameRegistry",
+      "runtimeBytes": 2149,
+      "constructorArgs": [
+        {
+          "name": "token_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "params_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "market_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "launch_",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "root_",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "snapshot_",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "endowment_",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "factory_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "name": "RewardPool",
+      "runtimeBytes": 3679,
+      "constructorArgs": [
+        {
+          "name": "registry_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "name": "FarmRewards",
+      "runtimeBytes": 12617,
+      "constructorArgs": [
+        {
+          "name": "registry_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "name": "FarmCore",
+      "runtimeBytes": 23527,
+      "constructorArgs": [
+        {
+          "name": "registry_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "name": "FarmItems",
+      "runtimeBytes": 8081,
+      "constructorArgs": [
+        {
+          "name": "registry_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "name": "PackSale",
+      "runtimeBytes": 8535,
+      "constructorArgs": [
+        {
+          "name": "registry_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "name": "StarterClaim",
+      "runtimeBytes": 3730,
+      "constructorArgs": [
+        {
+          "name": "registry_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "name": "FeeRouter",
+      "runtimeBytes": 5751,
+      "constructorArgs": [
+        {
+          "name": "registry_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "name": "GridOperator",
+      "runtimeBytes": 7172,
+      "constructorArgs": [
+        {
+          "name": "registry_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "name": "Season",
+      "runtimeBytes": 7197,
+      "constructorArgs": [
+        {
+          "name": "registry_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "name": "FarmEngine",
+      "runtimeBytes": 9500,
+      "constructorArgs": [
+        {
+          "name": "registry_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "name": "V4Market",
+      "runtimeBytes": 9954,
+      "constructorArgs": [
+        {
+          "name": "manager_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "token_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "network_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "fee_",
+          "type": "uint24",
+          "internalType": "uint24"
+        },
+        {
+          "name": "spacing_",
+          "type": "int24",
+          "internalType": "int24"
+        }
+      ]
+    }
+  ],
+  "sourceSha256": {
+    "sim/blackout_sim_v3.py": "edf10af7596a6207e06b24451d6822ebee424bb1174ed36117f32f085586897b",
+    "sim/blackout_sim_v31.py": "b64bd1e3ec444060e07748d0c6b375c31c5a2374606e0ba165eb599e9ebc45cf",
+    "sim/heartbeat_sweep_v31.py": "69000c80421f604fb6bbed79f4ea812f233b6ce963b9f16b8b9cb64c163afb7f",
+    "src/Params.sol": "9c3d88ef83ed0fe1de209397344949e45efab8629529834239a7936b46b247d8",
+    "src/lib/ModuleCode.sol": "49b4f8ec50d831812e786837b0dbc77760c06133a021007735db7041ec561c55",
+    "launch/V4Market.sol": "f82366c8725370ae7f75913047764ebb425ab5da3935d2f8884eaba49c02f622",
+    "sim/candidate_stress_v31.py": "11ea2d69e5356259b5b1d9632fe0a0039df9ad1e9a19396ecfe2d0993d261069",
+    "sim/heartbeat_boundaries_v31.py": "72935b3b6d916ffff8ee007cec2a11c26752fff3a49d7b2b457419a05f87e68f",
+    "tools/report_v31.py": "b8082ac82b6f95fc592039d4475be6940fc42188356ff15e5728e579fd3b90b3"
+  },
+  "simulationRuns": {
+    "baseline": 48,
+    "funded": 48,
+    "stress": 18,
+    "boundary": 3,
+    "total": 117
+  }
+}

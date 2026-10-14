@@ -1,0 +1,1062 @@
+No files changed, compilation skipped
+   ╭▸ src/RewardPool.sol:75:23
+75 │         if (!endowed) otherInflow += amount;
+   ╭▸ src/StandardAdapter.sol:46:64
+46 │         if (rate == 0 || rate > 1e40 || window < 30 minutes || at > block.timestamp || block.timestamp - at > 5 minutes)
+   ╭▸ src/StandardAdapter.sol:46:88
+46 │         if (rate == 0 || rate > 1e40 || window < 30 minutes || at > block.timestamp || block.timestamp - at > 5 minutes)
+   ╭▸ src/RewardPool.sol:51:33
+51 │         if (endowment() == 0 || block.timestamp >= dripStart + dripPeriod) return 0;
+   ╭▸ src/StandardAdapter.sol:58:9
+58 │         manager.unlock(abi.encode(msg.value, minOut, recipient));
+   ╭▸ src/MarketFactory.sol:59:9
+59 │         emit MarketDeployed(address(market), salt);
+   ╭▸ src/StandardAdapter.sol:58:9
+58 │         manager.unlock(abi.encode(msg.value, minOut, recipient));
+   ╭▸ src/RewardPool.sol:91:13
+91 │         if (token().balanceOf(address(this)) - before_ != amount) revert InvalidValue();
+   ╭▸ src/StandardAdapter.sol:67:62
+67 │         int256 delta = manager.swap(key(), SwapParams(true, -int256(input), 4295128740), "");
+   ╭▸ src/StandardAdapter.sol:68:27
+68 │         int128 ethDelta = int128(delta >> 128);
+   ╭▸ src/StandardAdapter.sol:69:22
+69 │         int128 out = int128(delta);
+   ╭▸ src/RewardPool.sol:99:9
+99 │         emit Reserved(amount);
+   ╭▸ src/StandardAdapter.sol:70:30
+70 │         if (ethDelta >= 0 || uint256(-int256(ethDelta)) != input || out <= 0 || uint256(uint128(out)) < minimum) {
+   ╭▸ src/StandardAdapter.sol:70:81
+70 │         if (ethDelta >= 0 || uint256(-int256(ethDelta)) != input || out <= 0 || uint256(uint128(out)) < minimum) {
+   ╭▸ src/StandardAdapter.sol:70:89
+70 │         if (ethDelta >= 0 || uint256(-int256(ethDelta)) != input || out <= 0 || uint256(uint128(out)) < minimum) {
+   ╭▸ src/StandardAdapter.sol:73:9
+73 │         manager.settle{value: input}();
+    ╭▸ src/RewardPool.sol:107:67
+107 │     function pay(address to, uint256 amount) external onlyRewards nonReentrant {
+   ╭▸ src/StandardAdapter.sol:74:49
+74 │         manager.take(address(token), recipient, uint256(uint128(out)));
+   ╭▸ src/StandardAdapter.sol:74:57
+74 │         manager.take(address(token), recipient, uint256(uint128(out)));
+   ╭▸ src/StandardAdapter.sol:75:27
+75 │         return abi.encode(uint256(uint128(out)));
+   ╭▸ src/StandardAdapter.sol:75:35
+75 │         return abi.encode(uint256(uint128(out)));
+    ╭▸ src/Params.sol:176:13
+176 │         if (block.timestamp < lastChanged[k] + 1 days) revert TooEarly();
+   ╭▸ src/Billboards.sol:60:13
+60 │         if (t.balanceOf(address(this)) - before_ != amount) revert InvalidValue();
+    ╭▸ src/FeeRouter.sol:172:9
+172 │         RewardPool(rewardPool()).recordInflow(reward);
+    ╭▸ src/FeeRouter.sol:173:9
+173 │         emit TokensRouted(reward, t, h);
+   ╭▸ src/Billboards.sol:82:17
+82 │                 revert InvalidValue();
+    ╭▸ src/FeeRouter.sol:181:9
+181 │         market().buy{value: msg.value}(minOut, recipient);
+   ╭▸ src/Billboards.sol:88:17
+88 │                 revert InvalidValue();
+    ╭▸ src/FeeRouter.sol:181:9
+181 │         market().buy{value: msg.value}(minOut, recipient);
+    ╭▸ src/FeeRouter.sol:199:13
+199 │             RewardPool(rewardPool()).recordInflow(excess);
+    ╭▸ src/FeeRouter.sol:215:9
+215 │         m.sell(amount, minOut, address(this));
+   ╭▸ src/Billboards.sol:70:9
+70 │         RewardPool(pool).donate(amount);
+    ╭▸ src/Billboards.sol:120:9
+120 │         emit BillboardSettled(w, d, b.bid);
+    ╭▸ src/FeeRouter.sol:215:9
+215 │         m.sell(amount, minOut, address(this));
+    ╭▸ src/FeeRouter.sol:220:22
+220 │         uint256 hb = received * h / amount;
+    ╭▸ src/FeeRouter.sol:194:30
+194 │         if (lastSell != 0 && block.timestamp < lastSell + 5 minutes) revert TooEarly();
+    ╭▸ src/FeeRouter.sol:225:9
+225 │         emit TokensSold(amount, received);
+    ╭▸ src/FeeRouter.sol:215:9
+215 │         m.sell(amount, minOut, address(this));
+    ╭▸ src/FeeRouter.sol:237:9
+237 │         market().buy{value: amount}(minOut, season());
+    ╭▸ src/FeeRouter.sol:240:9
+240 │         IPotSeason(season()).depositPot(received);
+    ╭▸ src/FeeRouter.sol:230:29
+230 │         if (lastBuy != 0 && block.timestamp < lastBuy + 5 minutes) revert TooEarly();
+    ╭▸ src/FeeRouter.sol:241:9
+241 │         emit PotBought(amount, received);
+    ╭▸ src/FeeRouter.sol:237:9
+237 │         market().buy{value: amount}(minOut, season());
+    ╭▸ src/FeeRouter.sol:282:22
+282 │         (bool ok,) = msg.sender.call{value: a}("");
+    ╭▸ src/FeeRouter.sol:284:9
+284 │         emit Withdrawn(msg.sender, a);
+    ╭▸ src/FeeRouter.sol:303:9
+303 │         market().buy{value: ethAmount}(minOut, rewardPool());
+    ╭▸ src/FeeRouter.sol:306:50
+306 │         if (!RewardPool(rewardPool()).endowed()) RewardPool(rewardPool()).recordInflow(received);
+    ╭▸ src/FeeRouter.sol:294:29
+294 │         if (lastBuy != 0 && block.timestamp < lastBuy + MIN_BUY_INTERVAL) revert TooEarly();
+    ╭▸ src/FeeRouter.sol:310:9
+310 │         emit WorkBounty(msg.sender, Params.Key.BuyBounty, ethAmount, paid);
+    ╭▸ src/FeeRouter.sol:311:9
+311 │         emit Bought(ethAmount, received);
+    ╭▸ src/FeeRouter.sol:303:9
+303 │         market().buy{value: ethAmount}(minOut, rewardPool());
+    ╭▸ src/FarmCore.sol:287:9
+287 │         f.serial = nextSerial++;
+   ╭▸ src/StarterClaim.sol:91:9
+91 │         claims[tokenId] = Claim(msg.sender, target, false);
+    ╭▸ src/StarterClaim.sol:112:9
+112 │         entropyHash[tokenId] = h;
+    ╭▸ src/StarterClaim.sol:113:9
+113 │         entropyCaptured[tokenId] = true;
+    ╭▸ src/FarmCore.sol:107:9
+107 │         purchasedRoom[msg.sender][room] = true;
+    ╭▸ src/FarmCore.sol:241:9
+241 │         f.paidXpToday += amount;
+   ╭▸ src/StarterClaim.sol:47:9
+47 │         farm().register(msg.sender);
+   ╭▸ src/StarterClaim.sol:35:13
+35 │         if (block.timestamp >= freeClaimEnds()) revert TooEarly();
+   ╭▸ src/StarterClaim.sol:48:9
+48 │         emit StarterCommitted(id, msg.sender, ChainClock.number() + 2);
+   ╭▸ src/StarterClaim.sol:49:9
+49 │         emit FreePackClaimed(msg.sender, index, id);
+   ╭▸ src/StarterClaim.sol:46:40
+46 │         claims[id] = Claim(msg.sender, uint64(ChainClock.number() + 2), false);
+   ╭▸ src/StarterClaim.sol:92:9
+92 │         farm().register(msg.sender);
+   ╭▸ src/StarterClaim.sol:84:13
+84 │         if (block.timestamp < launchTime() + 48 hours || block.timestamp >= launchTime() + 16 days) revert TooEarly();
+   ╭▸ src/StarterClaim.sol:84:58
+84 │         if (block.timestamp < launchTime() + 48 hours || block.timestamp >= launchTime() + 16 days) revert TooEarly();
+   ╭▸ src/StarterClaim.sol:93:9
+93 │         emit StarterCommitted(tokenId, msg.sender, target);
+   ╭▸ src/StarterClaim.sol:90:25
+90 │         uint64 target = uint64(ChainClock.number() + 2);
+    ╭▸ src/FarmCore.sol:312:9
+312 │         f.active = f.loadout;
+    ╭▸ src/FarmCore.sol:560:9
+560 │         farms[p].xp += 100;
+    ╭▸ src/StarterClaim.sol:114:9
+114 │         fees().payWork(keeper, Params.Key.EntropyBounty, 1, startGas - gasleft());
+    ╭▸ src/StarterClaim.sol:130:20
+130 │         c.target = uint64(ChainClock.number() + 2);
+    ╭▸ src/StarterClaim.sol:145:13
+145 │             items().mint(c.player, k, r, true);
+   ╭▸ src/StarterClaim.sol:72:26
+72 │         return FarmItems(registry.module(3));
+    ╭▸ src/StarterClaim.sol:145:13
+145 │             items().mint(c.player, k, r, true);
+    ╭▸ src/StarterClaim.sol:147:9
+147 │         emit StarterResolved(tokenId, h == bytes32(0));
+    ╭▸ src/StarterClaim.sol:145:13
+145 │             items().mint(c.player, k, r, true);
+    ╭▸ src/FarmCore.sol:288:9
+288 │         rewards().initialize(p);
+    ╭▸ src/FarmCore.sol:295:13
+295 │         if (rewards().settle(p, 8) < rewards().settledEpoch()) revert CatchUpRequired();
+    ╭▸ src/FarmCore.sol:301:9
+301 │ ┏         rewards()
+302 │ ┃             .setWeight(
+303 │ ┃                 p,
+304 │ ┃                 engine().allocationHash(farms[p].loadout, farms[p].paid != 0) * (10000 + _boost(p, block.timestamp))
+305 │ ┃                     / 10000
+306 │ ┃             );
+   ╭▸ src/FarmCore.sol:92:9
+92 │         season().recordSpend(p, cost, true);
+    ╭▸ src/FarmCore.sol:288:9
+288 │         rewards().initialize(p);
+    ╭▸ src/FarmCore.sol:295:13
+295 │         if (rewards().settle(p, 8) < rewards().settledEpoch()) revert CatchUpRequired();
+    ╭▸ src/FarmCore.sol:301:9
+301 │ ┏         rewards()
+302 │ ┃             .setWeight(
+303 │ ┃                 p,
+304 │ ┃                 engine().allocationHash(farms[p].loadout, farms[p].paid != 0) * (10000 + _boost(p, block.timestamp))
+305 │ ┃                     / 10000
+306 │ ┃             );
+    ╭▸ src/PackSale.sol:254:9
+254 │         c.seed = keccak256(abi.encode(h, address(this), id));
+   ╭▸ src/PackSale.sol:62:16
+62 │         return block.timestamp < pausedUntil;
+   ╭▸ src/PackSale.sol:68:13
+68 │         if (block.timestamp < nextPauseAt) revert TooEarly();
+    ╭▸ src/PackSale.sol:117:16
+117 │         return block.timestamp >= opensAt() && !paused();
+    ╭▸ src/PackSale.sol:144:13
+144 │         p = Economy(registry.module(10)).averageDaily() * daysPrice / 1 ether;
+    ╭▸ src/PackSale.sol:130:27
+130 │         uint256 elapsed = block.timestamp > opensAt() ? block.timestamp - opensAt() : 0;
+    ╭▸ src/FarmCore.sol:433:13
+433 │             RewardPool(pool()).recordInflow(paid);
+    ╭▸ src/PackSale.sol:132:24
+132 │         int256 ahead = int256(sales * 1 ether) - int256(elapsed * target * 1 ether / 1 hours);
+    ╭▸ src/PackSale.sol:132:50
+132 │         int256 ahead = int256(sales * 1 ether) - int256(elapsed * target * 1 ether / 1 hours);
+    ╭▸ src/PackSale.sol:135:30
+135 │             exponent = wadLn(int256(1 ether + params().get(Params.Key.PriceStepBps) * 1e14)) * ahead / 1 ether;
+    ╭▸ src/PackSale.sol:137:30
+137 │             exponent = wadLn(int256(1 ether - decay * 1e14)) * (-ahead) / int256(target) / 1 ether;
+    ╭▸ src/PackSale.sol:137:75
+137 │             exponent = wadLn(int256(1 ether - decay * 1e14)) * (-ahead) / int256(target) / 1 ether;
+    ╭▸ src/FarmCore.sol:435:20
+435 │             paid = rewards().spend(p, nominal);
+    ╭▸ src/FarmCore.sol:438:9
+438 │         season().recordSpend(p, paid, kind == 0 || kind == 3 || kind == 4);
+    ╭▸ src/PackSale.sol:141:37
+141 │         uint256 daysPrice = start * uint256(wadExp(exponent)) / 1 ether;
+    ╭▸ src/PackSale.sol:111:28
+111 │         return ILaunchHook(registry.market()).initializedAt() == 0
+    ╭▸ src/PackSale.sol:111:16
+111 │         return ILaunchHook(registry.market()).initializedAt() == 0
+    ╭▸ src/PackSale.sol:113:27
+113 │             : ILaunchHook(registry.market()).initializedAt() + OPEN_DELAY;
+    ╭▸ src/PackSale.sol:113:15
+113 │             : ILaunchHook(registry.market()).initializedAt() + OPEN_DELAY;
+   ╭▸ src/PackSale.sol:91:23
+91 │         return Params(registry.params());
+    ╭▸ src/PackSale.sol:135:47
+135 │             exponent = wadLn(int256(1 ether + params().get(Params.Key.PriceStepBps) * 1e14)) * ahead / 1 ether;
+    ╭▸ src/PackSale.sol:144:21
+144 │         p = Economy(registry.module(10)).averageDaily() * daysPrice / 1 ether;
+    ╭▸ src/PackSale.sol:144:13
+144 │         p = Economy(registry.module(10)).averageDaily() * daysPrice / 1 ether;
+   ╭▸ src/PackSale.sol:52:33
+52 │         uint256 daily = Economy(registry.module(10)).averageDaily();
+   ╭▸ src/PackSale.sol:52:25
+52 │         uint256 daily = Economy(registry.module(10)).averageDaily();
+   ╭▸ src/PackSale.sol:47:9
+47 │         revert InvalidValue();
+    ╭▸ src/FarmCore.sol:439:9
+439 │         emit Spent(p, kind, paid, nominal);
+    ╭▸ src/FarmCore.sol:108:9
+108 │         emit RoomPurchased(msg.sender, room, price);
+    ╭▸ src/FarmCore.sol:116:9
+116 │         emit AutoRepairSet(msg.sender, autoRepairThreshold[msg.sender]);
+    ╭▸ src/FarmCore.sol:127:13
+127 │             emit Spent(p, 0, paid, paid);
+    ╭▸ src/FarmCore.sol:433:13
+433 │             RewardPool(pool()).recordInflow(paid);
+    ╭▸ src/FarmCore.sol:435:20
+435 │             paid = rewards().spend(p, nominal);
+    ╭▸ src/FarmCore.sol:438:9
+438 │         season().recordSpend(p, paid, kind == 0 || kind == 3 || kind == 4);
+    ╭▸ src/FarmCore.sol:218:36
+218 │         uint256 age = born == 0 || block.timestamp < born ? 0 : block.timestamp - born;
+    ╭▸ src/FarmCore.sol:219:13
+219 │         if (age >= 5 days) return 10;
+    ╭▸ src/FarmCore.sol:220:13
+220 │         if (age >= 3 days) return 9;
+    ╭▸ src/FarmCore.sol:221:13
+221 │         if (age >= 1 days) return 6;
+    ╭▸ src/FarmCore.sol:228:13
+228 │         if (f.paidXpDay != block.timestamp / 1 days) return PAID_XP_PER_DAY;
+    ╭▸ src/FarmCore.sol:234:24
+234 │         uint64 today = uint64(block.timestamp / 1 days);
+    ╭▸ src/FarmCore.sol:261:53
+261 │         if (room == 1) return farms[p].born != 0 && block.timestamp >= farms[p].born + 3 days;
+    ╭▸ src/FarmCore.sol:289:9
+289 │         emit Registered(p, district(p));
+    ╭▸ src/FarmCore.sol:286:18
+286 │         f.born = uint64(block.timestamp);
+    ╭▸ src/FarmCore.sol:146:26
+146 │         return FarmItems(registry.module(3));
+    ╭▸ src/FarmCore.sol:320:39
+320 │             FarmItems.Item memory x = items().data(f.active[i]);
+    ╭▸ src/FarmCore.sol:313:25
+313 │         f.activeEpoch = uint64(e);
+    ╭▸ src/FarmCore.sol:315:25
+315 │         f.activeBoost = uint16(_boost(p, rewards().epochTime(e)));
+    ╭▸ src/FarmCore.sol:332:9
+332 │         rewards().recordSales(n);
+    ╭▸ src/FarmCore.sol:333:9
+333 │         season().recordSpend(p, ethValue, true);
+    ╭▸ src/FarmCore.sol:344:9
+344 │         rewards().setReferrer(msg.sender, inviter);
+    ╭▸ src/FarmCore.sol:373:9
+373 │         items().equip(msg.sender, id);
+    ╭▸ src/FarmCore.sol:375:13
+375 │           if (rewards()
+376 │ ┃                 .beginMining(
+377 │ ┃                     msg.sender,
+378 │ ┃                     engine().allocationHash(f.loadout, f.paid != 0) * (10000 + _boost(msg.sender, block.timestamp))
+379 │ ┃                         / 10000
+380 │ ┃                 )) {
+    ╭▸ src/FarmCore.sol:366:29
+366 │             if (old != 0 && items().data(old).kind == x.kind) revert InvalidValue();
+    ╭▸ src/FarmCore.sol:385:9
+385 │         emit Placed(msg.sender, id, room, slot);
+    ╭▸ src/FarmCore.sol:366:63
+366 │             if (old != 0 && items().data(old).kind == x.kind) revert InvalidValue();
+    ╭▸ src/FarmCore.sol:395:9
+395 │         items().unequip(msg.sender, id);
+    ╭▸ src/FarmCore.sol:397:9
+397 │         emit Unplaced(msg.sender, id, room, slot);
+    ╭▸ src/FarmCore.sol:415:9
+415 │         emit Retired(p);
+    ╭▸ src/FarmCore.sol:406:56
+406 │             if (f.loadout[i] != 0 || f.active[i] != 0) revert InvalidValue();
+    ╭▸ src/FarmCore.sol:431:13
+431 │             token().safeTransferFrom(p, pool(), paid);
+    ╭▸ src/FarmCore.sol:432:17
+432 │             if (token().balanceOf(pool()) - before_ != paid) revert InvalidValue();
+    ╭▸ src/FarmCore.sol:448:9
+448 │         items().maintain(id, 10000, x.overclock);
+    ╭▸ src/PackSale.sol:182:28
+182 │         uint256 received = fees().zapBuy{value: msg.value}(minTokens, address(this));
+    ╭▸ src/FarmCore.sol:457:32
+457 │         f.cableRepairedEpoch = uint64(rewards().epoch());
+    ╭▸ src/FarmCore.sol:458:29
+458 │         f.routerRepairBps = uint16((rewards().epochEnd() - block.timestamp) * 10000 / 6 hours);
+    ╭▸ src/FarmCore.sol:471:9
+471 │         items().expand(msg.sender);
+    ╭▸ src/FarmCore.sol:493:13
+493 │             rewards().spendTo(p, amount, router);
+    ╭▸ src/FarmCore.sol:495:9
+495 │         FeeRouter(payable(router)).routeTokens(amount);
+    ╭▸ src/FarmCore.sol:481:9
+481 │         rewards().recordSales(1);
+    ╭▸ src/FarmCore.sol:482:9
+482 │         season().recordSpend(msg.sender, price, true);
+    ╭▸ src/FarmCore.sol:483:14
+483 │         id = ITokenPacks(packs()).tokenPack(msg.sender);
+    ╭▸ src/FarmCore.sol:491:17
+491 │             if (token().balanceOf(router) - before_ != amount) revert InvalidValue();
+    ╭▸ src/FarmCore.sol:493:13
+493 │             rewards().spendTo(p, amount, router);
+    ╭▸ src/FarmCore.sol:495:9
+495 │         FeeRouter(payable(router)).routeTokens(amount);
+    ╭▸ src/FarmCore.sol:502:9
+502 │         season().recordSpend(msg.sender, amount, true);
+    ╭▸ src/FarmCore.sol:503:9
+503 │         grid().tokenLobby(msg.sender, amount);
+    ╭▸ src/FarmCore.sol:514:9
+514 │         items().destroy(id);
+    ╭▸ src/FarmCore.sol:515:26
+515 │         uint256 earned = rewards().scrap(msg.sender, hash, minimum);
+    ╭▸ src/FarmCore.sol:513:24
+513 │         uint256 hash = ItemMath.baseHash(x.rarity) * (x.kind < 3 ? 10000 : 6000) / 10000 * x.durability / 10000;
+    ╭▸ src/FarmCore.sol:516:9
+516 │         emit Scrapped(msg.sender, id, earned);
+    ╭▸ src/FarmCore.sol:536:14
+536 │         if (!occupied) return (0, 0, 0);
+    ╭▸ src/FarmCore.sol:547:28
+547 │             if (id != 0 && items().data(id).holder == address(0)) _remove(f, id);
+    ╭▸ src/FarmCore.sol:579:14
+579 │         id = items().mintDrop(msg.sender, seed);
+   ╭▸ src/Economy.sol:63:39
+63 │             FarmItems.Item memory x = inventory.data(id);
+   ╭▸ src/Economy.sol:95:45
+95 │         FarmItems.Item memory x = FarmItems(registry.module(3)).data(id);
+   ╭▸ src/Economy.sol:95:35
+95 │         FarmItems.Item memory x = FarmItems(registry.module(3)).data(id);
+   ╭▸ src/Economy.sol:87:45
+87 │         FarmItems.Item memory x = FarmItems(registry.module(3)).data(id);
+   ╭▸ src/Economy.sol:87:35
+87 │         FarmItems.Item memory x = FarmItems(registry.module(3)).data(id);
+   ╭▸ src/Economy.sol:52:30
+52 │         return IYieldRewards(registry.module(1));
+   ╭▸ src/Economy.sol:91:64
+91 │         return Math.mulDiv(hash * 4, Math.max(HASH_RATE_FLOOR, rewards().lastYieldPerHash()), 1 ether);
+   ╭▸ src/Economy.sol:99:30
+99 │             missing * Params(registry.params()).get(Params.Key.RepairHours),
+   ╭▸ src/Economy.sol:99:23
+99 │             missing * Params(registry.params()).get(Params.Key.RepairHours),
+   ╭▸ src/Economy.sol:66:17
+66 │             if (reward.pending(p) < cost) continue;
+   ╭▸ src/Economy.sol:67:21
+67 │             paid += reward.spend(p, cost);
+   ╭▸ src/Economy.sol:68:13
+68 │             inventory.maintain(id, 10000, x.overclock);
+   ╭▸ src/Economy.sol:88:37
+88 │         if (x.holder == address(0)) revert InvalidValue();
+  ╭▸ src/lib/ItemMath.sol:8:25
+8 │         if (rarity > 4) revert InvalidValue();
+   ╭▸ src/lib/EconomyMath.sol:19:39
+19 │         if (level == 0 || level > 16) revert InvalidValue();
+   ╭▸ src/Economy.sol:77:27
+77 │         if (start == 0 || start > block.timestamp) revert NotConfigured();
+   ╭▸ src/Economy.sol:90:16
+90 │         hash = hash * (10000 + EconomyMath.bonus(x.overclock)) / 10000;
+   ╭▸ src/Economy.sol:91:28
+91 │         return Math.mulDiv(hash * 4, Math.max(HASH_RATE_FLOOR, rewards().lastYieldPerHash()), 1 ether);
+    ╭▸ src/Economy.sol:136:9
+136 │         IEconomyCore(registry.module(2)).syncFor(msg.sender);
+    ╭▸ src/Economy.sol:149:9
+149 │         IEconomyCore(registry.module(2)).syncFor(msg.sender);
+    ╭▸ src/Economy.sol:150:9
+150 │         emit Locked(msg.sender, amount, block.timestamp + days_ * 1 days, bps);
+    ╭▸ src/Economy.sol:140:42
+140 │         locks[msg.sender] = Lock(amount, uint64(block.timestamp), uint64(block.timestamp + days_ * 1 days), uint16(bps));
+    ╭▸ src/Economy.sol:140:67
+140 │         locks[msg.sender] = Lock(amount, uint64(block.timestamp), uint64(block.timestamp + days_ * 1 days), uint16(bps));
+    ╭▸ src/Economy.sol:140:109
+140 │         locks[msg.sender] = Lock(amount, uint64(block.timestamp), uint64(block.timestamp + days_ * 1 days), uint16(bps));
+    ╭▸ src/Economy.sol:148:13
+148 │         if (t.balanceOf(address(this)) - before_ != amount) revert InvalidValue();
+    ╭▸ src/Economy.sol:156:9
+156 │         IEconomyCore(registry.module(2)).syncFor(msg.sender);
+    ╭▸ src/Economy.sol:167:9
+167 │         IEconomyCore(registry.module(2)).syncFor(msg.sender);
+    ╭▸ src/Economy.sol:155:30
+155 │         if (l.amount == 0 || block.timestamp < l.end) revert TooEarly();
+    ╭▸ src/Economy.sol:169:9
+169 │         emit Unlocked(msg.sender, l.amount);
+    ╭▸ src/Economy.sol:182:23
+182 │         previous[p] = prev;
+    ╭▸ src/Economy.sol:178:17
+178 │             if (steps++ == 32) revert InvalidValue();
+    ╭▸ src/Economy.sol:178:32
+178 │             if (steps++ == 32) revert InvalidValue();
+    ╭▸ src/Economy.sol:193:25
+193 │         for (uint256 i; i < 10 && p != address(0); ++i) {
+    ╭▸ src/FarmRewards.sol:151:30
+151 │         return epoch != 0 && block.timestamp < epochs[epoch].end;
+    ╭▸ src/FarmRewards.sol:165:13
+165 │             pool().recycle(scrapAllowance);
+    ╭▸ src/FarmRewards.sol:169:13
+169 │             grid().resolveFor(epoch, msg.sender);
+    ╭▸ src/FarmRewards.sol:179:17
+179 │                 pool().reserve(old.budget);
+    ╭▸ src/FarmRewards.sol:186:33
+186 │                 if (prize != 0) season().addPrize(week, prize);
+    ╭▸ src/FarmRewards.sol:230:9
+230 │         grid().shift(epoch);
+    ╭▸ src/FarmRewards.sol:231:9
+231 │         fees().payBounty(msg.sender);
+    ╭▸ src/FarmRewards.sol:189:40
+189 │                     lastAverageDaily = old.mining * (10000 - old.tariff) / 10000 * 4 / activeFarmCount[epoch];
+    ╭▸ src/FarmRewards.sol:163:13
+163 │         if (block.timestamp < launchTime() || (epoch != 0 && block.timestamp < epochs[epoch].end)) revert TooEarly();
+    ╭▸ src/FarmRewards.sol:163:62
+163 │         if (block.timestamp < launchTime() || (epoch != 0 && block.timestamp < epochs[epoch].end)) revert TooEarly();
+    ╭▸ src/FarmRewards.sol:115:23
+115 │         return Params(registry.params());
+    ╭▸ src/FarmRewards.sol:226:36
+226 │             epochParam[epoch][k] = params().get(Params.Key(k));
+    ╭▸ src/FarmRewards.sol:198:13
+198 │             emit EpochClosed(epoch, old.budget, old.raw);
+    ╭▸ src/FarmRewards.sol:209:13
+209 │             emit Expired(epoch, gone);
+    ╭▸ src/FarmRewards.sol:232:9
+232 │         emit EpochStarted(epoch, e.start, e.end, msg.sender);
+    ╭▸ src/PackSale.sol:199:9
+199 │         farm().register(recipient);
+    ╭▸ src/FarmRewards.sol:171:13
+171 │             (old.kind, old.severity, old.district, old.seed,) = grid().eventAt(epoch);
+    ╭▸ src/PackSale.sol:200:9
+200 │         farm().paidPackBought(recipient, n, cost);
+    ╭▸ src/PackSale.sol:207:9
+207 │         fees().routeTokens(cost);
+    ╭▸ src/FarmRewards.sol:202:19
+202 │         e.start = uint64(block.timestamp);
+    ╭▸ src/FarmRewards.sol:203:17
+203 │         e.end = uint64(block.timestamp + EPOCH);
+    ╭▸ src/FarmRewards.sol:309:9
+309 │         emit MiningStarted(p, epoch, secondsLeft, weighted);
+    ╭▸ src/PackSale.sol:234:9
+234 │         emit PackCommitted(id, p, n, target, guaranteed);
+    ╭▸ src/PackSale.sol:206:13
+206 │         if (t.balanceOf(address(fees())) - before_ != cost) revert InvalidValue();
+    ╭▸ src/PackSale.sol:212:25
+212 │         if (paused() || block.timestamp < opensAt()) revert TooEarly();
+    ╭▸ src/PackSale.sol:232:25
+232 │         uint64 target = uint64(ChainClock.number() + 2);
+    ╭▸ src/PackSale.sol:256:9
+256 │         fees().payWork(keeper, Params.Key.EntropyBounty, 1, startGas - gasleft());
+    ╭▸ src/PackSale.sol:270:20
+270 │         c.target = uint64(ChainClock.number() + 2);
+    ╭▸ src/PackSale.sol:289:13
+289 │             items().mint(c.player, k, r, c.guaranteed);
+   ╭▸ src/PackSale.sol:87:26
+87 │         return FarmItems(registry.module(3));
+    ╭▸ src/PackSale.sol:289:13
+289 │             items().mint(c.player, k, r, c.guaranteed);
+    ╭▸ src/PackSale.sol:291:9
+291 │         emit PackOpened(id, n, c.expired);
+    ╭▸ src/PackSale.sol:289:13
+289 │             items().mint(c.player, k, r, c.guaranteed);
+    ╭▸ src/V4Market.sol:452:9
+452 │         heldBase += base;
+    ╭▸ src/V4Market.sol:453:9
+453 │         heldSellTax += excess;
+    ╭▸ src/V4Market.sol:512:9
+512 │         heldBase += base;
+    ╭▸ src/FarmRewards.sol:350:25
+350 │         for (uint256 n; n < limit && cursor < settledEpoch; ++n) {
+    ╭▸ src/FarmRewards.sol:123:22
+123 │         return ICore(registry.module(2));
+    ╭▸ src/FarmRewards.sol:359:60
+359 │         (uint256 raw, uint256 productive, uint256 power) = core().process(p, id);
+    ╭▸ src/FarmRewards.sol:139:16
+139 │         return registry.launchTime();
+    ╭▸ src/FarmRewards.sol:425:9
+425 │         core().autoRepair(p, id);
+    ╭▸ src/FarmRewards.sol:119:27
+119 │         return RewardPool(registry.module(0));
+    ╭▸ src/FarmRewards.sol:446:26
+446 │         if (unused != 0) pool().recycle(unused);
+    ╭▸ src/FarmRewards.sol:449:28
+449 │             if (dust != 0) pool().recycle(dust);
+    ╭▸ src/FarmRewards.sol:431:13
+431 │             core().activity(p, id, o.gross, o.net);
+    ╭▸ src/FarmRewards.sol:433:17
+433 │                 core().grantDrop(p, keccak256(abi.encode(e.seed, p, "item")));
+    ╭▸ src/FarmRewards.sol:135:24
+135 │         return ISeason(registry.module(8));
+    ╭▸ src/FarmRewards.sol:435:13
+435 │             season().recordActivity(p, week, o.gross, weight);
+    ╭▸ src/FarmRewards.sol:380:13
+380 │             season().complete(p, week);
+    ╭▸ src/FarmRewards.sol:477:13
+477 │             emit Credited(p, e, amount);
+    ╭▸ src/FarmRewards.sol:488:9
+488 │         emit Credited(p, e, amount);
+    ╭▸ src/FarmRewards.sol:450:13
+450 │             emit EpochSettled(id, e.spent, dust);
+    ╭▸ src/FarmRewards.sol:422:35
+422 │         if (spent > o.allocation) revert InvalidValue();
+    ╭▸ src/FarmRewards.sol:475:13
+475 │         if (block.timestamp >= at + 7 days) {
+    ╭▸ src/FarmRewards.sol:485:19
+485 │         v.epoch = uint64(e);
+    ╭▸ src/FarmRewards.sol:486:48
+486 │         if (v.amount == 0 || at < v.at) v.at = uint64(at);
+    ╭▸ src/FarmRewards.sol:514:25
+514 │         for (uint256 n; n < 32 && amount != 0; ++n) {
+    ╭▸ src/FarmRewards.sol:503:36
+503 │             if (old.amount != 0 && block.timestamp >= uint256(old.at) + 7 days) {
+    ╭▸ src/FarmRewards.sol:520:45
+520 │             if (taxed) tax += used * taxBps(block.timestamp > v.at ? block.timestamp - v.at : 0) / 10000;
+   ╭▸ src/FarmEngine.sol:61:30
+61 │             (, uint256 hi) = params().bounds(k);
+   ╭▸ src/FarmEngine.sol:40:26
+40 │         return FarmItems(registry.module(3));
+   ╭▸ src/FarmEngine.sol:74:27
+74 │             f.clocks[i] = items().data(ids[i]).overclock;
+    ╭▸ src/FarmEngine.sol:126:39
+126 │             FarmItems.Item memory x = items().data(id);
+    ╭▸ src/FarmEngine.sol:160:35
+160 │         FarmItems.Item memory x = items().data(id);
+   ╭▸ src/FarmEngine.sol:44:23
+44 │         return Params(registry.params());
+   ╭▸ src/FarmEngine.sol:61:30
+61 │             (, uint256 hi) = params().bounds(k);
+   ╭▸ src/FarmEngine.sol:48:25
+48 │         return IRewards(registry.module(1));
+   ╭▸ src/FarmEngine.sol:64:25
+64 │         return active ? rewards().epochParam(e, uint256(k)) : params().get(k);
+   ╭▸ src/FarmEngine.sol:64:63
+64 │         return active ? rewards().epochParam(e, uint256(k)) : params().get(k);
+    ╭▸ src/FarmEngine.sol:121:24
+121 │         if (room >= 4) revert InvalidValue();
+   ╭▸ src/FarmEngine.sol:88:39
+88 │             FarmItems.Item memory x = items().data(ids[i]);
+    ╭▸ src/FarmEngine.sol:168:29
+168 │         a.baseProductive += raw * tier / 10000;
+    ╭▸ src/FarmEngine.sol:169:15
+169 │         raw = raw * (10000 + EconomyMath.bonus(f.clocks[idx])) / 10000;
+    ╭▸ src/FarmEngine.sol:171:25
+171 │         s.productive += raw * tier / 10000;
+    ╭▸ src/FarmEngine.sol:202:32
+202 │             if (f.ids[i] != 0) occupied++;
+    ╭▸ src/FarmRewards.sol:359:60
+359 │         (uint256 raw, uint256 productive, uint256 power) = core().process(p, id);
+    ╭▸ src/FarmRewards.sol:380:13
+380 │             season().complete(p, week);
+    ╭▸ src/FarmRewards.sol:425:9
+425 │         core().autoRepair(p, id);
+    ╭▸ src/FarmRewards.sol:431:13
+431 │             core().activity(p, id, o.gross, o.net);
+    ╭▸ src/FarmRewards.sol:433:17
+433 │                 core().grantDrop(p, keccak256(abi.encode(e.seed, p, "item")));
+    ╭▸ src/FarmRewards.sol:435:13
+435 │             season().recordActivity(p, week, o.gross, weight);
+    ╭▸ src/FarmRewards.sol:446:26
+446 │         if (unused != 0) pool().recycle(unused);
+    ╭▸ src/FarmRewards.sol:449:28
+449 │             if (dust != 0) pool().recycle(dust);
+    ╭▸ src/FarmRewards.sol:533:9
+533 │         pool().pay(msg.sender, net);
+    ╭▸ src/FarmRewards.sol:293:9
+293 │         emit Committed(p, weight, epoch + 1, expiry);
+    ╭▸ src/FarmRewards.sol:534:9
+534 │         emit Claimed(msg.sender, amount, tax);
+    ╭▸ src/FarmRewards.sol:542:9
+542 │         emit Spent(p, consumed);
+    ╭▸ src/FarmRewards.sol:553:9
+553 │         emit Spent(p, amount);
+    ╭▸ src/FarmRewards.sol:556:80
+556 │     function scrap(address p, uint256 hash, uint256 minimum) external onlyCore nonReentrant returns (uint256 amount) {
+    ╭▸ src/FarmRewards.sol:570:9
+570 │         pool().recycle(amount);
+   ╭▸ src/Civic.sol:61:13
+61 │         if (t.balanceOf(address(this)) - before_ != amount) revert InvalidValue();
+   ╭▸ src/Civic.sol:84:82
+84 │         if (feature >= FEATURES || noticeAt[feature] == 0 || enabled[feature] || block.timestamp < noticeAt[feature]) {
+    ╭▸ src/Civic.sol:103:17
+103 │         return (block.timestamp < boostUntil[d] ? seasonBoost[d] : 0) + (block.timestamp < warBoostUntil[d] ? 1000 : 0);
+    ╭▸ src/Civic.sol:103:74
+103 │         return (block.timestamp < boostUntil[d] ? seasonBoost[d] : 0) + (block.timestamp < warBoostUntil[d] ? 1000 : 0);
+    ╭▸ src/Civic.sol:137:13
+137 │             uint64(block.timestamp + 48 hours),
+    ╭▸ src/Civic.sol:173:66
+173 │         if (!found && contribution[warId][msg.sender] > low) top[slot] = msg.sender;
+    ╭▸ src/Civic.sol:173:14
+173 │         if (!found && contribution[warId][msg.sender] > low) top[slot] = msg.sender;
+    ╭▸ src/Civic.sol:152:42
+152 │         if (!enabled[0] || warId == 0 || block.timestamp >= w.end || w.settled || (d != w.a && d != w.b)) {
+   ╭▸ src/Civic.sol:71:9
+71 │         RewardPool(pool).donate(amount);
+    ╭▸ src/Civic.sol:192:40
+192 │         if (warId == 0 || w.settled || block.timestamp < w.end) revert TooEarly();
+    ╭▸ src/Civic.sol:202:9
+202 │         emit WarFinished(warId, w.winner, w.payout, toPool);
+    ╭▸ src/Civic.sol:228:67
+228 │             !enabled[1] || !collapseFinalized || outagePending || block.timestamp < greenUntil
+    ╭▸ src/Civic.sol:239:34
+239 │         if (collapseFinalized || block.timestamp >= collapseEnd) revert TooEarly();
+    ╭▸ src/Civic.sol:243:9
+243 │         emit CollapseFunded(msg.sender, amount);
+    ╭▸ src/Civic.sol:247:34
+247 │         if (collapseFinalized || block.timestamp < collapseEnd) revert TooEarly();
+    ╭▸ src/Civic.sol:261:13
+261 │         if (block.timestamp < greenUntil) return 1;
+    ╭▸ src/Civic.sol:280:48
+280 │         lots[w] = Lot(kind, rarity, supply, 0, uint64(block.timestamp));
+    ╭▸ src/Civic.sol:298:9
+298 │         ICore(registry.module(2)).civicPurchase(msg.sender, cost);
+    ╭▸ src/Civic.sol:299:14
+299 │         id = FarmItems(registry.module(3)).mint(msg.sender, l.kind, l.rarity, false);
+    ╭▸ src/Civic.sol:300:9
+300 │         emit LotBought(w, msg.sender, id, cost);
+   ╭▸ src/Enhancement.sol:55:63
+55 │             (cap == 8 ? next != 12 : cap == 12 ? next != 16 : true) || announcedCap != 0 || bytes(letter).length == 0
+   ╭▸ src/Enhancement.sol:66:34
+66 │         if (announcedCap == 0 || block.timestamp < activationAt) revert TooEarly();
+   ╭▸ src/Enhancement.sol:85:9
+85 │         core.prepareEnhancement(msg.sender, item, cost, wallet);
+   ╭▸ src/Enhancement.sol:89:9
+89 │         emit EnhancementCommitted(id, msg.sender, item, target, ChainClock.number() + 2, cost);
+   ╭▸ src/Enhancement.sol:88:50
+88 │         attempts[id] = Attempt(msg.sender, item, uint64(ChainClock.number() + 2), target, bytes32(0), false, false);
+    ╭▸ src/Enhancement.sol:100:24
+100 │             a.target = uint64(ChainClock.number() + 2);
+    ╭▸ src/Enhancement.sol:122:21
+122 │         if (burned) inventory.destroy(a.item);
+    ╭▸ src/Enhancement.sol:123:14
+123 │         else inventory.maintain(a.item, x.durability, level);
+    ╭▸ src/Enhancement.sol:124:9
+124 │         emit EnhancementResolved(id, success, burned, level);
+    ╭▸ src/SwarmDesk.sol:162:27
+162 │         o.questionChain = uint32(policyWord);
+    ╭▸ src/SwarmDesk.sol:163:23
+163 │         o.fromBlock = uint48(policyWord >> 32);
+    ╭▸ src/SwarmDesk.sol:164:21
+164 │         o.toBlock = uint48(policyWord >> 80);
+    ╭▸ src/SwarmDesk.sol:165:22
+165 │         o.maxPrice = uint96(policyWord >> 128);
+    ╭▸ src/SwarmDesk.sol:170:26
+170 │         b.heartbeatBps = uint16(policyWord >> 224);
+    ╭▸ src/SwarmDesk.sol:261:33
+261 │         (PoolKey memory k,,,) = ILaunchRecords(Robinhood.LAUNCH_FACTORY).positionOf(launch);
+    ╭▸ src/SwarmDesk.sol:305:14
+305 │           id = ISwarmIntake(config.intake)
+306 │ ┃             .requestWithFailure(
+307 │ ┃                 config.action,
+308 │ ┃                 body,
+    ‡ ┃
+312 │ ┃                 price
+313 │ ┃             );
+    ╭▸ src/SwarmDesk.sol:299:20
+299 │                 || block.timestamp < s * _period(stream) + 1 hours
+    ╭▸ src/SwarmDesk.sol:318:13
+318 │         if (deadline > end) deadline = end;
+    ╭▸ src/SwarmDesk.sol:320:9
+320 │         emit BackupAsked(stream, s, id, price);
+    ╭▸ src/SwarmDesk.sol:319:31
+319 │         pending[id] = Pending(uint64(s), uint64(deadline), stream + 1);
+    ╭▸ src/SwarmDesk.sol:319:42
+319 │         pending[id] = Pending(uint64(s), uint64(deadline), stream + 1);
+    ╭▸ src/SwarmDesk.sol:366:13
+366 │             a.expiresAt < block.timestamp || uint256(a.issuedAt) + (stream == 0 ? 6 hours : 1 days) < block.timestamp
+    ╭▸ src/SwarmDesk.sol:366:46
+366 │             a.expiresAt < block.timestamp || uint256(a.issuedAt) + (stream == 0 ? 6 hours : 1 days) < block.timestamp
+    ╭▸ src/SwarmDesk.sol:367:31
+367 │                 || (direct && block.timestamp >= p.deadline)
+    ╭▸ src/SwarmDesk.sol:383:13
+383 │             emit AnswerIgnored(a.requestId, 2);
+    ╭▸ src/SwarmDesk.sol:387:13
+387 │             emit AnswerIgnored(a.requestId, 2);
+    ╭▸ src/SwarmDesk.sol:401:9
+401 │         emit AnswerStored(stream, a.requestId, s, a.answer);
+    ╭▸ src/SwarmDesk.sol:399:59
+399 │             keccak256(a.answer), a.requestId, a.issuedAt, uint64(until), uint64(s), true, uint48(ChainClock.number())
+    ╭▸ src/SwarmDesk.sol:399:74
+399 │             keccak256(a.answer), a.requestId, a.issuedAt, uint64(until), uint64(s), true, uint48(ChainClock.number())
+    ╭▸ src/SwarmDesk.sol:399:91
+399 │             keccak256(a.answer), a.requestId, a.issuedAt, uint64(until), uint64(s), true, uint48(ChainClock.number())
+    ╭▸ src/SwarmDesk.sol:418:37
+418 │         if (p.streamPlusOne == 0 || block.timestamp < p.deadline) revert TooEarly();
+    ╭▸ src/SwarmDesk.sol:420:35
+420 │         emit OracleFailure(id, 0, bytes32("timeout"));
+    ╭▸ src/SwarmDesk.sol:458:13
+458 │             grid.submitPlan(e, GridOperator.Kind(kind), severity, v[5], notice);
+    ╭▸ src/SwarmDesk.sol:474:13
+474 │             params.set(k, target, notice);
+    ╭▸ src/SwarmDesk.sol:479:47
+479 │             if (civic.noticeAt(feature) == 0) civic.announce(feature, notice);
+    ╭▸ src/SwarmDesk.sol:483:13
+483 │             enhancement.announceCap(enhancement.cap() == 8 ? 12 : 16, notice);
+    ╭▸ src/SwarmDesk.sol:487:17
+487 │               try civic.grantDistrictBoost(
+488 │ ┃                 _clamp(uint256(v[11]) >> 128, 1, 8) - 1,
+489 │ ┃                 uint16(_clamp(uint256(v[11]) & type(uint128).max, 0, 1500)),
+490 │ ┃                 notice
+491 │ ┃             ) {}
+    ╭▸ src/SwarmDesk.sol:498:13
+498 │             packs.unpause();
+    ╭▸ src/SwarmDesk.sol:500:17
+500 │             try packs.pause(_clamp(uint256(v[12]) - 1, 1, 72 hours)) {}
+    ╭▸ src/SwarmDesk.sol:506:17
+506 │               try civic.startWar(
+507 │ ┃                 uint8(_clamp(uint256(v[13]) >> 128, 1, 8) - 1),
+508 │ ┃                 uint8(_clamp(uint256(v[13]) & type(uint128).max, 1, 8) - 1)
+509 │ ┃             ) {}
+    ╭▸ src/SwarmDesk.sol:516:17
+516 │             try civic.startCollapse(_clamp(uint256(v[14]), daily, daily * 100)) {}
+    ╭▸ src/SwarmDesk.sol:522:17
+522 │               try civic.listLot(
+523 │ ┃                 uint8(_clamp(uint256(v[15]) >> 16, 1, 12) - 1),
+524 │ ┃                 uint8(_clamp((uint256(v[15]) >> 8) & 255, 1, 3)),
+525 │ ┃                 uint8(_clamp(uint256(v[15]) & 255, 1, 3))
+526 │ ┃             ) {}
+    ╭▸ src/SwarmDesk.sol:428:13
+428 │         if (block.timestamp >= r.validUntil || r.slot != slot(stream)) {
+    ╭▸ src/SwarmDesk.sol:438:9
+438 │         emit Executed(stream, r.requestId, letter);
+    ╭▸ src/FarmEngine.sol:239:39
+239 │             FarmItems.Item memory x = items().data(id);
+    ╭▸ src/FarmEngine.sol:244:21
+244 │                     items().destroy(id);
+    ╭▸ src/FarmEngine.sol:259:13
+259 │             items().maintain(id, uint16(x.durability > damage ? x.durability - damage : 0), x.overclock);
+    ╭▸ src/SwarmDesk.sol:457:33
+457 │             if (e <= current || grid.planAt(e).submitted) continue;
+    ╭▸ src/FarmEngine.sol:295:39
+295 │             FarmItems.Item memory x = items().data(id);
+    ╭▸ src/FarmEngine.sol:296:13
+296 │             items().maintain(id, x.durability > 100 ? x.durability - 100 : 0, x.overclock);
+    ╭▸ src/SwarmDesk.sol:458:13
+458 │             grid.submitPlan(e, GridOperator.Kind(kind), severity, v[5], notice);
+    ╭▸ src/SwarmDesk.sol:451:22
+451 │         uint8 kind = uint8(_clamp(uint256(v[2]), 0, maxKind));
+    ╭▸ src/SwarmDesk.sol:453:27
+453 │         uint16 severity = uint16(_clamp(uint256(v[3]), SEVERITY_MIN, SEVERITY_MAX));
+    ╭▸ src/SwarmDesk.sol:454:24
+454 │         districtHint = uint8(_clamp(uint256(v[4]), 0, 7)); // Advisory only; preserve weighted district/entropy rules.
+    ╭▸ src/FarmEngine.sol:221:32
+221 │                 f.theftUntil = uint64(e + 2);
+    ╭▸ src/SwarmDesk.sol:473:34
+473 │             if (target == old || block.timestamp < params.lastChanged(k) + 1 days) continue;
+    ╭▸ src/SwarmDesk.sol:470:27
+470 │             uint256 old = params.get(k);
+    ╭▸ src/SwarmDesk.sol:471:40
+471 │             (uint256 lo, uint256 hi) = params.bounds(k);
+    ╭▸ src/SwarmDesk.sol:473:52
+473 │             if (target == old || block.timestamp < params.lastChanged(k) + 1 days) continue;
+    ╭▸ src/SwarmDesk.sol:474:13
+474 │             params.set(k, target, notice);
+    ╭▸ src/FarmEngine.sol:252:17
+252 │                 damage += 3000 * uint256(ev.severity) / 10000 / (before_.airflow ? 2 : 1);
+    ╭▸ src/SwarmDesk.sol:493:17
+493 │                 emit ActionSkipped(0, reason);
+    ╭▸ src/SwarmDesk.sol:502:17
+502 │                 emit ActionSkipped(1, reason);
+    ╭▸ src/FarmEngine.sol:258:29
+258 │             f.health[idx] = uint16(f.health[idx] > damage ? f.health[idx] - damage : 0);
+    ╭▸ src/FarmEngine.sol:259:34
+259 │             items().maintain(id, uint16(x.durability > damage ? x.durability - damage : 0), x.overclock);
+    ╭▸ src/SwarmDesk.sol:511:17
+511 │                 emit ActionSkipped(2, reason);
+    ╭▸ src/SwarmDesk.sol:518:17
+518 │                 emit ActionSkipped(3, reason);
+    ╭▸ src/SwarmDesk.sol:528:17
+528 │                 emit ActionSkipped(4, reason);
+    ╭▸ src/SwarmDesk.sol:489:17
+489 │                 uint16(_clamp(uint256(v[11]) & type(uint128).max, 0, 1500)),
+    ╭▸ src/SwarmDesk.sol:507:17
+507 │                 uint8(_clamp(uint256(v[13]) >> 128, 1, 8) - 1),
+    ╭▸ src/SwarmDesk.sol:508:17
+508 │                 uint8(_clamp(uint256(v[13]) & type(uint128).max, 1, 8) - 1)
+    ╭▸ src/SwarmDesk.sol:523:17
+523 │                 uint8(_clamp(uint256(v[15]) >> 16, 1, 12) - 1),
+    ╭▸ src/SwarmDesk.sol:524:17
+524 │                 uint8(_clamp((uint256(v[15]) >> 8) & 255, 1, 3)),
+    ╭▸ src/SwarmDesk.sol:525:17
+525 │                 uint8(_clamp(uint256(v[15]) & 255, 1, 3))
+   ╭▸ src/Season.sol:76:9
+76 │         bestClaimed[w] = true;
+    ╭▸ src/Season.sol:174:21
+174 │                     seasons[w].districtSpend[d] += districtSpendOf[w][p];
+    ╭▸ src/Season.sol:241:17
+241 │                 seasons[w].districtSpend[d] += districtSpendOf[w][p];
+    ╭▸ src/Season.sol:263:9
+263 │         s.totalTickets += weight;
+    ╭▸ src/Season.sol:275:9
+275 │         seasons[w].prize += amount;
+    ╭▸ src/Season.sol:364:9
+364 │         lotteryClaimed[w][msg.sender] = true;
+    ╭▸ src/GridOperator.sol:116:16
+116 │         return block.timestamp < uint256(l.at) + 3 days ? l.amount : 0;
+   ╭▸ src/Season.sol:67:26
+67 │         if (rolled[w] || block.timestamp >= claimDeadline(w)) revert TooEarly();
+    ╭▸ src/GridOperator.sol:127:13
+127 │             total += stake[i];
+    ╭▸ src/GridOperator.sol:128:28
+128 │             if (stake[i] > largest) largest = stake[i];
+    ╭▸ src/GridOperator.sol:126:24
+126 │             stake[i] = eco.districtStake(i);
+    ╭▸ src/GridOperator.sol:159:52
+159 │         lobbies[d] = Lobby(lobbyAmount(d) + value, uint64(block.timestamp));
+    ╭▸ src/GridOperator.sol:121:31
+121 │         Economy eco = Economy(registry.module(10));
+    ╭▸ src/GridOperator.sol:140:35
+140 │         stable += 5000 * lobby / (eco.averageDaily() * 5 + lobby);
+    ╭▸ src/GridOperator.sol:173:33
+173 │             outputBonus[e][d] = civic.outputBonus(d);
+    ╭▸ src/GridOperator.sol:120:21
+120 │         if (d >= 8) revert InvalidValue();
+    ╭▸ src/GridOperator.sol:167:20
+167 │         x.target = uint64(ChainClock.number() + 1);
+    ╭▸ src/GridOperator.sol:168:21
+168 │         x.started = uint64(block.timestamp);
+    ╭▸ src/GridOperator.sol:250:9
+250 │         fees().payWork(keeper, Params.Key.EntropyBounty, 1, startGas - gasleft());
+   ╭▸ src/Season.sol:81:26
+81 │         if (rolled[w] || block.timestamp < claimDeadline(w)) revert TooEarly();
+    ╭▸ src/Season.sol:154:13
+154 │         if (block.timestamp < launchTime()) revert TooEarly();
+    ╭▸ src/Season.sol:161:13
+161 │         if (block.timestamp >= deadline(w) || completed[w][p]) return;
+    ╭▸ src/Season.sol:202:60
+202 │         if (districtSpendOf[w][p] > low) topSpenders[w][d][slot] = p;
+    ╭▸ src/Season.sol:234:13
+234 │         if (block.timestamp >= deadline(w) || completed[w][p]) return;
+    ╭▸ src/GridOperator.sol:225:13
+225 │             sum += w;
+    ╭▸ src/GridOperator.sol:209:57
+209 │             if (old == Kind.Green || old == Kind.Cheap) positives++;
+    ╭▸ src/GridOperator.sol:210:27
+210 │             if (old == k) repeated++;
+    ╭▸ src/Season.sol:253:13
+253 │         if (block.timestamp >= deadline(w) || completed[w][p]) return;
+    ╭▸ src/GridOperator.sol:233:34
+233 │                     x.district = uint8(d);
+    ╭▸ src/Season.sol:280:42
+280 │         if (!rewards().seasonReady(w) || block.timestamp < deadline(w) || limit == 0 || limit > 64) revert TooEarly();
+    ╭▸ src/Season.sol:283:20
+283 │         s.target = uint64(ChainClock.number() + 2);
+    ╭▸ src/Season.sol:328:39
+328 │             if (s.best != address(0)) rewards().award(s.best, s.prize);
+    ╭▸ src/Season.sol:329:18
+329 │             else rewards().releasePrize(s.prize);
+    ╭▸ src/Season.sol:331:34
+331 │         if (s.participants != 0) fees().payWork(msg.sender, Params.Key.SeasonBounty, 1, startGas - gasleft());
+    ╭▸ src/Season.sol:319:25
+319 │         for (uint256 i; i < 3 && left != 0; ++i) {
+    ╭▸ src/Season.sol:332:9
+332 │         emit SeasonFinalized(w, s.winnerDistrict, s.best, s.seed);
+    ╭▸ src/Season.sol:315:36
+315 │                 s.winnerDistrict = uint8(d);
+    ╭▸ src/Season.sol:338:20
+338 │         s.target = uint64(ChainClock.number() + 2);
+    ╭▸ src/Season.sol:359:14
+359 │         id = packs().rewardPack(msg.sender);
+    ╭▸ src/Season.sol:366:14
+366 │         id = packs().rewardPack(msg.sender);
+    ╭▸ src/V4Market.sol:193:24
+193 │         if (base != 0) fees.depositBaseFee{value: base}();
+    ╭▸ src/V4Market.sol:194:26
+194 │         if (excess != 0) fees.depositSellTax{value: excess}();
+    ╭▸ src/V4Market.sol:195:29
+195 │         if (launchTax != 0) fees.depositLaunchTax{value: launchTax}();
+    ╭▸ src/V4Market.sol:196:9
+196 │         emit FeesFlushed(base, excess);
+    ╭▸ src/V4Market.sol:197:29
+197 │         if (launchTax != 0) emit LaunchTaxFlushed(launchTax);
+    ╭▸ src/V4Market.sol:252:13
+252 │             emit PriceObserved(now_, price);
+    ╭▸ src/V4Market.sol:265:9
+265 │         emit PriceObserved(now_, price);
+    ╭▸ src/V4Market.sol:259:38
+259 │             uint256 c = cumulative + (1e60 / lastPrice) * (minute * 60 - updatedAt);
+    ╭▸ src/V4Market.sol:262:23
+262 │         cumulative += (1e60 / lastPrice) * (now_ - updatedAt);
+    ╭▸ src/V4Market.sol:257:13
+257 │         if (last >= 32 && first < last - 31) first = last - 31;
+    ╭▸ src/V4Market.sol:257:27
+257 │         if (last >= 32 && first < last - 31) first = last - 31;
+    ╭▸ src/V4Market.sol:258:38
+258 │         for (uint256 minute = first; minute <= last; ++minute) {
+    ╭▸ src/V4Market.sol:260:53
+260 │             observations[minute % 32] = Observation(uint64(minute), c);
+    ╭▸ src/V4Market.sol:271:50
+271 │         if (ts >= updatedAt) return cumulative + (1e60 / lastPrice) * (ts - updatedAt);
+    ╭▸ src/V4Market.sol:278:35
+278 │         if (initializedAt == 0 || block.timestamp < initializedAt + 31 minutes) revert NotConfigured();
+    ╭▸ src/V4Market.sol:295:13
+295 │         if (a.period != p) {
+    ╭▸ src/V4Market.sol:301:13
+301 │         if (b.period != p) {
+    ╭▸ src/V4Market.sol:297:24
+297 │             a.period = uint64(p);
+    ╭▸ src/V4Market.sol:303:24
+303 │             b.period = uint64(p);
+    ╭▸ src/V4Market.sol:306:24
+306 │             a.sells += uint192(amount);
+    ╭▸ src/V4Market.sol:307:24
+307 │             b.sells += uint192(amount);
+    ╭▸ src/V4Market.sol:309:23
+309 │             a.buys += uint192(amount);
+    ╭▸ src/V4Market.sol:310:23
+310 │             b.buys += uint192(amount);
+    ╭▸ src/V4Market.sol:320:17
+320 │                 s += shortVolumes[i].sells;
+    ╭▸ src/V4Market.sol:321:17
+321 │                 b += shortVolumes[i].buys;
+    ╭▸ src/V4Market.sol:319:17
+319 │             if (uint256(shortVolumes[i].period) + 12 > current) {
+    ╭▸ src/V4Market.sol:329:17
+329 │             if (uint256(longVolumes[i].period) + 24 > current) {
+    ╭▸ src/V4Market.sol:385:13
+385 │         if (average != 0 && price > average) dev = Math.min(1000, 10000 - Math.mulDiv(average, 10000, price));
+    ╭▸ src/V4Market.sol:384:13
+384 │         if (block.timestamp >= initializedAt + 31 minutes) average = twap();
+    ╭▸ src/V4Market.sol:390:27
+390 │         uint256 decayed = storedFeeWad > fall ? storedFeeWad - fall : PROJECT_BPS * 1 ether;
+    ╭▸ src/V4Market.sol:411:13
+411 │             emit LaunchTax(sender, ethIn, taxBps, fee);
+    ╭▸ src/V4Market.sol:404:25
+404 │         uint256 ethIn = uint256(-p.amountSpecified);
+    ╭▸ src/V4Market.sol:407:19
+407 │         if (fee > uint256(uint128(type(int128).max))) revert InvalidValue();
+    ╭▸ src/V4Market.sol:407:27
+407 │         if (fee > uint256(uint128(type(int128).max))) revert InvalidValue();
+    ╭▸ src/V4Market.sol:416:43
+416 │         return (this.beforeSwap.selector, int256(fee << 128), 0);
+    ╭▸ src/V4Market.sol:445:9
+445 │         emit SellFee(sender, output, bps, hour, day, dev);
+    ╭▸ src/V4Market.sol:427:27
+427 │         int128 ethDelta = int128(delta >> 128);
+    ╭▸ src/V4Market.sol:430:28
+430 │             _record(false, uint256(-int256(ethDelta)));
+    ╭▸ src/V4Market.sol:434:26
+434 │         uint256 output = uint256(uint128(ethDelta));
+    ╭▸ src/V4Market.sol:434:34
+434 │         uint256 output = uint256(uint128(ethDelta));
+    ╭▸ src/V4Market.sol:436:42
+436 │         return (this.afterSwap.selector, int128(int256(_chargeSell(sender, output, price))));
+    ╭▸ src/V4Market.sol:436:49
+436 │         return (this.afterSwap.selector, int128(int256(_chargeSell(sender, output, price))));
+    ╭▸ src/V4Market.sol:463:31
+463 │         received = abi.decode(manager.unlock(abi.encode(msg.value, minOut, recipient)), (uint256));
+    ╭▸ src/V4Market.sol:470:24
+470 │         return gross - gross * PROJECT_BPS / 10000;
+    ╭▸ src/V4Market.sol:490:31
+490 │         received = abi.decode(manager.unlock(abi.encode(amount, minOut, recipient)), (uint256));
+    ╭▸ src/V4Market.sol:514:22
+514 │         (bool ok,) = recipient.call{value: net}("");
+    ╭▸ src/V4Market.sol:498:39
+498 │             key(), SwapParams(false, -int256(amount), 1461446703485210103287273052203988822378723970341), ""
+    ╭▸ src/V4Market.sol:501:25
+501 │         int128 ethOut = int128(delta >> 128);
+    ╭▸ src/V4Market.sol:502:26
+502 │         int128 tokenIn = int128(delta);
+    ╭▸ src/V4Market.sol:503:44
+503 │         if (ethOut <= 0 || tokenIn >= 0 || uint256(-int256(tokenIn)) != amount) revert InsufficientBalance();
+    ╭▸ src/V4Market.sol:504:25
+504 │         uint256 gross = uint256(uint128(ethOut));
+    ╭▸ src/V4Market.sol:504:33
+504 │         uint256 gross = uint256(uint128(ethOut));
+    ╭▸ src/V4Market.sol:510:9
+510 │         manager.settle();
+    ╭▸ src/V4Market.sol:497:24
+497 │           int256 delta = manager.swap(
+498 │ ┃             key(), SwapParams(false, -int256(amount), 1461446703485210103287273052203988822378723970341), ""
+499 │ ┃         );
+    ╭▸ src/V4Market.sol:527:24
+527 │         int256 delta = manager.swap(key(), SwapParams(true, -int256(input), 4295128740), "");
+    ╭▸ src/V4Market.sol:527:62
+527 │         int256 delta = manager.swap(key(), SwapParams(true, -int256(input), 4295128740), "");
+    ╭▸ src/V4Market.sol:529:27
+529 │         int128 ethDelta = int128(delta >> 128);
+    ╭▸ src/V4Market.sol:530:29
+530 │         int128 tokenDelta = int128(delta);
+    ╭▸ src/V4Market.sol:532:30
+532 │             ethDelta >= 0 || uint256(-int256(ethDelta)) != input || tokenDelta <= 0
+    ╭▸ src/V4Market.sol:533:20
+533 │                 || uint256(uint128(tokenDelta)) < minOut
+    ╭▸ src/V4Market.sol:533:28
+533 │                 || uint256(uint128(tokenDelta)) < minOut
+    ╭▸ src/V4Market.sol:538:9
+538 │         manager.settle{value: input}();
+    ╭▸ src/V4Market.sol:539:40
+539 │         manager.take(token, recipient, uint256(uint128(tokenDelta)));
+    ╭▸ src/V4Market.sol:539:48
+539 │         manager.take(token, recipient, uint256(uint128(tokenDelta)));
+    ╭▸ src/V4Market.sol:541:27
+541 │         return abi.encode(uint256(uint128(tokenDelta)));
+    ╭▸ src/V4Market.sol:541:35
+541 │         return abi.encode(uint256(uint128(tokenDelta)));
+    ╭▸ test/EconomyV35.t.sol:152:43
+152 │         assertEq(d.economy.boostAt(alice, block.timestamp), 500);
+    ‡
+156 │         vm.warp(block.timestamp + 7 days);
+    ╭▸ test/EconomyV35.t.sol:156:17
+156 │         vm.warp(block.timestamp + 7 days);
+    ╭▸ test/PhasedReleaseV36.t.sol:145:49
+145 │         assertEq(d.civic.noticeAt(ENHANCEMENT), block.timestamp + 48 hours);
+146 │         vm.warp(block.timestamp + 48 hours - 1);
+    ╭▸ test/PhasedReleaseV36.t.sol:146:17
+146 │         vm.warp(block.timestamp + 48 hours - 1);
+    ╭▸ test/SwarmDeskV37.t.sol:213:17
+213 │         vm.warp(block.timestamp + 1 days);
+    ╭▸ test/SwarmDeskV37.t.sol:70:29
+ 70 │         a.issuedAt = uint64(block.timestamp);
+    ‡
+230 │         vm.warp(d.civic.noticeAt(3));
+    ╭▸ test/SwarmDeskV37.t.sol:71:30
+ 71 │         a.expiresAt = uint64(block.timestamp + 6 hours);
+    ‡
+230 │         vm.warp(d.civic.noticeAt(3));
+    ╭▸ test/SwarmDeskV37.t.sol:223:39
+223 │         assertEq(d.civic.noticeAt(3), block.timestamp + 48 hours);
+    ‡
+230 │         vm.warp(d.civic.noticeAt(3));
+    ╭▸ test/SwarmDeskV37.t.sol:286:17
+286 │         vm.warp(block.timestamp + 6 hours);
+    ╭▸ test/SwarmDeskV37.t.sol:70:29
+ 70 │         a.issuedAt = uint64(block.timestamp);
+    ‡
+339 │         vm.warp(block.timestamp + 6 hours);
+    ╭▸ test/SwarmDeskV37.t.sol:71:30
+ 71 │         a.expiresAt = uint64(block.timestamp + 6 hours);
+    ‡
+339 │         vm.warp(block.timestamp + 6 hours);
+    ╭▸ test/SwarmDeskV37.t.sol:339:17
+339 │         vm.warp(block.timestamp + 6 hours);
+    ╭▸ test/SwarmDeskV37.t.sol:626:17
+626 │         vm.warp(block.timestamp + 2 days);
+    ╭▸ test/SwarmDeskV37.t.sol:651:17
+651 │         vm.warp(block.timestamp + 2 days);
+    ╭▸ test/V34.t.sol:149:25
+149 │         uint256 start = block.timestamp;
+    ‡
+152 │         vm.warp(start + 60 minutes - 1);
+    ╭▸ test/V34.t.sol:230:17
+230 │         vm.warp(block.timestamp + 5 minutes - 1);
+    ╭▸ test/V34.t.sol:233:17
+233 │         vm.warp(block.timestamp + 1);
+    ╭▸ test/fork/RehearsalV311.t.sol:683:18
+683 │         vm.warp((block.timestamp / 6 hours) * 6 hours + 1 hours);

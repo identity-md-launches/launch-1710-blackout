@@ -1,0 +1,21 @@
+[profile.default]
+src = "src"
+test = "test"
+script = "script"
+out = "out"
+libs = ["vendor"]
+solc = "0.8.26"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+bytecode_hash = "none"
+via_ir = false
+remappings = ["@openzeppelin/contracts/=vendor/openzeppelin/contracts/", "forge-std/=vendor/forge-std/src/", "solmate/=vendor/solmate/", "v4-core/=vendor/v4-core/"]
+
+[profile.default.fuzz]
+runs = 256
+
+[profile.default.invariant]
+runs = 128
+depth = 64
+fail_on_revert = false

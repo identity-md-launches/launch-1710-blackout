@@ -1,0 +1,179 @@
+{
+  "phases": [
+    [
+      "core",
+      {
+        "enhance": false,
+        "lobby": false,
+        "billboards": false,
+        "locks": false,
+        "pot": false
+      }
+    ],
+    [
+      "core+enhancement",
+      {
+        "enhance": true,
+        "lobby": false,
+        "billboards": false,
+        "locks": false,
+        "pot": false
+      }
+    ],
+    [
+      "core+enhancement+locks/lobby",
+      {
+        "enhance": true,
+        "lobby": true,
+        "billboards": false,
+        "locks": true,
+        "pot": false
+      }
+    ],
+    [
+      "all (v3.5 full)",
+      {
+        "enhance": true,
+        "lobby": true,
+        "billboards": true,
+        "locks": true,
+        "pot": true
+      }
+    ]
+  ],
+  "results": {
+    "core / steady": {
+      "maintain_profit_tokens": 58067689.62499307,
+      "maintain_repair_share": 0.10390422807715935,
+      "week1_payback_days": 3.75,
+      "week1_token_payback_days": 3.75,
+      "team_eth": 3.5789485055770958,
+      "drawdown": 0.017640987222032,
+      "grower_spend_mined": 1.3896386272554724,
+      "sinks": {
+        "packs": 109750086.17204008,
+        "repair": 21762266.79821285,
+        "rooms": 50326711.93663338,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 5.793571472167969e-05
+    },
+    "core / weak": {
+      "maintain_profit_tokens": 31323366.921410386,
+      "maintain_repair_share": 0.10640382064451616,
+      "week1_payback_days": 4.25,
+      "week1_token_payback_days": 4.0,
+      "team_eth": 0.9168786213870431,
+      "drawdown": 0.007330312195172772,
+      "grower_spend_mined": 1.3884301045687593,
+      "sinks": {
+        "packs": 60225426.87105219,
+        "repair": 11988769.684453832,
+        "rooms": 28507691.070539247,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 2.86102294921875e-05
+    },
+    "core / hype": {
+      "maintain_profit_tokens": 128131438.83521011,
+      "maintain_repair_share": 0.1062286643951574,
+      "week1_payback_days": 3.5,
+      "week1_token_payback_days": 4.0,
+      "team_eth": 4.996015854210379,
+      "drawdown": 0.019406050071929304,
+      "grower_spend_mined": 1.39131676628262,
+      "sinks": {
+        "packs": 121047109.35148075,
+        "repair": 29496938.321322445,
+        "rooms": 63988288.53033792,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 7.49826431274414e-05
+    },
+    "core / drop50": {
+      "maintain_profit_tokens": 65869166.277465016,
+      "maintain_repair_share": 0.10520846892495943,
+      "week1_payback_days": 3.75,
+      "week1_token_payback_days": 3.75,
+      "team_eth": 3.533345756408166,
+      "drawdown": 0.49374647247427383,
+      "grower_spend_mined": 1.3893288878719623,
+      "sinks": {
+        "packs": 125371371.20474264,
+        "repair": 25519301.079171054,
+        "rooms": 58493922.17215514,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 5.4955482482910156e-05
+    },
+    "core+enhancement / steady": {
+      "maintain_profit_tokens": 58238856.30759637,
+      "maintain_repair_share": 0.10391470988009513,
+      "week1_payback_days": 3.75,
+      "week1_token_payback_days": 3.75,
+      "team_eth": 3.529987540458886,
+      "drawdown": 0.017762407214370612,
+      "grower_spend_mined": 1.3976031195216252,
+      "sinks": {
+        "packs": 89626412.89145286,
+        "repair": 21839760.3853659,
+        "rooms": 35871206.19217053,
+        "enhance": 35871206.19217053,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 6.222724914550781e-05
+    },
+    "core+enhancement+locks/lobby / steady": {
+      "maintain_profit_tokens": 57023811.51702074,
+      "maintain_repair_share": 0.10381476186675981,
+      "week1_payback_days": 3.75,
+      "week1_token_payback_days": 3.75,
+      "team_eth": 3.572232849754135,
+      "drawdown": 0.017663892379065294,
+      "grower_spend_mined": 1.399594713088794,
+      "sinks": {
+        "packs": 85964950.58493923,
+        "repair": 21326424.867013596,
+        "rooms": 33278740.333845768,
+        "enhance": 33278740.333845768,
+        "lobby": 13311496.133538362,
+        "billboards": 0.0
+      },
+      "locked_peak": 25881766.75934582,
+      "conservation_error": 6.031990051269531e-05
+    },
+    "all (v3.5 full) / steady": {
+      "maintain_profit_tokens": 44334341.87830297,
+      "maintain_repair_share": 0.10400544358538528,
+      "week1_payback_days": 3.75,
+      "week1_token_payback_days": 3.75,
+      "team_eth": 3.496672676150673,
+      "drawdown": 0.012816934039322048,
+      "grower_spend_mined": 1.400457719058777,
+      "sinks": {
+        "packs": 65325446.78966366,
+        "repair": 16715298.067059463,
+        "rooms": 24754729.285523634,
+        "enhance": 24754729.285523634,
+        "lobby": 9901891.714209555,
+        "billboards": 4950945.857104777
+      },
+      "locked_peak": 20032040.89482559,
+      "conservation_error": 9.083747863769531e-05
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_comment": "Fill from GET /launches/:id after each launch is recorded. Addresses are the recorded ones; launch numbers are the plane's. Indices are array positions. No value here is a prediction.",
+  "desk": "0x_SwarmDesk_from_launch_1",
+  "escrow": "0x_EndowmentEscrow_from_launch_2",
+  "registry": "0x_GameRegistry_from_job_A",
+  "launchFactory": "0xa25b02a1e93903b790e6aaf7da1b8b8d50294645",
+  "tokenLaunch": 0,
+  "jobA": {
+    "launch": 0,
+    "contracts": ["Params", "GameRegistry", "RewardPool", "FarmRewards", "FarmCore", "FarmItems", "PackSale", "StarterClaim"]
+  },
+  "jobB": {
+    "launch": 0,
+    "contracts": ["FeeRouter", "GridOperator", "Season", "FarmEngine", "Economy", "Enhancement", "Civic", "Billboards"]
+  },
+  "artifacts": ["out-launch", "out"]
+}

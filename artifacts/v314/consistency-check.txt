@@ -1,0 +1,1 @@
+PASS: all 19 creation hashes, flat constructor lists, four objective lengths, accepted-list copies, compiler settings, artifact directories and protected paths agree.

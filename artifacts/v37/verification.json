@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-11",
+  "compiler": "0.8.26",
+  "build": "passed",
+  "forgeTests": {
+    "passed": 244,
+    "failed": 0,
+    "skipped": 1,
+    "suites": 42,
+    "skipReason": "Optional live-RPC Robinhood fork test is excluded from default offline verification"
+  },
+  "format": "passed",
+  "modulePins": "passed",
+  "swarmPins": "passed",
+  "authorityScan": "passed",
+  "pythonTests": 34,
+  "nodeTestFiles": [
+    "test/oracle-v37.test.mjs",
+    "test/reveal.test.mjs",
+    "test/ui-v35.test.mjs"
+  ],
+  "independentFocusedForgeTests": 21,
+  "protectedPathChanges": false,
+  "deployed": false,
+  "broadcast": false,
+  "paidOracleRequests": 0,
+  "tokenActions": 0
+}

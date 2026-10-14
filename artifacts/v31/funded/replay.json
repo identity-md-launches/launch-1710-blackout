@@ -1,0 +1,290 @@
+[
+  {
+    "scenario": "steady",
+    "endowment": 0.1,
+    "drip_days": 0,
+    "minimum_replay_bps": 1072
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.1,
+    "drip_days": 0,
+    "minimum_replay_bps": 2296
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.1,
+    "drip_days": 0,
+    "minimum_replay_bps": 2834
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.1,
+    "drip_days": 14,
+    "minimum_replay_bps": 1080
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.1,
+    "drip_days": 14,
+    "minimum_replay_bps": 2494
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.1,
+    "drip_days": 14,
+    "minimum_replay_bps": 2886
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.1,
+    "drip_days": 42,
+    "minimum_replay_bps": 1075
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.1,
+    "drip_days": 42,
+    "minimum_replay_bps": 2281
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.1,
+    "drip_days": 42,
+    "minimum_replay_bps": 2844
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.1,
+    "drip_days": 56,
+    "minimum_replay_bps": 1079
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.1,
+    "drip_days": 56,
+    "minimum_replay_bps": 2272
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.1,
+    "drip_days": 56,
+    "minimum_replay_bps": 2886
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.15,
+    "drip_days": 0,
+    "minimum_replay_bps": 1068
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.15,
+    "drip_days": 0,
+    "minimum_replay_bps": 2487
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.15,
+    "drip_days": 0,
+    "minimum_replay_bps": 2788
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.15,
+    "drip_days": 14,
+    "minimum_replay_bps": 1064
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.15,
+    "drip_days": 14,
+    "minimum_replay_bps": 2326
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.15,
+    "drip_days": 14,
+    "minimum_replay_bps": 2790
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.15,
+    "drip_days": 42,
+    "minimum_replay_bps": 1076
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.15,
+    "drip_days": 42,
+    "minimum_replay_bps": 2318
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.15,
+    "drip_days": 42,
+    "minimum_replay_bps": 2839
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.15,
+    "drip_days": 56,
+    "minimum_replay_bps": 1079
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.15,
+    "drip_days": 56,
+    "minimum_replay_bps": 2343
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.15,
+    "drip_days": 56,
+    "minimum_replay_bps": 2869
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.2,
+    "drip_days": 0,
+    "minimum_replay_bps": 1079
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.2,
+    "drip_days": 0,
+    "minimum_replay_bps": 2339
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.2,
+    "drip_days": 0,
+    "minimum_replay_bps": 2834
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.2,
+    "drip_days": 14,
+    "minimum_replay_bps": 1060
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.2,
+    "drip_days": 14,
+    "minimum_replay_bps": 2319
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.2,
+    "drip_days": 14,
+    "minimum_replay_bps": 2784
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.2,
+    "drip_days": 42,
+    "minimum_replay_bps": 1073
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.2,
+    "drip_days": 42,
+    "minimum_replay_bps": 2350
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.2,
+    "drip_days": 42,
+    "minimum_replay_bps": 2895
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.2,
+    "drip_days": 56,
+    "minimum_replay_bps": 1077
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.2,
+    "drip_days": 56,
+    "minimum_replay_bps": 2417
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.2,
+    "drip_days": 56,
+    "minimum_replay_bps": 2867
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.25,
+    "drip_days": 0,
+    "minimum_replay_bps": 1092
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.25,
+    "drip_days": 0,
+    "minimum_replay_bps": 2369
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.25,
+    "drip_days": 0,
+    "minimum_replay_bps": 2781
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.25,
+    "drip_days": 14,
+    "minimum_replay_bps": 1072
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.25,
+    "drip_days": 14,
+    "minimum_replay_bps": 2288
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.25,
+    "drip_days": 14,
+    "minimum_replay_bps": 2811
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.25,
+    "drip_days": 42,
+    "minimum_replay_bps": 1068
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.25,
+    "drip_days": 42,
+    "minimum_replay_bps": 2293
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.25,
+    "drip_days": 42,
+    "minimum_replay_bps": 2855
+  },
+  {
+    "scenario": "steady",
+    "endowment": 0.25,
+    "drip_days": 56,
+    "minimum_replay_bps": 1074
+  },
+  {
+    "scenario": "hype",
+    "endowment": 0.25,
+    "drip_days": 56,
+    "minimum_replay_bps": 2197
+  },
+  {
+    "scenario": "weak",
+    "endowment": 0.25,
+    "drip_days": 56,
+    "minimum_replay_bps": 2819
+  }
+]

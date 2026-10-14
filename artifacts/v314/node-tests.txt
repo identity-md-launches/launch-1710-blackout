@@ -1,0 +1,22 @@
+✔ four launches, correct order, named references, and no forbidden constructor literals (4.740358ms)
+✔ every forbidden address is rejected in every launch, including padded and decimal words (30.706081ms)
+✔ allowed platform references pass; empty plans fail closed (0.388588ms)
+✔ Desk launch words match the offline encoder and reject endpoint drift (1.444557ms)
+keeper v3.9 relay and wiring encoders match cast vectors; attestation document checks pass.
+✔ test/keeper-v39.test.mjs (103.812892ms)
+oracle-v310 ok
+✔ test/oracle-v310.test.mjs (96.995696ms)
+5 independent protocol hash vectors; commitments, seven-word constructor packing, field limits, dynamic keeper ABI and log recovery passed.
+✔ test/oracle-v37.test.mjs (191.68866ms)
+Reveal: captured receipt and expired/rearmed receipt complete from one invocation.
+✔ test/reveal.test.mjs (69.822809ms)
+v3.5 UI: precise amounts, address validation, static/dynamic ABI encoding and metadata decoding passed.
+✔ test/ui-v35.test.mjs (68.712643ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 224.924164

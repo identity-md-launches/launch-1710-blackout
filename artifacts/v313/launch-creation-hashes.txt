@@ -1,0 +1,6 @@
+# BLACKOUT v3.13 creation-code hashes, launch profile = foundry.toml (solc 0.8.26, optimizer 200, cancun, viaIR false, bytecode_hash none)
+EndowmentEscrow 0x4a39e28d9eb7fc03582b549a2022859f7586ce9bcb4f1ab3712f0329d0502ef3
+V4Market 0x4610352776e29437b7b1acf74fdd11c85ff3cb3d79135c75ddb702edcb391392
+GameRegistry 0xedcb22640cb6434636d72a457d6557987e40dbfcd8dcea4355ab7d525cef2b22
+Params 0x26c9f36af040b02eba9644f52daeed84fae4e42eab9bdb23277d0bb28c6dc6c0
+SwarmDesk 0x65968358bcf87aa8839b8bce6b2d339493deac3f77d75a3ff0b3ad4f35955745

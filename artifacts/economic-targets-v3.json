@@ -1,0 +1,9 @@
+{
+  "explicit_initial_capital_eth": 40,
+  "pace_policy": "hold",
+  "steady_week1_whole_cohort_median_at_most_10d": true,
+  "steady_and_hype_stall_not_before_21d": true,
+  "weekly_event_loss_at_most_10pct": true,
+  "conditional_only": true,
+  "unfunded_baseline_meets_all_targets": false
+}

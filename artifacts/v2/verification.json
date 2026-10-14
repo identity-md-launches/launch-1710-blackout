@@ -1,0 +1,110 @@
+{
+  "toolchain": [
+    "forge Version: 1.8.3",
+    "Commit SHA: cae51ad458f6abb64852b7709eb784352429825d",
+    "Build Timestamp: 2026-09-15T10:46:16.519267388Z (1789469176)",
+    "Build Profile: dist"
+  ],
+  "checks": {
+    "forge build": {
+      "exit_code": 0,
+      "compiler": "Solc 0.8.26",
+      "compiler_seconds": 179.42,
+      "lint_warnings_present": true
+    },
+    "forge test -vv": {
+      "exit_code": 0,
+      "passed": 68,
+      "failed": 0,
+      "skipped": 1,
+      "summary": "Ran 13 test suites in 20.55s (26.09s CPU time): 68 tests passed, 0 failed, 1 skipped (69 total tests)",
+      "fuzz_runs": 256,
+      "invariant_runs": 128,
+      "invariant_depth": 64,
+      "stateful_calls": 8192
+    },
+    "forge fmt --check": {
+      "exit_code": 0
+    },
+    "python3 sim/blackout_sim_v2.py --check": {
+      "exit_code": 0,
+      "passed": 5
+    },
+    "python3 -m unittest discover -s test/python -v": {
+      "exit_code": 0,
+      "passed": 2
+    },
+    "Robinhood fork smoke": {
+      "exit_code": 0,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "log": "robinhood-fork.txt"
+    },
+    "fresh offline test": {
+      "started_utc": "2026-10-10T21:43:30.185885+00:00",
+      "finished_utc": "2026-10-10T21:46:57.114796+00:00",
+      "command": [
+        "test",
+        "--offline",
+        "--threads",
+        "4",
+        "--fuzz-seed",
+        "0x0000000000000000000000000000000000000000000000000000000001352892",
+        "-vv"
+      ],
+      "environment_keys": [
+        "PATH"
+      ],
+      "fresh_checkout_without_inputs_or_artifacts": true,
+      "exit_code": 0,
+      "summary": [
+        "Ran 13 test suites in 19.90s (24.36s CPU time): 68 tests passed, 0 failed, 1 skipped (69 total tests)"
+      ]
+    }
+  },
+  "authority": "Implementation-author local results; no independent verification authority",
+  "source_sha256": {
+    "src/BurnVault.sol": "738c4894c1e89d7d5a31d71028f0a5cb316d59d74dc4e8877f3168cfb61bf1c4",
+    "src/FarmCore.sol": "6a3063834eee93dfe66195cb8c39254fd0b2c59cee50da323c9e3069a487f842",
+    "src/FarmItems.sol": "1122d0d01113cbbb83c1bbeaa1a85034252ac176cbc7953d61ec43251a90d8e2",
+    "src/FarmRewards.sol": "df442df9d3c31859e60d2dfcfedf7ee258174958b9a530fe2ff96b7955e51874",
+    "src/FeeRouter.sol": "6bcbb8f0a07de00b19a6c3c18c42ed3fba2ee909735472af9ef78fbedb5be5cb",
+    "src/Generator.sol": "b06a42e6139447dd31e3bbab3ff81a3ad5bbfaa5c51b9f5008801c5dce346b65",
+    "src/GridOperator.sol": "2164aa272c266fc8508fb6271d91ab046312c52daae1a7b42675607c5d37d3ac",
+    "src/MarketFactory.sol": "259d7fe9616b6ab0e3177971af21c4f0a0afdf1a7cd4d1143c1cb2420c599ac4",
+    "src/PackSale.sol": "06f5bb0afda8b6ff08aefa555b09f01bdc1a21d5c074705f27dda053f1dbc52f",
+    "src/Params.sol": "5c8cd3bbd06afd0a43bb22dc102c2d7008952eb53551cf5db29a168ac4b68bac",
+    "src/RewardPool.sol": "ac6650bac06adc2d74350e683d801f91d3f40c590b534725f8adab2a0224726e",
+    "src/StarterClaim.sol": "29af2a1a2c05db04c331900a3ea6943c3fac09fd8e29d35e6fce4df3344a9406",
+    "src/V4Market.sol": "09fdcb87f69b8e847ece51a9787e74d8622107c6576b1099c9d7c4fca1907706",
+    "src/interfaces/IV4.sol": "dab58416fba59cbf725c8269de85831baf1b7a262f0fbe8aee5595786bd8b7ca",
+    "src/interfaces/Interfaces.sol": "4d3f6e63f872b1d8adc5041fab7c8a6707c830161be4804af813ea3138a86f1d",
+    "src/lib/ChainClock.sol": "5103dfd63051b86bb864dd585fe989d6ceef1e2e8537e33c0c6109114bdab7ce",
+    "src/lib/Errors.sol": "bda55c854481a954d724933ddf08ed0e4aa140802bf81614c6b62acafb55a992",
+    "src/lib/ItemMath.sol": "5446fee15700c031fd89762ca243a359cd739bb4c05bec50c72e436ac6d4e518",
+    "test/Adversarial.t.sol": "981252cd7729f2ff6cec605980c175c8decc650ae1369601a8bb3b4553d50eac",
+    "test/Base.t.sol": "c5820f682548ff208ac222ed76bfa920e37dc0e5af79a1ded3003bd194817e22",
+    "test/Clock.t.sol": "f17fd88cf8e150496ced6a06392f051738b882103b11a6f6b77bab35e0258fbb",
+    "test/Deployment.t.sol": "07e22bf0f4a9d24b176640648ca170f815e850173b2ddcfa698c1010b9c9bc94",
+    "test/ExtraBehavior.t.sol": "ea07a07db21bfd4648408532038fbd4dc786097bbe99416ce38a81bf0f6b3712",
+    "test/Factory.t.sol": "f53c5f0d8824d39f39344157a356b41e3254f1a4e6ed135a89e850e2f7d0c9d7",
+    "test/Invariants.t.sol": "093b87a64538dbb636eb0dca29cc41bd68bb37312dd451fb1090ad704659e3f9",
+    "test/Market.t.sol": "21424bd5af03cf3ddebd92b660d0c0cc47659069f5728a86b4a60ba2ee124c3d",
+    "test/Operations.t.sol": "c7d8b806d8503206b5b578f95904278c305617e0845c4191798ce9c12d62a370",
+    "test/Packs.t.sol": "2ad81b07d455c76a6f50b4877ad105b6fabe6154e98b6256311f03b339a65fbb",
+    "test/Rewards.t.sol": "3cc082dfeb03276292e5bbf45557d3eae9ca875771df29ab7adb43db112ce96b",
+    "test/Rooms.t.sol": "3d3b7ed6f855fbad5f84c0c4aafeb416a98f26eb666149311ee2f7beb910c6ff",
+    "test/V4Integration.t.sol": "7f677133b94180d4560a1c9350eff0ead82f1cab09b82bca5cb63a3e6677b890",
+    "test/fork/RobinhoodFork.t.sol": "a91af0e5ab55b911ad79762ddf7b34b929f24e149438fbcabb50ff800c103267",
+    "test/mocks/MockMarket.sol": "6cbe0ba26adbd85f0381ef72a02932550fd3bab637e0ac8905e5c28a86c854d0",
+    "test/mocks/MockToken.sol": "4d9ac5d247f92fefe11232981c4ad10bf1bcc5828c308fc68a2b8796b9844efd",
+    "test/mocks/MockV4Manager.sol": "f17bd665bbaa6f0a3cf7eee328c99bd78a72a4a7f734607ec67be3254ca9a8fe",
+    "test/python/test_merkle.py": "0d305e5bd99827b85df37eefd0ba57d61336965f830ca932519d0fc7075b8d86",
+    "script/Deploy.s.sol": "497273e5dcc75b0a26f1adec302970db2def98362435e07b2d2e606a7e4f23ea",
+    "script/DeployMarket.s.sol": "cac1b27c67408f50e731d36973c51426c1c17bcfbfcc227bce56b75adaf295a8",
+    "sim/blackout_sim_v2.py": "f96f7ac0c1faaba8a7c3bbb663ca84f997e8a0d0b9d8687bbd2a8129b519ff56",
+    "tools/starter_merkle.py": "8c0f8856c4c1f1576c69ef3a09abfed279705402291a4d4123a991a50cf7c3c5",
+    "foundry.toml": "5e3d82fb438089eb53948317eaa77c83c8452310c9327991d932663f44ebfb60"
+  }
+}

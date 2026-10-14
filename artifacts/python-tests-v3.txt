@@ -1,0 +1,18 @@
+test_reject_missing_or_duplicate_snapshot (test_merkle.MerkleTests.test_reject_missing_or_duplicate_snapshot) ... ok
+test_solidity_abi_single_leaf_and_odd_tree (test_merkle.MerkleTests.test_solidity_abi_single_leaf_and_odd_tree) ... ok
+test_cooldown_is_not_permission (test_regulator.RegulatorTest.test_cooldown_is_not_permission) ... ok
+test_empty_pool_is_not_infinite_runway (test_regulator.RegulatorTest.test_empty_pool_is_not_infinite_runway) ... ok
+test_good_state_no_unnecessary_changes (test_regulator.RegulatorTest.test_good_state_no_unnecessary_changes) ... ok
+test_holding_pace_keeps_daily_emission_response (test_regulator.RegulatorTest.test_holding_pace_keeps_daily_emission_response) ... ok
+test_invalid_policy_rejected (test_regulator.RegulatorTest.test_invalid_policy_rejected) ... ok
+test_runway_response_and_steps (test_regulator.RegulatorTest.test_runway_response_and_steps) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.295s
+
+OK
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK

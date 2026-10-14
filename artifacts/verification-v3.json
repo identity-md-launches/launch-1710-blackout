@@ -1,0 +1,67 @@
+{
+  "compiler": "0.8.26",
+  "forge_version": "forge Version: 1.8.3",
+  "build": "passed",
+  "forge_test": {
+    "passed": 86,
+    "failed": 0,
+    "skipped": 1,
+    "total": 87,
+    "suites": 18,
+    "fuzz_runs": 256,
+    "invariant_runs": 128,
+    "invariant_depth": 64
+  },
+  "fmt_check": "passed",
+  "robinhood_fork": {
+    "chain_id": 4663,
+    "rpc": "https://rpc.mainnet.chain.robinhood.com",
+    "passed": 1,
+    "failed": 0,
+    "scope": "Native ArbSys number/hash via RPC, replayed in local non-ArbOS EVM; no deployed application"
+  },
+  "python": {
+    "sim_checks": 5,
+    "tool_checks": 8
+  },
+  "no_deploy": true,
+  "independent_review": "Fresh-context read-only contributor; all reported high/medium resolved; reviewer did not rerun tests",
+  "gas_deltas": {
+    "buy ETH pack": 507970,
+    "open one pack": 309797,
+    "equip": 201533,
+    "repair wallet": 248172,
+    "overclock": 106453,
+    "expand": 120067,
+    "token pack internal": 235348,
+    "withdraw": 113740,
+    "unequip": 102797,
+    "measure eight full 24-item farms": 14477149,
+    "credit eight full farms": 3047132,
+    "advance empty roster": 819200,
+    "advance 1000 farms": 821766
+  },
+  "source_sha256": {
+    "src/FarmCore.sol": "11e242020dc98ef191238ba96713aa49a5962daff1726b8c7236e5fc799d951e",
+    "src/FarmEngine.sol": "1df8e95aa4747d13f8fa05090bc6717856dd16904346c8dd84ca35d09adbac34",
+    "src/FarmItems.sol": "79123a9cb76ffa9a5e9685079cee6c15a143b48f7047d20e569b601891427d98",
+    "src/FarmRewards.sol": "0e77e55d979b31c199140e65536b7f2af2aa5f2f83888c51c92f57a1d699088d",
+    "src/FeeRouter.sol": "1323e78edb4f429da25ca209e1843dd6569a3017ef9fa90a3025fc863a529cf9",
+    "src/GridOperator.sol": "2ec16a507c5360db361610b13d690d31bf887568200fa4cedc213e95d9d63a94",
+    "src/MarketFactory.sol": "259d7fe9616b6ab0e3177971af21c4f0a0afdf1a7cd4d1143c1cb2420c599ac4",
+    "src/PackSale.sol": "5d344c46c57b43a0a5265954dafa83c95bc70513162aebfef94dd7a1bea2b0ad",
+    "src/Params.sol": "c4f1ab41a27b6d3a10559a10d8e29b3633838dc8b4c0674cf50a15dddfa0bb69",
+    "src/RewardPool.sol": "156f7800d047d4c2d1bf290b503a46051448e537453ed2abb6242fad771bc370",
+    "src/Season.sol": "208e1cde750c5fede977fef43999c920f175bae4f531a4462e9d95c63b5f5fb2",
+    "src/StandardAdapter.sol": "717f41298c231ed83de12ed75f1aa31dee2ca9bc5b0e5d380e96eb2035f49b26",
+    "src/StandardMarket.sol": "877272562d8a1ccc4ec098cec64fbf3b9374f07940962a81dca17a57fd8fc6a1",
+    "src/StarterClaim.sol": "dc8ef0b6470c86a47c716bc89147bc792387e329cfff9c45be6cbc970bb2fbc5",
+    "src/V4Market.sol": "7386c21d88fe69f042f79a4c8af906918d9dc139209a2cf9b7d4c88809aef6eb",
+    "src/interfaces/IGame.sol": "88be6eef28bc4d489029fb4a05e6445b0500c5e08aca2a21f93f8b6373f79603",
+    "src/interfaces/IV4.sol": "dab58416fba59cbf725c8269de85831baf1b7a262f0fbe8aee5595786bd8b7ca",
+    "src/interfaces/Interfaces.sol": "c0447c44c6badaeec98fd3d47d993b278962e2024399460832f4d2973746e8c0",
+    "src/lib/ChainClock.sol": "5103dfd63051b86bb864dd585fe989d6ceef1e2e8537e33c0c6109114bdab7ce",
+    "src/lib/Errors.sol": "bda55c854481a954d724933ddf08ed0e4aa140802bf81614c6b62acafb55a992",
+    "src/lib/ItemMath.sol": "a56b7563ba69e7d78ef00224e0ce26c456c63be0040c2fd6cb5e7fcfc569e92b"
+  }
+}

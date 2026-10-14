@@ -1,0 +1,102 @@
+{
+  "observed": "2026-10-11",
+  "method": "Canonical identity fields independently reproduced from published official oracle records; no network needed to verify these fixtures.",
+  "vectors": [
+    {
+      "source": "https://api.imd.fun/oracle/requests/4c772fed-d644-4f97-b503-9a629ea19604?members=0",
+      "body": {
+        "v": 1,
+        "question": "Is the Eiffel Tower located in Paris, France?",
+        "chainId": 1,
+        "window": {
+          "fromBlock": 26163583,
+          "toBlock": 26170760
+        },
+        "answerType": "bool",
+        "evidence": "panel",
+        "definitions": {
+          "missing": "Unavailable evidence is not false. Report inability rather than guessing."
+        }
+      },
+      "questionHash": "0x2706a74a378bf41cdd6c90f239f12028dd194474ccf66299dd7c9572f7a3d119"
+    },
+    {
+      "source": "https://api.imd.fun/oracle/requests/99f49123-221b-412c-b57c-90520c049f46?members=0",
+      "body": {
+        "v": 1,
+        "question": "Fetch the public JSON document at https://cdn.syndication.twimg.com/tweet-result?id=2109295512424009991&token=a . It is X's embed endpoint, readable by anyone over plain HTTPS with no login or API key (a GET returns application/json). Its field text holds one tweet. Answer with the single Ethereum contract address written in that text field. If the document cannot be fetched or names no address, answer 0x0000000000000000000000000000000000000000.",
+        "chainId": 1,
+        "window": {
+          "fromBlock": 26163601,
+          "toBlock": 26170778
+        },
+        "answerType": "address",
+        "evidence": "panel",
+        "head": 1,
+        "definitions": {
+          "source": "the syndication URL given, fetched directly; x.com itself is not needed",
+          "address": "the 0x-prefixed 40-hex-digit string in the text field, as written",
+          "purpose": "a read probe for Marginalia: can the panel read a tweet through this mirror and extract an address"
+        }
+      },
+      "questionHash": "0x5f96e4147fa67b0d7efd46018556b7e50f1b0f8b06a5a3263710bce3d5667d3c"
+    },
+    {
+      "source": "https://api.imd.fun/oracle/requests/fbc6c024-726e-496d-918d-aa4c69046bc2?members=0",
+      "body": {
+        "v": 1,
+        "question": "Use only https://aviationweather.gov/api/data/metar?ids=EGLL&format=json for the newest valid METAR observation at EGLL, London Heathrow. Return uint256 = obsTime * 2 + wet, where obsTime is that row's Unix observation time, and wet is 1 if a current-weather group in wxString contains RA or DZ (rain or drizzle, including -RA, SHRA and FZRA); ignore groups beginning RE or VC. Otherwise wet=0. Absent, null or empty wxString means no reported rain only when rawOb is a valid EGLL METAR and not NIL. If the API fails, the report is missing/invalid, or obsTime is future or more than 90 minutes old at retrieval, report unavailable rather than a number. Never infer from clouds, humidity or forecasts.",
+        "chainId": 1,
+        "window": {
+          "fromBlock": 26122900,
+          "toBlock": 26122901
+        },
+        "answerType": "uint256",
+        "evidence": "panel",
+        "definitions": {
+          "source": "Only NOAA Aviation Weather Center API, station EGLL (London Heathrow). This is a station observation, not all of London. Select the row with greatest obsTime.",
+          "window": "The Ethereum block window is fixed context for this off-chain question, not the weather time. obsTime at retrieval controls freshness.",
+          "missing": "Unavailable, invalid, future or older-than-90-minute observations must not be encoded as dry. Do not guess.",
+          "encoding": "answer = obsTime * 2 + wet. obsTime is Unix seconds. Split wxString on whitespace; wet=1 when a group contains RA or DZ and does not begin RE or VC. Otherwise wet=0. Missing wxString is dry only with a valid non-NIL rawOb."
+        }
+      },
+      "questionHash": "0x39eecf277118e4219d50e4352a2fcf943cf802239c546d54dd4baba53c72d787"
+    },
+    {
+      "source": "https://api.imd.fun/oracle/requests/be3c78aa-19e3-48e8-b917-ae3469f9c776?members=0",
+      "body": {
+        "v": 1,
+        "question": "At the last block of the pinned window on Ethereum mainnet, what is the Uniswap v4 spot price of the IMD token 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 against native ETH, read from pool id 0xb07d640fd9e2eb9dc81b953c8e4fd006bdfeaf276010fb5418eb763ca15abfb3 on PoolManager 0x000000000004444c5dc75cb358380d2e3de08a90, expressed as a whole number of wei of native ETH per 1e18 raw units of IMD, truncated toward zero?",
+        "chainId": 1,
+        "window": {
+          "fromBlock": 26169555,
+          "toBlock": 26169855
+        },
+        "answerType": "uint256",
+        "definitions": {
+          "pool": "The pool's currency0 is native ETH (the zero address) and currency1 is IMD 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7, fee 10000, tickSpacing 200. It is the deeper of the two live IMD pools. Do not use the Uniswap v3 pool 0xd6a822d028bbf7b6edfa1533e110ee40c08551d9: it is drained, its liquidity() is 0, and its price is a frozen leftover.",
+          "recipe": "univ4-spot with poolManager 0x000000000004444c5dc75cb358380d2e3de08a90, poolId 0xb07d640fd9e2eb9dc81b953c8e4fd006bdfeaf276010fb5418eb763ca15abfb3, invert false, samples 1. One sample is the window's last block alone, which is the point-in-time reading this feed wants: the window average belongs to the separate primary feed.",
+          "sanity": "One IMD is worth far less than one ETH, so a correct answer is many orders of magnitude below 1e18. A result above 1e18 means the direction was inverted.",
+          "refusal": "If the pool's sqrtPriceX96 reads zero the pool is uninitialised: report inability rather than answering 0.",
+          "direction": "invert false yields currency0 per 1e18 raw currency1, which is wei of native ETH per 1e18 raw IMD. That is the direction wanted."
+        }
+      },
+      "questionHash": "0x16373ed235fa98d3d4a2bfd646b4772c0adceb7b585922aa74d67a96abfa4507"
+    },
+    {
+      "source": "https://api.imd.fun/oracle/requests/788aea55-9650-4724-9279-c8df6977ce0b?members=0",
+      "body": {
+        "v": 1,
+        "question": "Which Uniswap v4 pool on Robinhood Chain (PoolManager 0x8366a39cc670b4001a1121b8f6a443a643e40951) did the most INTC (Intel • Robinhood Token, token 0xc72b96e0e48ecd4dc75e1e45396e26300bc39681) volume in the last hour? Rank pools whose currencies include 0xc72b96e0e48ecd4dc75e1e45396e26300bc39681 by the sum of the absolute INTC amount over Swap events; answer the top 5 pool ids, largest first.",
+        "chainId": 4663,
+        "window": {
+          "fromBlock": 68435372,
+          "toBlock": 68471147
+        },
+        "answerType": "bytes32[]",
+        "head": 1
+      },
+      "questionHash": "0xb4bb193a20b7056b0b3c5b9ae7576760c74986339e065c8321a9049dd2461627"
+    }
+  ]
+}

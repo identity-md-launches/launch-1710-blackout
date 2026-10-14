@@ -1,0 +1,16 @@
+{
+  "url": "https://rpc.mainnet.chain.robinhood.com",
+  "requests": [
+    {
+      "method": "eth_chainId",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "subsequent_foundry_fork": {
+    "checked_utc": "2026-10-10T21:44:53.461141+00:00",
+    "command": "forge test --fork-url https://rpc.mainnet.chain.robinhood.com --match-contract RobinhoodForkTest -vv",
+    "exit_code": 0,
+    "result": "1 passed, 0 failed, 0 skipped",
+    "scope": "Native ArbSys number/hash RPC reads replayed into local EVM; no broadcast"
+  }
+}

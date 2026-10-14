@@ -1,0 +1,24 @@
+== test/deploy-gate-v314.test.mjs
+ℹ tests 4
+ℹ pass 4
+ℹ fail 0
+== test/keeper-v39.test.mjs
+ℹ tests 1
+ℹ pass 1
+ℹ fail 0
+== test/oracle-v310.test.mjs
+ℹ tests 1
+ℹ pass 1
+ℹ fail 0
+== test/oracle-v37.test.mjs
+ℹ tests 1
+ℹ pass 1
+ℹ fail 0
+== test/reveal.test.mjs
+ℹ tests 1
+ℹ pass 1
+ℹ fail 0
+== test/ui-v35.test.mjs
+ℹ tests 1
+ℹ pass 1
+ℹ fail 0

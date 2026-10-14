@@ -1,0 +1,178 @@
+No files changed, compilation skipped
+
+Ran 2 tests for test/Clock.t.sol:ClockTest
+[PASS] testLocalEvmFutureBlockAnd256BlockBoundary() (gas: 220367)
+[PASS] testRobinhoodUsesArbSysNotL1EstimateAndHandlesExpiry() (gas: 443925)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 1.58ms (920.20µs CPU time)
+
+Ran 4 tests for test/Deployment.t.sol:DeploymentTest
+[PASS] testEmptyChainConstructorsDoNotCallDependencies() (gas: 13799)
+[PASS] testNoAdminMintOrPoolDrain() (gas: 161782)
+[PASS] testRejectInvalidConfiguration() (gas: 44406)
+[PASS] testWiringAndRuntimeLimits() (gas: 85651)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 7.24ms (1.58ms CPU time)
+
+Ran 1 test for test/fork/RobinhoodFork.t.sol:RobinhoodForkTest
+[SKIP] testForkArbSysAndHistoricalHash() (gas: 0)
+Suite result: ok. 0 passed; 0 failed; 1 skipped; finished in 285.68µs (97.64µs CPU time)
+
+Ran 5 tests for test/ExtraBehavior.t.sol:ExtraBehaviorTest
+[PASS] testAllPoolSpendingUnderAuditRemainsBacked() (gas: 11583991)
+[PASS] testLongerTaxDecayCannotLoseAgedVintageOnRingRollover() (gas: 16109668)
+[PASS] testMergeMintsOnlyThroughPackSaleAndConsumesThreeWithFee() (gas: 5407673)
+[PASS] testPackBuybackBootstrapsMiningWithoutAnInitialDonation() (gas: 3316524)
+[PASS] testRedistributionIsFullyAddedAndNotTaxedForReferralAgain() (gas: 5441508)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 59.93ms (53.83ms CPU time)
+
+Ran 2 tests for test/Factory.t.sol:FactoryTest
+[PASS] testFactoryInvalidSearchRange() (gas: 5114)
+[PASS] testHookFactoryFlagsImmutableConfigAndIdempotence() (gas: 3066243)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 13.39ms (9.58ms CPU time)
+
+Ran 9 tests for test/Operations.t.sol:OperationsTest
+[PASS] testBlackoutRollingMaximumAndDistrictCooldown() (gas: 8725546)
+[PASS] testBuybackQuoteSlippageSpacingAndFailureAtomicity() (gas: 1308677)
+[PASS] testEveryParameterRejectsHardBoundAndExcessStep() (gas: 3647569)
+[PASS] testFeeSplitsEveryStreamAndPullRecipientRotation() (gas: 553343)
+[PASS] testFuzzParamCannotExceedTenPercent(uint16) (runs: 256, μ: 45912, ~: 45971)
+Logs:
+  Bound result 899
+
+[PASS] testGeneratorLockUnlockPrincipalAndPauseIsolation() (gas: 12223509)
+[PASS] testGridRoleFutureBlockExpiryAndHerald() (gas: 2606526)
+[PASS] testLobbyDecayFloorSnapshotAndCalmFallback() (gas: 3385368)
+[PASS] testParamsRoleStepBoundsAnd24Hours() (gas: 1834500)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 113.29ms (107.47ms CPU time)
+
+Ran 8 tests for test/Packs.t.sol:PacksTest
+[PASS] testBetaCapsAndExactRollingDay() (gas: 827562)
+[PASS] testExpiredPackCommonAndCommitEpochFixed() (gas: 21141145)
+[PASS] testGlobalBetaCap() (gas: 7324127)
+[PASS] testPackInvalidCountPaymentAndUnknownId() (gas: 240388)
+[PASS] testPaidPackRoutesFeesAndPermissionlessResolve() (gas: 1261825)
+[PASS] testPauseOnlySwarmBoundedAndCannotExtend() (gas: 1424722)
+[PASS] testStarterBecomesFullHashOnlyAfterPaidReveal() (gas: 1522668)
+[PASS] testStarterProofWindowExpiryAndSoulbound() (gas: 3518835)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 68.04ms (60.05ms CPU time)
+
+Ran 7 tests for test/Adversarial.t.sol:AdversarialTest
+[PASS] testERC1155ReceiverCannotReenterResolution() (gas: 1365037)
+[PASS] testERC20CallbackCannotReenterClaimAndFailureRollsBackLiabilities() (gas: 3691777)
+[PASS] testEthWithdrawalReentrancyAndRecipientFailureIsolation() (gas: 655542)
+[PASS] testLongInactiveFarmCanBeRemovedAndRepairedFromWallet() (gas: 50106434)
+[PASS] testMintBonusIsFrozenAcrossParameterUpdatesAndDelayedResolve() (gas: 7306457)
+[PASS] testSupplyMetadataAndMintEditionRestrictions() (gas: 103431)
+[PASS] testSwarmCanResumeEventsAfterLongOutage() (gas: 2090627)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 195.48ms (153.58ms CPU time)
+
+Ran 6 tests for test/Market.t.sol:MarketTest
+[PASS] testBuyChargesOnlyBaseAndNetworkPullPayment() (gas: 279894)
+[PASS] testFuzzTotalFeeHardCap(uint96) (runs: 256, μ: 1874863, ~: 1886237)
+Logs:
+  Bound result 4682
+
+[PASS] testOnlyManagerCorrectPoolExactInputAndHookAddress() (gas: 112604)
+[PASS] testSingleDumpIncludesItselfAndFeeDecaysWithoutGriefReset() (gas: 16470509)
+[PASS] testTwapAveragesEthPriceAcrossUnequalPrices() (gas: 2434526)
+[PASS] testTwapWarmupAndFlashManipulationResistance() (gas: 1955052)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 224.65ms (215.96ms CPU time)
+
+Ran 3 tests for test/V4Integration.t.sol:V4IntegrationTest
+[PASS] testRealV4BuyAndSingleSwapSellTaxConserveSettlement() (gas: 2244100)
+[PASS] testRealV4ManipulatedSpotCannotInstantlySetBuybackQuote() (gas: 1917469)
+[PASS] testRealV4SystemBuyUsesTwapAndOnlySystemFunds() (gas: 2290035)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 69.37ms (3.62ms CPU time)
+
+Ran 8 tests for test/Rooms.t.sol:RoomsTest
+[PASS] testAllSixMineAlone() (gas: 2996847)
+[PASS] testDirectUntrackedDepositRejected() (gas: 126864)
+[PASS] testFullCommonSetAndPairs() (gas: 2995045)
+[PASS] testFuzzSetCap(uint8) (runs: 256, μ: 3026413, ~: 3044287)
+Logs:
+  Bound result 3
+
+[PASS] testPartialRarityBonusesAndNoCrossRoomSet() (gas: 2825834)
+[PASS] testRareEpicLegendarySetCap() (gas: 8169526)
+[PASS] testRoomKeyCannotLeaveOccupiedRoomAndCanReturn() (gas: 1253003)
+[PASS] testRoomSlotTypeOwnershipAndNoDoublePlacement() (gas: 2193391)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 2.43s (2.45s CPU time)
+
+Ran 13 tests for test/Rewards.t.sol:RewardsTest
+[PASS] testClaimsWithdrawalsAndItemExitDuringPause() (gas: 3749050)
+[PASS] testFIFOConsumesOldBeforeFresh() (gas: 10732823)
+[PASS] testFuzzConservation(uint96,uint32) (runs: 256, μ: 14977544, ~: 11865194)
+Logs:
+  Bound result 99999999000000000000016118
+  Bound result 2589750
+
+[PASS] testInspectionWindowWinnerPayoutAndNoDoublePay() (gas: 13595089)
+[PASS] testLongIdleCatchupIsPermissionlessAndBounded() (gas: 95456713)
+[PASS] testMiningClaimTaxAndConservation() (gas: 3447214)
+[PASS] testNoFreeUpgradeBeforeRewardsExist() (gas: 742564)
+[PASS] testOldRewardsKeepVintageWithoutDailyCalls() (gas: 9949561)
+[PASS] testReferralOnceNotSelfAndNoCyclesOrRetroactiveReferral() (gas: 4267506)
+[PASS] testRepairUpgradeAndTokenPackSpend() (gas: 7823990)
+[PASS] testReservedUnclaimedCannotBeEmittedAgain() (gas: 5248486)
+[PASS] testSpendingBonusBurnAndNoWithdrawalTax() (gas: 4547211)
+[PASS] testZeroHashDoesNotEmitAndDonationIsPermissionless() (gas: 1799756)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 2.43s (2.74s CPU time)
+
+Ran 1 test for test/Invariants.t.sol:InvariantsTest
+[PASS]
+InvariantsTest invariants:
+[PASS] invariantHashAndCustodyConserved
+[PASS] invariantTokensConservedAndPendingFullyBacked
+ InvariantsTest invariants (runs: 128, calls: 8192, reverts: 0)
+
+╭----------------+-----------------+-------+---------+----------╮
+| Contract       | Selector        | Calls | Reverts | Discards |
++===============================================================+
+| EconomyHandler | advance         | 1674  | 0       | 0        |
+|----------------+-----------------+-------+---------+----------|
+| EconomyHandler | claim           | 1615  | 0       | 0        |
+|----------------+-----------------+-------+---------+----------|
+| EconomyHandler | donate          | 1621  | 0       | 0        |
+|----------------+-----------------+-------+---------+----------|
+| EconomyHandler | placeOrWithdraw | 1614  | 0       | 0        |
+|----------------+-----------------+-------+---------+----------|
+| EconomyHandler | prepay          | 1668  | 0       | 0        |
+╰----------------+-----------------+-------+---------+----------╯
+
+Logs:
+  Bound result 768
+  Bound result 65
+  Bound result 17999
+  Bound result 260
+  Bound result 69
+  Bound result 6500
+  Bound result 5398
+  Bound result 141154
+  Bound result 1771
+  Bound result 14116
+  Bound result 98898
+  Bound result 10938
+  Bound result 7283
+  Bound result 112892
+  Bound result 1247135911767751490923041
+  Bound result 1
+  Bound result 4
+  Bound result 13983
+  Bound result 23293
+  Bound result 223
+  Bound result 7614
+  Bound result 9462
+  Bound result 20
+  Bound result 2482483
+  Bound result 9000
+  Bound result 14303
+  Bound result 172800
+  Bound result 56576
+  Bound result 4852
+  Bound result 3753
+  Bound result 5565
+  Bound result 6
+  Bound result 2881899881730856055861764
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 20.47s (20.46s CPU time)
+
+Ran 13 test suites in 20.55s (26.09s CPU time): 68 tests passed, 0 failed, 1 skipped (69 total tests)

@@ -1,0 +1,14 @@
+{
+  "launchNumber": 1271,
+  "index": 0,
+  "initCodeBytes": 20235,
+  "factory": "0x9c9d2fcb75c2c132c0ac0c42df3819a42347265e",
+  "prediction": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "0x0000000000000000000000002abccbfd0054e0617118658edca690090ef17aa3"
+  },
+  "sourceTransaction": "0xcc510b0b420b4968c06a85fb079da76fb416dfeaf51a68a6679bacdac4bdfaeb",
+  "recordedDeployedAddress": "0x2abccbfd0054e0617118658edca690090ef17aa3",
+  "matchesRecordedDeployment": true
+}

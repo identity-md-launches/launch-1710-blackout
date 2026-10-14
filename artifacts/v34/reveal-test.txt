@@ -1,0 +1,1 @@
+Reveal: captured receipt and expired/rearmed receipt complete from one invocation.

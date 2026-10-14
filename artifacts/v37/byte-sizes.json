@@ -1,0 +1,131 @@
+{
+  "compiler": "0.8.26",
+  "contracts": [
+    {
+      "contract": "SwarmDesk",
+      "runtimeBytes": 17157,
+      "creationBytes": 20002,
+      "constructorArguments": 14,
+      "initcodeWithArgumentsBytes": 20450
+    },
+    {
+      "contract": "Params",
+      "runtimeBytes": 1815,
+      "creationBytes": 2627,
+      "constructorArguments": 3,
+      "initcodeWithArgumentsBytes": 2723
+    },
+    {
+      "contract": "GameRegistry",
+      "runtimeBytes": 2501,
+      "creationBytes": 2994,
+      "constructorArguments": 8,
+      "initcodeWithArgumentsBytes": 3250
+    },
+    {
+      "contract": "RewardPool",
+      "runtimeBytes": 3562,
+      "creationBytes": 3722,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 3754
+    },
+    {
+      "contract": "FarmRewards",
+      "runtimeBytes": 19152,
+      "creationBytes": 19312,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 19344
+    },
+    {
+      "contract": "FarmCore",
+      "runtimeBytes": 24330,
+      "creationBytes": 24510,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 24542
+    },
+    {
+      "contract": "FarmItems",
+      "runtimeBytes": 14397,
+      "creationBytes": 14978,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 15010
+    },
+    {
+      "contract": "PackSale",
+      "runtimeBytes": 12974,
+      "creationBytes": 13138,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 13170
+    },
+    {
+      "contract": "StarterClaim",
+      "runtimeBytes": 4970,
+      "creationBytes": 5130,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 5162
+    },
+    {
+      "contract": "FeeRouter",
+      "runtimeBytes": 10713,
+      "creationBytes": 10873,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 10905
+    },
+    {
+      "contract": "GridOperator",
+      "runtimeBytes": 7937,
+      "creationBytes": 8097,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 8129
+    },
+    {
+      "contract": "Season",
+      "runtimeBytes": 12127,
+      "creationBytes": 12287,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 12319
+    },
+    {
+      "contract": "FarmEngine",
+      "runtimeBytes": 13594,
+      "creationBytes": 13750,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 13782
+    },
+    {
+      "contract": "Economy",
+      "runtimeBytes": 9746,
+      "creationBytes": 9906,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 9938
+    },
+    {
+      "contract": "Enhancement",
+      "runtimeBytes": 5961,
+      "creationBytes": 6138,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 6170
+    },
+    {
+      "contract": "Civic",
+      "runtimeBytes": 11596,
+      "creationBytes": 11764,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 11796
+    },
+    {
+      "contract": "Billboards",
+      "runtimeBytes": 5156,
+      "creationBytes": 5316,
+      "constructorArguments": 1,
+      "initcodeWithArgumentsBytes": 5348
+    },
+    {
+      "contract": "V4Market",
+      "runtimeBytes": 19188,
+      "creationBytes": 20141,
+      "constructorArguments": 8,
+      "initcodeWithArgumentsBytes": 20397
+    }
+  ]
+}

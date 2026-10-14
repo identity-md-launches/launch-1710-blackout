@@ -1,0 +1,21 @@
+{
+  "started_utc": "2026-10-10T21:43:30.185885+00:00",
+  "finished_utc": "2026-10-10T21:46:57.114796+00:00",
+  "command": [
+    "test",
+    "--offline",
+    "--threads",
+    "4",
+    "--fuzz-seed",
+    "0x0000000000000000000000000000000000000000000000000000000001352892",
+    "-vv"
+  ],
+  "environment_keys": [
+    "PATH"
+  ],
+  "fresh_checkout_without_inputs_or_artifacts": true,
+  "exit_code": 0,
+  "summary": [
+    "Ran 13 test suites in 19.90s (24.36s CPU time): 68 tests passed, 0 failed, 1 skipped (69 total tests)"
+  ]
+}

@@ -1,0 +1,342 @@
+[
+  {
+    "scenario": "steady",
+    "path": "custom",
+    "holders": 900,
+    "bootstrap_eth": 0,
+    "holder_swarm_sale_fraction": 0.35,
+    "cohorts": [
+      {
+        "week": 1,
+        "farms": 770,
+        "realized_fraction": 0.6181818181818182,
+        "realized_median": 16.25,
+        "estimated_median": 17.75,
+        "unpaid_or_quit": 294
+      },
+      {
+        "week": 2,
+        "farms": 560,
+        "realized_fraction": 0.12321428571428572,
+        "realized_median": 19.0,
+        "estimated_median": 50.27037159437515,
+        "unpaid_or_quit": 491
+      },
+      {
+        "week": 3,
+        "farms": 530,
+        "realized_fraction": 0.026415094339622643,
+        "realized_median": 16.25,
+        "estimated_median": 52.80440276546299,
+        "unpaid_or_quit": 516
+      },
+      {
+        "week": 4,
+        "farms": 467,
+        "realized_fraction": 0.0021413276231263384,
+        "realized_median": 13.5,
+        "estimated_median": 55.51800347907782,
+        "unpaid_or_quit": 466
+      },
+      {
+        "week": 5,
+        "farms": 437,
+        "realized_fraction": 0.0,
+        "realized_median": null,
+        "estimated_median": 74.49835611697735,
+        "unpaid_or_quit": 437
+      }
+    ],
+    "stall_day": null,
+    "team_eth": 13.499216350116,
+    "heartbeat_eth": 0.9994684000000135,
+    "bounties_eth": 0.1400000000000001,
+    "network_eth": 0.544902636968898,
+    "pool_tokens": 472598812.92988575,
+    "pack_eth": 82.27241836746838,
+    "final_price": 7.0550487060253e-08,
+    "final_emission": 0.06,
+    "final_tariff": 0.1,
+    "max_weekly_event_loss": 0.03450367496687533,
+    "weekly_event_losses": [
+      0.00781509099133185,
+      0.009072239371703221,
+      0.023362555382413577,
+      0.03249090790943743,
+      0.03450367496687533
+    ],
+    "token_conservation_max_error": 1.5974044799804688e-05
+  },
+  {
+    "scenario": "steady",
+    "path": "custom",
+    "holders": 900,
+    "bootstrap_eth": 5,
+    "holder_swarm_sale_fraction": 0.35,
+    "cohorts": [
+      {
+        "week": 1,
+        "farms": 770,
+        "realized_fraction": 0.7259740259740259,
+        "realized_median": 14.5,
+        "estimated_median": 15.25,
+        "unpaid_or_quit": 211
+      },
+      {
+        "week": 2,
+        "farms": 560,
+        "realized_fraction": 0.11964285714285715,
+        "realized_median": 18.25,
+        "estimated_median": 52.53173291524735,
+        "unpaid_or_quit": 493
+      },
+      {
+        "week": 3,
+        "farms": 547,
+        "realized_fraction": 0.031078610603290677,
+        "realized_median": 16.0,
+        "estimated_median": 54.997051983253215,
+        "unpaid_or_quit": 530
+      },
+      {
+        "week": 4,
+        "farms": 477,
+        "realized_fraction": 0.0,
+        "realized_median": null,
+        "estimated_median": 55.185724755291545,
+        "unpaid_or_quit": 477
+      },
+      {
+        "week": 5,
+        "farms": 442,
+        "realized_fraction": 0.0,
+        "realized_median": null,
+        "estimated_median": 72.51914117314698,
+        "unpaid_or_quit": 442
+      }
+    ],
+    "stall_day": null,
+    "team_eth": 13.687201359982058,
+    "heartbeat_eth": 0.9994672000000134,
+    "bounties_eth": 0.1400000000000001,
+    "network_eth": 0.5732334496351038,
+    "pool_tokens": 470178068.5890845,
+    "pack_eth": 82.54727555113698,
+    "final_price": 7.077021154404958e-08,
+    "final_emission": 0.06,
+    "final_tariff": 0.1,
+    "max_weekly_event_loss": 0.02205135137690207,
+    "weekly_event_losses": [
+      0.00746917510428249,
+      0.012147204660026112,
+      0.005384852778244799,
+      0.019413377611633913,
+      0.02205135137690207
+    ],
+    "token_conservation_max_error": 6.663799285888672e-05
+  },
+  {
+    "scenario": "steady",
+    "path": "custom",
+    "holders": 900,
+    "bootstrap_eth": 10,
+    "holder_swarm_sale_fraction": 0.35,
+    "cohorts": [
+      {
+        "week": 1,
+        "farms": 770,
+        "realized_fraction": 0.7792207792207793,
+        "realized_median": 13.75,
+        "estimated_median": 14.25,
+        "unpaid_or_quit": 170
+      },
+      {
+        "week": 2,
+        "farms": 560,
+        "realized_fraction": 0.2892857142857143,
+        "realized_median": 16.625,
+        "estimated_median": 24.0,
+        "unpaid_or_quit": 398
+      },
+      {
+        "week": 3,
+        "farms": 557,
+        "realized_fraction": 0.00718132854578097,
+        "realized_median": 15.0,
+        "estimated_median": 77.88426680541649,
+        "unpaid_or_quit": 553
+      },
+      {
+        "week": 4,
+        "farms": 485,
+        "realized_fraction": 0.0,
+        "realized_median": null,
+        "estimated_median": 60.165184304120096,
+        "unpaid_or_quit": 485
+      },
+      {
+        "week": 5,
+        "farms": 443,
+        "realized_fraction": 0.0,
+        "realized_median": null,
+        "estimated_median": 76.22878318972118,
+        "unpaid_or_quit": 443
+      }
+    ],
+    "stall_day": null,
+    "team_eth": 13.782334015308964,
+    "heartbeat_eth": 0.9994740000000136,
+    "bounties_eth": 0.1400000000000001,
+    "network_eth": 0.5972396821584368,
+    "pool_tokens": 475861760.0608244,
+    "pack_eth": 82.28918926776511,
+    "final_price": 7.194053415231754e-08,
+    "final_emission": 0.06,
+    "final_tariff": 0.1,
+    "max_weekly_event_loss": 0.045858381622504635,
+    "weekly_event_losses": [
+      0.007487665945833703,
+      0.018059648790392287,
+      0.02046425093530838,
+      0.032358424081187415,
+      0.045858381622504635
+    ],
+    "token_conservation_max_error": 2.6106834411621094e-05
+  },
+  {
+    "scenario": "steady",
+    "path": "custom",
+    "holders": 900,
+    "bootstrap_eth": 20,
+    "holder_swarm_sale_fraction": 0.35,
+    "cohorts": [
+      {
+        "week": 1,
+        "farms": 770,
+        "realized_fraction": 0.8389610389610389,
+        "realized_median": 11.75,
+        "estimated_median": 12.0,
+        "unpaid_or_quit": 124
+      },
+      {
+        "week": 2,
+        "farms": 560,
+        "realized_fraction": 0.5571428571428572,
+        "realized_median": 15.5,
+        "estimated_median": 17.75,
+        "unpaid_or_quit": 248
+      },
+      {
+        "week": 3,
+        "farms": 560,
+        "realized_fraction": 0.0,
+        "realized_median": null,
+        "estimated_median": 155.62175290069038,
+        "unpaid_or_quit": 560
+      },
+      {
+        "week": 4,
+        "farms": 534,
+        "realized_fraction": 0.0,
+        "realized_median": null,
+        "estimated_median": 68.3565249002003,
+        "unpaid_or_quit": 534
+      },
+      {
+        "week": 5,
+        "farms": 464,
+        "realized_fraction": 0.0,
+        "realized_median": null,
+        "estimated_median": 70.08681989908854,
+        "unpaid_or_quit": 464
+      }
+    ],
+    "stall_day": null,
+    "team_eth": 14.083274331615387,
+    "heartbeat_eth": 0.9994774000000137,
+    "bounties_eth": 0.1400000000000001,
+    "network_eth": 0.6500830987889444,
+    "pool_tokens": 478734714.20042753,
+    "pack_eth": 82.40913722570681,
+    "final_price": 7.398411106495591e-08,
+    "final_emission": 0.06,
+    "final_tariff": 0.1,
+    "max_weekly_event_loss": 0.04048192326063062,
+    "weekly_event_losses": [
+      0.007999737007668765,
+      0.019895767683265012,
+      0.030320787813960443,
+      0.0401962342666351,
+      0.04048192326063062
+    ],
+    "token_conservation_max_error": 0.00013017654418945312
+  },
+  {
+    "scenario": "steady",
+    "path": "custom",
+    "holders": 900,
+    "bootstrap_eth": 40,
+    "holder_swarm_sale_fraction": 0.35,
+    "cohorts": [
+      {
+        "week": 1,
+        "farms": 769,
+        "realized_fraction": 0.893368010403121,
+        "realized_median": 8.0,
+        "estimated_median": 8.25,
+        "unpaid_or_quit": 82
+      },
+      {
+        "week": 2,
+        "farms": 560,
+        "realized_fraction": 0.6303571428571428,
+        "realized_median": 15.5,
+        "estimated_median": 16.75,
+        "unpaid_or_quit": 207
+      },
+      {
+        "week": 3,
+        "farms": 560,
+        "realized_fraction": 0.039285714285714285,
+        "realized_median": 16.0,
+        "estimated_median": 90.16420746454834,
+        "unpaid_or_quit": 538
+      },
+      {
+        "week": 4,
+        "farms": 536,
+        "realized_fraction": 0.0,
+        "realized_median": null,
+        "estimated_median": 103.0904773262848,
+        "unpaid_or_quit": 536
+      },
+      {
+        "week": 5,
+        "farms": 469,
+        "realized_fraction": 0.0,
+        "realized_median": null,
+        "estimated_median": 70.52145946099489,
+        "unpaid_or_quit": 469
+      }
+    ],
+    "stall_day": null,
+    "team_eth": 14.538716244360485,
+    "heartbeat_eth": 0.9994818000000139,
+    "bounties_eth": 0.1400000000000001,
+    "network_eth": 0.7503387728609894,
+    "pool_tokens": 479327305.48252904,
+    "pack_eth": 81.57683841013787,
+    "final_price": 7.477599676073616e-08,
+    "final_emission": 0.06,
+    "final_tariff": 0.1,
+    "max_weekly_event_loss": 0.038718990554253055,
+    "weekly_event_losses": [
+      0.005961108596000301,
+      0.01973595685278631,
+      0.015087648605922039,
+      0.028785105489061397,
+      0.038718990554253055
+    ],
+    "token_conservation_max_error": 6.508827209472656e-05
+  }
+]

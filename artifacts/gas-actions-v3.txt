@@ -1,0 +1,15 @@
+Measured local EVM gasleft deltas from the passing Foundry gas-report run. Warmth reflects the action test sequence; these are not live-chain gas prices.
+
+buy ETH pack: 507,970
+open one pack: 309,797
+equip: 201,533
+repair wallet: 248,172
+overclock: 106,453
+expand: 120,067
+token pack internal: 235,348
+withdraw: 113,740
+unequip: 102,797
+measure eight full 24-item farms: 14,477,149
+credit eight full farms: 3,047,132
+advance empty roster: 819,200
+advance 1000 farms: 821,766

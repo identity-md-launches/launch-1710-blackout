@@ -1,0 +1,1 @@
+All fourteen module creation-code pins match both toolchains; every runtime fits EIP-170.

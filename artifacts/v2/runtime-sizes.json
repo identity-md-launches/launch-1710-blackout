@@ -1,0 +1,21 @@
+{
+  "compiler": "0.8.26",
+  "optimizer_runs": 200,
+  "via_ir": true,
+  "runtime_limit": 24576,
+  "runtime_bytes": {
+    "FarmRewards": 21782,
+    "FeeRouter": 4018,
+    "PackSale": 8171,
+    "BurnVault": 57,
+    "RewardPool": 2052,
+    "MarketFactory": 11669,
+    "Generator": 1943,
+    "FarmItems": 6928,
+    "GridOperator": 7212,
+    "Params": 1758,
+    "FarmCore": 15533,
+    "V4Market": 9236,
+    "StarterClaim": 3322
+  }
+}

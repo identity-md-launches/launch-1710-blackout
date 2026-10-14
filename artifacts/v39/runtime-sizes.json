@@ -1,0 +1,197 @@
+{
+ "limit": 24576,
+ "launchToolchain": "solc 0.8.26, optimizer 200, cancun, viaIR false, bytecode_hash none (FOUNDRY_VIA_IR=false FOUNDRY_BYTECODE_HASH=none)",
+ "repoToolchain": "foundry.toml: via_ir true, default ipfs metadata",
+ "sizes": {
+  "RewardPool": {
+   "launch": {
+    "runtime": 4234,
+    "initcode": 4412
+   },
+   "repo": {
+    "runtime": 3562,
+    "initcode": 3722
+   }
+  },
+  "FarmRewards": {
+   "launch": {
+    "runtime": 16345,
+    "initcode": 16523
+   },
+   "repo": {
+    "runtime": 19012,
+    "initcode": 19172
+   }
+  },
+  "FarmCore": {
+   "launch": {
+    "runtime": 21987,
+    "initcode": 22184
+   },
+   "repo": {
+    "runtime": 24330,
+    "initcode": 24510
+   }
+  },
+  "FarmItems": {
+   "launch": {
+    "runtime": 13861,
+    "initcode": 14468
+   },
+   "repo": {
+    "runtime": 14397,
+    "initcode": 14978
+   }
+  },
+  "PackSale": {
+   "launch": {
+    "runtime": 12538,
+    "initcode": 12721
+   },
+   "repo": {
+    "runtime": 12974,
+    "initcode": 13138
+   }
+  },
+  "StarterClaim": {
+   "launch": {
+    "runtime": 5477,
+    "initcode": 5655
+   },
+   "repo": {
+    "runtime": 4970,
+    "initcode": 5130
+   }
+  },
+  "FeeRouter": {
+   "launch": {
+    "runtime": 11644,
+    "initcode": 11822
+   },
+   "repo": {
+    "runtime": 10664,
+    "initcode": 10824
+   }
+  },
+  "GridOperator": {
+   "launch": {
+    "runtime": 9364,
+    "initcode": 9542
+   },
+   "repo": {
+    "runtime": 7976,
+    "initcode": 8136
+   }
+  },
+  "Season": {
+   "launch": {
+    "runtime": 12389,
+    "initcode": 12567
+   },
+   "repo": {
+    "runtime": 12127,
+    "initcode": 12287
+   }
+  },
+  "FarmEngine": {
+   "launch": {
+    "runtime": 10783,
+    "initcode": 10957
+   },
+   "repo": {
+    "runtime": 12928,
+    "initcode": 13084
+   }
+  },
+  "Economy": {
+   "launch": {
+    "runtime": 10693,
+    "initcode": 10871
+   },
+   "repo": {
+    "runtime": 9746,
+    "initcode": 9906
+   }
+  },
+  "Enhancement": {
+   "launch": {
+    "runtime": 6858,
+    "initcode": 7054
+   },
+   "repo": {
+    "runtime": 5961,
+    "initcode": 6138
+   }
+  },
+  "Civic": {
+   "launch": {
+    "runtime": 13019,
+    "initcode": 13210
+   },
+   "repo": {
+    "runtime": 11596,
+    "initcode": 11764
+   }
+  },
+  "Billboards": {
+   "launch": {
+    "runtime": 6031,
+    "initcode": 6209
+   },
+   "repo": {
+    "runtime": 5156,
+    "initcode": 5316
+   }
+  },
+  "GameRegistry": {
+   "launch": {
+    "runtime": 3555,
+    "initcode": 4051
+   },
+   "repo": {
+    "runtime": 3347,
+    "initcode": 3840
+   }
+  },
+  "Params": {
+   "launch": {
+    "runtime": 3118,
+    "initcode": 4092
+   },
+   "repo": {
+    "runtime": 1815,
+    "initcode": 2627
+   }
+  },
+  "SwarmDesk": {
+   "launch": {
+    "runtime": 20797,
+    "initcode": 23338
+   },
+   "repo": {
+    "runtime": 19374,
+    "initcode": 21975
+   }
+  },
+  "V4Market": {
+   "launch": {
+    "runtime": 21913,
+    "initcode": 22950
+   },
+   "repo": {
+    "runtime": 19668,
+    "initcode": 20626
+   }
+  },
+  "EndowmentEscrow": {
+   "launch": {
+    "runtime": 5814,
+    "initcode": 6184
+   },
+   "repo": {
+    "runtime": 5036,
+    "initcode": 5384
+   }
+  }
+ }
+}

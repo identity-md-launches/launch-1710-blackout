@@ -1,0 +1,23 @@
+[Unit]
+Description=BLACKOUT v3.9 keeper (oracle relay, epochs, entropy, hook flush, system sells, reward/pot buys, seasons, fee claims)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=blackout
+Group=blackout
+WorkingDirectory=/opt/blackout/keeper
+# RPC_URL, KEEPER_KEY, REGISTRY live only in this file (mode 0600, owned by blackout). Never in the repo.
+ExecStart=/usr/bin/node /opt/blackout/keeper/keeper.mjs run --env /etc/blackout/keeper.env --interval 2
+Restart=always
+RestartSec=5
+StateDirectory=blackout
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/blackout
+
+[Install]
+WantedBy=multi-user.target

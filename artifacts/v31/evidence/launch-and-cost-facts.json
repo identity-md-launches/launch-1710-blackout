@@ -1,0 +1,130 @@
+{
+  "checkedUTC": "2026-10-11",
+  "workerCommit": "0bf1c6333e786bc240dcfaaaa730f33d153271b5",
+  "scheduleQuotes": [
+    {
+      "action": "schedule.create",
+      "version": "schedule-1",
+      "payment": {
+        "network": "eip155:1",
+        "asset": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+        "amount": "500000000000000000",
+        "payTo": "0x4e0fa57bde726079356537e2f34d671e9f41adbc",
+        "decimals": 18
+      },
+      "quoteTtlSeconds": 600
+    },
+    {
+      "action": "schedule.topup",
+      "version": "topup-1",
+      "payment": {
+        "network": "eip155:1",
+        "asset": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+        "amount": "500000000000000000",
+        "payTo": "0x4e0fa57bde726079356537e2f34d671e9f41adbc",
+        "decimals": 18
+      },
+      "quoteTtlSeconds": 600
+    }
+  ],
+  "referenceApplicationLaunch": {
+    "url": "https://api.imd.fun/launches/848ec41a-4641-42bc-b2e8-0c1426b49d8e",
+    "number": 1271,
+    "chainId": 4663,
+    "transaction": "0xcc510b0b420b4968c06a85fb079da76fb416dfeaf51a68a6679bacdac4bdfaeb",
+    "factory": "0x9c9d2fcb75c2c132c0ac0c42df3819a42347265e",
+    "method": "0x99674075",
+    "predictionSignature": "predictContract(uint64,uint256,bytes)",
+    "deploymentOpcode": "CREATE2"
+  },
+  "gasObservation": {
+    "rpc": "https://rpc.mainnet.chain.robinhood.com",
+    "chainId": 4663,
+    "gasPriceWei": 20000000,
+    "checkedUTC": "2026-10-11 ~07:17"
+  },
+  "imdPriceReference": {
+    "chainId": "ethereum",
+    "dexId": "uniswap",
+    "url": "https://dexscreener.com/ethereum/0xb07d640fd9e2eb9dc81b953c8e4fd006bdfeaf276010fb5418eb763ca15abfb3",
+    "pairAddress": "0xb07d640fd9e2eb9dc81b953c8e4fd006bdfeaf276010fb5418eb763ca15abfb3",
+    "labels": [
+      "v4"
+    ],
+    "baseToken": {
+      "address": "0xD34a99Bc0f67aE1bbd63C660e6d0b0dd03E263B7",
+      "name": "Identity.md",
+      "symbol": "IMD"
+    },
+    "quoteToken": {
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Ether",
+      "symbol": "ETH"
+    },
+    "priceNative": "0.003451",
+    "priceUsd": "8.63",
+    "txns": {
+      "m5": {
+        "buys": 5,
+        "sells": 11
+      },
+      "h1": {
+        "buys": 170,
+        "sells": 121
+      },
+      "h6": {
+        "buys": 335,
+        "sells": 229
+      },
+      "h24": {
+        "buys": 542,
+        "sells": 456
+      }
+    },
+    "volume": {
+      "h24": 1029699.13,
+      "h6": 488032.87,
+      "h1": 271988.69,
+      "m5": 22500.12
+    },
+    "priceChange": {
+      "m5": -0.35,
+      "h1": 6.78,
+      "h6": 14.28,
+      "h24": 11.87
+    },
+    "liquidity": {
+      "usd": 2609702.23,
+      "base": 170723,
+      "quote": 453.4084
+    },
+    "fdv": 35852178,
+    "marketCap": 35856169,
+    "pairCreatedAt": 1785353567000,
+    "info": {
+      "imageUrl": "https://cdn.dexscreener.com/cms/images/e2cGlI71ubIiEUpw?width=800&height=800&quality=95&format=auto",
+      "header": "https://cdn.dexscreener.com/cms/images/BZQtaA4H5bjaEDsu?width=1500&height=500&quality=95&format=auto",
+      "openGraph": "https://cdn.dexscreener.com/token-images/og/ethereum/0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7?timestamp=1791703200000",
+      "websites": [
+        {
+          "url": "https://imd.fun",
+          "label": "Website"
+        },
+        {
+          "url": "https://etherscan.io/address/0x200E710aCAA6A93bbc77146026328C40F1d60fB1",
+          "label": "announcements"
+        }
+      ],
+      "socials": [
+        {
+          "url": "https://x.com/surfcoderepeat/status/2082143148214530256",
+          "type": "twitter"
+        }
+      ]
+    }
+  },
+  "modelImdEth": 0.003451,
+  "modelRuns": 140,
+  "modelRunsCostImd": 70,
+  "modelRunsEth": 0.24157
+}

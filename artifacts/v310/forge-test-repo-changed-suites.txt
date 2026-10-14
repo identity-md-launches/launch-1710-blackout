@@ -1,0 +1,115 @@
+Compiling 5 files with Solc 0.8.26
+Solc 0.8.26 finished in 115.97s
+Compiler run successful with warnings:
+Warning (2519): This declaration shadows an existing declaration.
+  --> src/lib/EconomyMath.sol:17:48:
+   |
+17 |         returns (uint256 chance, uint256 burn, uint256 bonus, uint256 daysWad)
+   |                                                ^^^^^^^^^^^^^
+Note: The shadowed declaration is here:
+  --> src/lib/EconomyMath.sol:44:5:
+   |
+44 |     function bonus(uint256 level) internal pure returns (uint256 b) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (8760): This declaration has the same name as another declaration.
+   --> src/V4Market.sol:300:22:
+    |
+300 |     function _record(bool sell, uint256 amount) private {
+    |                      ^^^^^^^^^
+Note: The other declaration is here:
+   --> src/V4Market.sol:490:5:
+    |
+490 |     function sell(uint256 amount, uint256 minOut, address recipient) external nonReentrant returns (uint256 received) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (8760): This declaration has the same name as another declaration.
+  --> test/mocks/MockSwarmIntake.sol:26:9:
+   |
+26 |         bytes4 failure,
+   |         ^^^^^^^^^^^^^^
+Note: The other declaration is here:
+  --> test/mocks/MockSwarmIntake.sol:44:5:
+   |
+44 |     function failure(bytes32 id, uint8 status, bytes32 reason) external returns (bool) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (8760): This declaration has the same name as another declaration.
+    --> test/scratch/flat/LaunchHook.sol:1645:22:
+     |
+1645 |     function _record(bool sell, uint256 amount) private {
+     |                      ^^^^^^^^^
+Note: The other declaration is here:
+    --> test/scratch/flat/LaunchHook.sol:1835:5:
+     |
+1835 |     function sell(uint256 amount, uint256 minOut, address recipient) external nonReentrant returns (uint256 received) {
+     |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2072): Unused local variable.
+   --> test/LazyAccounting.t.sol:186:13:
+    |
+186 |             uint256 quote = d.packs.quote(112);
+    |             ^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/LazyAccounting.t.sol:421:9:
+    |
+421 |         uint256 quote = d.packs.quote(112);
+    |         ^^^^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/FarmRewards.sol:146:5:
+    |
+146 |     function ready() public view returns (bool) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 6 tests for test/EndowmentEscrowV38.t.sol:EndowmentEscrowV38Test
+[PASS] testConstructorRejectsMissingInputs() (gas: 6423)
+[PASS] testForwardRejectsBadProofs() (gas: 2577963)
+[PASS] testForwardRequiresBalance() (gas: 734078)
+[PASS] testForwardSendsWholeBalanceOnceToAuthenticatedPoolAndFundsEndowment() (gas: 1666969)
+[PASS] testForwardWithRealEndowmentActivatesDrip() (gas: 11795733)
+[PASS] testTwinWithForeignTokenCannotDrainEscrow() (gas: 11740883)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 67.71ms (52.47ms CPU time)
+
+Ran 9 tests for test/LazyAccounting.t.sol:LazyAccountingTest
+[PASS] testAuditChargesTenPercentEvenAtHalfSeverityAndThresholdIsFrozen() (gas: 6159668)
+[PASS] testClaimCatchesUpWhilePacksPausedAndDoesNotEraseRemainingHistory() (gas: 25664985)
+[PASS] testExhaustedFarmCannotCollectRedistributionByRemainingIdle() (gas: 15115836)
+[PASS] testFuzzLazyEqualsIndependentEagerForRandomFarmsAndAllEvents(uint256) (runs: 256, μ: 45591658, ~: 45593148)
+[PASS] testGlobalAccumulatorAndWeightsAreSnapshottedBeforeMutations() (gas: 9283928)
+[PASS] testLateSeasonSettlementPaysMiningWithoutChangingFrozenWinners() (gas: 59518878)
+[PASS] testOneWeiMiningGreenCannotLockSettlementThroughEnvelopeRounding() (gas: 11085586)
+[PASS] testSparseMatureVintageConsumedBeforeRecentSlotAfterWrap() (gas: 43761293)
+[PASS] testStaleActionsRequireChunksAndNeverBlockGlobalAdvance() (gas: 40555087)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 100.96s (100.94s CPU time)
+
+Ran 19 tests for test/SwarmDeskV37.t.sol:SwarmDeskV37Test
+[PASS] testBackupFailureUnknownFailureDeadlineAndPriceCap() (gas: 747581)
+[PASS] testBackupPullsExactPriceRecordsRequestAndRestrictsBodyAndCadence() (gas: 1182040)
+[PASS] testEmptyChainConstructorAndAuthenticatedBindingRejectSpoofs() (gas: 11972603)
+[PASS] testEventClampingAndFallbackWithoutAnswer() (gas: 1037766)
+[PASS] testExpiredOldSlotOldEpochAndUnexecutedAnswersNeverAct() (gas: 824190)
+[PASS] testFlatConstructorRejectsUnusedPackedBits() (gas: 6272605)
+[PASS] testForgedTamperedWrongSignerWrongDomainAndCallerRejected() (gas: 340323)
+[PASS] testFutureIssueWrongTypeMalformedLengthAndPriceNeverConsume() (gas: 306693)
+[PASS] testFuzzEveryParamHardBoundsAndTenPercentStep(uint8,uint248) (runs: 256, μ: 454632, ~: 456796)
+[PASS] testNextSlotAcceptsSameQuestionAndChangedExecutionBytesReject() (gas: 1123422)
+[PASS] testNoAdminPathsAndEntireGraphUsesDesk() (gas: 388647)
+[PASS] testNoopRegulatorAcceptedAndParamsCooldownPreserved() (gas: 435462)
+[PASS] testRegulatorClampsParamsAnnouncesPhasesAndThirtyDayCaps() (gas: 1108366)
+[PASS] testReplayDifferentSourceAndSecondAnswerSameSlotIgnored() (gas: 1041173)
+[PASS] testRobinhoodNativeClockCallbackWithin200k() (gas: 343487)
+[PASS] testScheduleDeliveryStoresUnder200kThenExecutesTwoPlans() (gas: 964655)
+[PASS] testSubmitRelayAcceptsAttestedAnswerFromAnyoneOnce() (gas: 1063578)
+[PASS] testSubmitRelayRejectsForgedWrongQuestionStaleAndMalformed() (gas: 1791536)
+[PASS] testWrongQuestionUnknownRequestWeakPanelAndWindowRejected() (gas: 362819)
+Suite result: ok. 19 passed; 0 failed; 0 skipped; finished in 507.28ms (493.03ms CPU time)
+
+Ran 2 tests for test/V310.t.sol:ToolchainPinsV310Test
+[PASS] testEveryModuleOfThisBuildMatchesOneToolchainPin() (gas: 173900)
+[PASS] testPinsAreDistinctPerToolchainAndRejectUnknownCode() (gas: 25524)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 2.17ms (745.22µs CPU time)
+
+Ran 4 test suites in 101.54s (101.54s CPU time): 36 tests passed, 0 failed, 0 skipped (36 total tests)

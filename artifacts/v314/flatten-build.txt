@@ -1,0 +1,871 @@
+Compiling 1 files with Solc 0.8.26
+Solc 0.8.26 finished in 1.09s
+Compiler run successful with warnings:
+Warning (8760): This declaration has the same name as another declaration.
+    --> src/V4Market.sol:1620:22:
+     |
+1620 |     function _record(bool sell, uint256 amount) private {
+     |                      ^^^^^^^^^
+Note: The other declaration is here:
+    --> src/V4Market.sol:1811:5:
+     |
+1811 |     function sell(uint256 amount, uint256 minOut, address recipient) external nonReentrant returns (uint256 received) {
+     |     ^ (Relevant source part starts here and spans across multiple lines).
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:413:32
+    │
+413 │             if (c < a) return (false, 0);
+    │                                ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:414:21
+    │
+414 │             return (true, c);
+    │                     ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:423:32
+    │
+423 │             if (b > a) return (false, 0);
+    │                                ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:424:21
+    │
+424 │             return (true, a - b);
+    │                     ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:436:33
+    │
+436 │             if (a == 0) return (true, 0);
+    │                                 ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:438:37
+    │
+438 │             if (c / a != b) return (false, 0);
+    │                                     ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:439:21
+    │
+439 │             return (true, c);
+    │                     ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:448:33
+    │
+448 │             if (b == 0) return (false, 0);
+    │                                 ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:449:21
+    │
+449 │             return (true, a / b);
+    │                     ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:458:33
+    │
+458 │             if (b == 0) return (false, 0);
+    │                                 ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:459:21
+    │
+459 │             return (true, a % b);
+    │                     ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[controlled-delegatecall]: `delegatecall` target is not provably trusted
+    ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:107:51
+    │
+107 │         (bool success, bytes memory returndata) = target.delegatecall(data);
+    │                                                   ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/controlled-delegatecall
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1123:13
+     │
+1123 │         if (block.timestamp < lastChanged[k] + 1 days) revert TooEarly();
+     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[missing-events-arithmetic]: `heldBase` is changed without an event but is used in arithmetic
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1781:9
+     │
+1781 │         heldBase += base;
+     │         ━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/missing-events-arithmetic
+
+warning[missing-events-arithmetic]: `heldSellTax` is changed without an event but is used in arithmetic
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1782:9
+     │
+1782 │         heldSellTax += excess;
+     │         ━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/missing-events-arithmetic
+
+warning[missing-events-arithmetic]: `heldBase` is changed without an event but is used in arithmetic
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1841:9
+     │
+1841 │         heldBase += base;
+     │         ━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/missing-events-arithmetic
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1522:24
+     │
+1522 │         if (base != 0) fees.depositBaseFee{value: base}();
+     │                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1523:26
+     │
+1523 │         if (excess != 0) fees.depositSellTax{value: excess}();
+     │                          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1524:29
+     │
+1524 │         if (launchTax != 0) fees.depositLaunchTax{value: launchTax}();
+     │                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1525:9
+     │
+1525 │         emit FeesFlushed(base, excess);
+     │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1526:29
+     │
+1526 │         if (launchTax != 0) emit LaunchTaxFlushed(launchTax);
+     │                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1581:13
+     │
+1581 │             emit PriceObserved(now_, price);
+     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1594:9
+     │
+1594 │         emit PriceObserved(now_, price);
+     │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[divide-before-multiply]: division before multiplication may lose precision
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1588:38
+     │
+1588 │             uint256 c = cumulative + (1e60 / lastPrice) * (minute * 60 - updatedAt);
+     │                                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/divide-before-multiply
+
+warning[divide-before-multiply]: division before multiplication may lose precision
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1591:23
+     │
+1591 │         cumulative += (1e60 / lastPrice) * (now_ - updatedAt);
+     │                       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/divide-before-multiply
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1586:13
+     │
+1586 │         if (last >= 32 && first < last - 31) first = last - 31;
+     │             ━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1586:27
+     │
+1586 │         if (last >= 32 && first < last - 31) first = last - 31;
+     │                           ━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1587:38
+     │
+1587 │         for (uint256 minute = first; minute <= last; ++minute) {
+     │                                      ━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1589:53
+     │
+1589 │             observations[minute % 32] = Observation(uint64(minute), c);
+     │                                                     ━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint64' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[divide-before-multiply]: division before multiplication may lose precision
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1600:50
+     │
+1600 │         if (ts >= updatedAt) return cumulative + (1e60 / lastPrice) * (ts - updatedAt);
+     │                                                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/divide-before-multiply
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1607:35
+     │
+1607 │         if (initializedAt == 0 || block.timestamp < initializedAt + 31 minutes) revert NotConfigured();
+     │                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1624:13
+     │
+1624 │         if (a.period != p) {
+     │             ━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1630:13
+     │
+1630 │         if (b.period != p) {
+     │             ━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1626:24
+     │
+1626 │             a.period = uint64(p);
+     │                        ━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint64' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1632:24
+     │
+1632 │             b.period = uint64(p);
+     │                        ━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint64' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1635:24
+     │
+1635 │             a.sells += uint192(amount);
+     │                        ━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint192' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1636:24
+     │
+1636 │             b.sells += uint192(amount);
+     │                        ━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint192' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1638:23
+     │
+1638 │             a.buys += uint192(amount);
+     │                       ━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint192' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1639:23
+     │
+1639 │             b.buys += uint192(amount);
+     │                       ━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint192' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[uninitialized-local]: local variable is read before being initialized
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1650:17
+     │
+1650 │                 b += shortVolumes[i].buys;
+     │                 ━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1649:17
+     │
+1649 │                 s += shortVolumes[i].sells;
+     │                 ━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1648:17
+     │
+1648 │             if (uint256(shortVolumes[i].period) + 12 > current) {
+     │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1658:17
+     │
+1658 │             if (uint256(longVolumes[i].period) + 24 > current) {
+     │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[uninitialized-local]: local variable is read before being initialized
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1714:13
+     │
+1714 │         if (average != 0 && price > average) dev = Math.min(1000, 10000 - Math.mulDiv(average, 10000, price));
+     │             ━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1713:13
+     │
+1713 │         if (block.timestamp >= initializedAt + 31 minutes) average = twap();
+     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1719:27
+     │
+1719 │         uint256 decayed = storedFeeWad > fall ? storedFeeWad - fall : PROJECT_BPS * 1 ether;
+     │                           ━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1740:13
+     │
+1740 │             emit LaunchTax(sender, ethIn, taxBps, fee);
+     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1733:25
+     │
+1733 │         uint256 ethIn = uint256(-p.amountSpecified);
+     │                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1736:19
+     │
+1736 │         if (fee > uint256(uint128(type(int128).max))) revert InvalidValue();
+     │                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1736:27
+     │
+1736 │         if (fee > uint256(uint128(type(int128).max))) revert InvalidValue();
+     │                           ━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1745:43
+     │
+1745 │         return (this.beforeSwap.selector, int256(fee << 128), 0);
+     │                                           ━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'int256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1774:9
+     │
+1774 │         emit SellFee(sender, output, bps, hour, day, dev);
+     │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1756:27
+     │
+1756 │         int128 ethDelta = int128(delta >> 128);
+     │                           ━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'int128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1759:28
+     │
+1759 │             _record(false, uint256(-int256(ethDelta)));
+     │                            ━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1763:26
+     │
+1763 │         uint256 output = uint256(uint128(ethDelta));
+     │                          ━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1763:34
+     │
+1763 │         uint256 output = uint256(uint128(ethDelta));
+     │                                  ━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1765:42
+     │
+1765 │         return (this.afterSwap.selector, int128(int256(_chargeSell(sender, output, price))));
+     │                                          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'int128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1765:49
+     │
+1765 │         return (this.afterSwap.selector, int128(int256(_chargeSell(sender, output, price))));
+     │                                                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'int256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[reentrancy-no-eth]: external call can be reentered before `_status` is updated
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1792:31
+     │
+1792 │         received = abi.decode(manager.unlock(abi.encode(msg.value, minOut, recipient)), (uint256));
+     │                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[divide-before-multiply]: division before multiplication may lose precision
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1799:24
+     │
+1799 │         return gross - gross * PROJECT_BPS / 10000;
+     │                        ━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/divide-before-multiply
+
+warning[reentrancy-no-eth]: external call can be reentered before `_status` is updated
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1819:31
+     │
+1819 │         received = abi.decode(manager.unlock(abi.encode(amount, minOut, recipient)), (uint256));
+     │                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1843:22
+     │
+1843 │         (bool ok,) = recipient.call{value: net}("");
+     │                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1827:39
+     │
+1827 │             key(), SwapParams(false, -int256(amount), 1461446703485210103287273052203988822378723970341), ""
+     │                                       ━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'int256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1830:25
+     │
+1830 │         int128 ethOut = int128(delta >> 128);
+     │                         ━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'int128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1831:26
+     │
+1831 │         int128 tokenIn = int128(delta);
+     │                          ━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'int128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1832:44
+     │
+1832 │         if (ethOut <= 0 || tokenIn >= 0 || uint256(-int256(tokenIn)) != amount) revert InsufficientBalance();
+     │                                            ━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1833:25
+     │
+1833 │         uint256 gross = uint256(uint128(ethOut));
+     │                         ━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1833:33
+     │
+1833 │         uint256 gross = uint256(uint128(ethOut));
+     │                                 ━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unused-return]: return value of an external call is not used
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1839:9
+     │
+1839 │         manager.settle();
+     │         ━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/unused-return
+
+warning[reentrancy-no-eth]: external call can be reentered before `updatedAt` is updated
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1826:24
+     │
+1826 │           int256 delta = manager.swap(
+     │ ┏━━━━━━━━━━━━━━━━━━━━━━━━┛
+1827 │ ┃             key(), SwapParams(false, -int256(amount), 1461446703485210103287273052203988822378723970341), ""
+1828 │ ┃         );
+     │ ┗━━━━━━━━━┛
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[reentrancy-no-eth]: external call can be reentered before `updatedAt` is updated
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1856:24
+     │
+1856 │         int256 delta = manager.swap(key(), SwapParams(true, -int256(input), 4295128740), "");
+     │                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1856:62
+     │
+1856 │         int256 delta = manager.swap(key(), SwapParams(true, -int256(input), 4295128740), "");
+     │                                                              ━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'int256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1858:27
+     │
+1858 │         int128 ethDelta = int128(delta >> 128);
+     │                           ━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'int128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1859:29
+     │
+1859 │         int128 tokenDelta = int128(delta);
+     │                             ━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'int128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1861:30
+     │
+1861 │             ethDelta >= 0 || uint256(-int256(ethDelta)) != input || tokenDelta <= 0
+     │                              ━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1862:20
+     │
+1862 │                 || uint256(uint128(tokenDelta)) < minOut
+     │                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1862:28
+     │
+1862 │                 || uint256(uint128(tokenDelta)) < minOut
+     │                            ━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unused-return]: return value of an external call is not used
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1867:9
+     │
+1867 │         manager.settle{value: input}();
+     │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/unused-return
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1868:40
+     │
+1868 │         manager.take(token, recipient, uint256(uint128(tokenDelta)));
+     │                                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1868:48
+     │
+1868 │         manager.take(token, recipient, uint256(uint128(tokenDelta)));
+     │                                                ━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1870:27
+     │
+1870 │         return abi.encode(uint256(uint128(tokenDelta)));
+     │                           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint256' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ /tmp/blackout-v314-flat/src/V4Market.sol:1870:35
+     │
+1870 │         return abi.encode(uint256(uint128(tokenDelta)));
+     │                                   ━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint128' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+

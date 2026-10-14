@@ -1,0 +1,381 @@
+{
+  "cases": [
+    [
+      "steady / no swarm sales",
+      "steady",
+      0.0,
+      4,
+      0.0
+    ],
+    [
+      "steady / 25% in day 1",
+      "steady",
+      0.25,
+      4,
+      0.0
+    ],
+    [
+      "steady / 50% in day 1",
+      "steady",
+      0.5,
+      4,
+      0.0
+    ],
+    [
+      "steady / 100% in day 1",
+      "steady",
+      1.0,
+      4,
+      0.0
+    ],
+    [
+      "steady / 50% over week 1",
+      "steady",
+      0.5,
+      28,
+      0.0
+    ],
+    [
+      "steady / 100% over week 1",
+      "steady",
+      1.0,
+      28,
+      0.0
+    ],
+    [
+      "steady / 50% in day 1 + 2 ETH window buys",
+      "steady",
+      0.5,
+      4,
+      2.0
+    ],
+    [
+      "weak / 50% in day 1",
+      "weak",
+      0.5,
+      4,
+      0.0
+    ],
+    [
+      "weak / 100% over week 1",
+      "weak",
+      1.0,
+      28,
+      0.0
+    ],
+    [
+      "hype / 50% in day 1",
+      "hype",
+      0.5,
+      4,
+      0.0
+    ],
+    [
+      "hype / 100% over week 1",
+      "hype",
+      1.0,
+      28,
+      0.0
+    ]
+  ],
+  "fdv_eth": 10.0,
+  "pool_share": 0.7,
+  "swarm_tokens": 100000000.0,
+  "v36_core": {
+    "steady": {
+      "team_eth": 3.579,
+      "drawdown": 0.018,
+      "week1_payback_days": 3.75,
+      "maintain_profit_tokens": 58067690
+    },
+    "weak": {
+      "team_eth": 0.917,
+      "drawdown": 0.007,
+      "week1_payback_days": 4.25,
+      "maintain_profit_tokens": 31323367
+    },
+    "hype": {
+      "team_eth": 4.996,
+      "drawdown": 0.019,
+      "week1_payback_days": 3.5,
+      "maintain_profit_tokens": 128131439
+    }
+  },
+  "results": {
+    "steady / no swarm sales": {
+      "scenario": "steady",
+      "maintain_profit_tokens": 61141112.0408927,
+      "maintain_repair_share": 0.10370788810859978,
+      "week1_payback_days": 3.75,
+      "week1_token_payback_days": 3.75,
+      "team_eth": 3.582419949570594,
+      "drawdown": 0.01925781416856409,
+      "grower_spend_mined": 1.3897554472752913,
+      "sinks": {
+        "packs": 115367886.69707319,
+        "repair": 22780882.20392249,
+        "rooms": 52763398.99409307,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 5.888938903808594e-05,
+      "swarm_eth": 0.0,
+      "swarm_sold_tokens": 0.0,
+      "launch_tax_eth": 0.0,
+      "price_floor_vs_open": 1.0,
+      "final_vs_open": 3.0843923516198175
+    },
+    "steady / 25% in day 1": {
+      "scenario": "steady",
+      "maintain_profit_tokens": 63814920.82193734,
+      "maintain_repair_share": 0.10361916572435832,
+      "week1_payback_days": 3.75,
+      "week1_token_payback_days": 3.75,
+      "team_eth": 3.5840248211277017,
+      "drawdown": 0.019555864943177848,
+      "grower_spend_mined": 1.3898118242285469,
+      "sinks": {
+        "packs": 120300040.7124905,
+        "repair": 23713596.696938533,
+        "rooms": 54962537.34190616,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 4.8279762268066406e-05,
+      "swarm_eth": 0.23699123558451257,
+      "swarm_sold_tokens": 25000000.0,
+      "launch_tax_eth": 0.0,
+      "price_floor_vs_open": 0.9881360055712886,
+      "final_vs_open": 2.963439646709422
+    },
+    "steady / 50% in day 1": {
+      "scenario": "steady",
+      "maintain_profit_tokens": 66536954.97953628,
+      "maintain_repair_share": 0.10353300944264364,
+      "week1_payback_days": 3.75,
+      "week1_token_payback_days": 3.75,
+      "team_eth": 3.5857524865305637,
+      "drawdown": 0.07497553060902629,
+      "grower_spend_mined": 1.3898665345261623,
+      "sinks": {
+        "packs": 125317211.76960099,
+        "repair": 24660756.297018956,
+        "rooms": 57197239.22748775,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 8.928775787353516e-05,
+      "swarm_eth": 0.4583967461819163,
+      "swarm_sold_tokens": 50000000.0,
+      "launch_tax_eth": 0.0,
+      "price_floor_vs_open": 0.925198054525853,
+      "final_vs_open": 2.8523370943862805
+    },
+    "steady / 100% in day 1": {
+      "scenario": "steady",
+      "maintain_profit_tokens": 72119902.9323771,
+      "maintain_repair_share": 0.10336771916662486,
+      "week1_payback_days": 3.5,
+      "week1_token_payback_days": 3.75,
+      "team_eth": 3.589491081118934,
+      "drawdown": 0.18389763825030536,
+      "grower_spend_mined": 1.389971141902987,
+      "sinks": {
+        "packs": 135596431.05757633,
+        "repair": 26596372.327995773,
+        "rooms": 61768620.52255855,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 4.780292510986328e-05,
+      "swarm_eth": 0.8602382082896649,
+      "swarm_sold_tokens": 100000000.0,
+      "launch_tax_eth": 0.0,
+      "price_floor_vs_open": 0.816257503663669,
+      "final_vs_open": 2.6553433606931813
+    },
+    "steady / 50% over week 1": {
+      "scenario": "steady",
+      "maintain_profit_tokens": 65353079.406590566,
+      "maintain_repair_share": 0.1039529384853172,
+      "week1_payback_days": 3.75,
+      "week1_token_payback_days": 3.75,
+      "team_eth": 3.579172163377942,
+      "drawdown": 0.019525266065071767,
+      "grower_spend_mined": 1.389770945109843,
+      "sinks": {
+        "packs": 123117000.48152566,
+        "repair": 24416280.348474547,
+        "rooms": 56479084.96922812,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 6.401538848876953e-05,
+      "swarm_eth": 0.5434711596731652,
+      "swarm_sold_tokens": 49999999.99999999,
+      "launch_tax_eth": 0.0,
+      "price_floor_vs_open": 1.0,
+      "final_vs_open": 2.82618987299777
+    },
+    "steady / 100% over week 1": {
+      "scenario": "steady",
+      "maintain_profit_tokens": 69705005.12415363,
+      "maintain_repair_share": 0.10417793787443581,
+      "week1_payback_days": 3.75,
+      "week1_token_payback_days": 3.75,
+      "team_eth": 3.577167598170013,
+      "drawdown": 0.0198497200961828,
+      "grower_spend_mined": 1.3897894177644967,
+      "sinks": {
+        "packs": 131114114.29935187,
+        "repair": 26103915.629611507,
+        "rooms": 60313614.33041948,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 5.614757537841797e-05,
+      "swarm_eth": 1.0164053901935004,
+      "swarm_sold_tokens": 99999999.99999999,
+      "launch_tax_eth": 0.0,
+      "price_floor_vs_open": 1.0,
+      "final_vs_open": 2.609322468750025
+    },
+    "steady / 50% in day 1 + 2 ETH window buys": {
+      "scenario": "steady",
+      "maintain_profit_tokens": 78087496.03941049,
+      "maintain_repair_share": 0.09613570780584921,
+      "week1_payback_days": 4.75,
+      "week1_token_payback_days": 5.5,
+      "team_eth": 3.8034673047067025,
+      "drawdown": 0.06409380741090609,
+      "grower_spend_mined": 1.3910641177809016,
+      "sinks": {
+        "packs": 158756174.07142922,
+        "repair": 25657553.425030325,
+        "rooms": 62517904.353072345,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 6.222724914550781e-05,
+      "swarm_eth": 0.7538892906380634,
+      "swarm_sold_tokens": 50000000.0,
+      "launch_tax_eth": 1.1,
+      "price_floor_vs_open": 1.0,
+      "final_vs_open": 3.713967941009018
+    },
+    "weak / 50% in day 1": {
+      "scenario": "weak",
+      "maintain_profit_tokens": 35063806.41439451,
+      "maintain_repair_share": 0.10607772077275096,
+      "week1_payback_days": 4.25,
+      "week1_token_payback_days": 4.0,
+      "team_eth": 0.9144071985053932,
+      "drawdown": 0.11160392993490842,
+      "grower_spend_mined": 1.388562088904785,
+      "sinks": {
+        "packs": 67359207.80883642,
+        "repair": 13322414.254997974,
+        "rooms": 31751264.13000572,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 1.4781951904296875e-05,
+      "swarm_eth": 0.44698355756724456,
+      "swarm_sold_tokens": 50000000.0,
+      "launch_tax_eth": 0.0,
+      "price_floor_vs_open": 0.888475063451701,
+      "final_vs_open": 1.2806946152229943
+    },
+    "weak / 100% over week 1": {
+      "scenario": "weak",
+      "maintain_profit_tokens": 36535989.819157384,
+      "maintain_repair_share": 0.10653215721290192,
+      "week1_payback_days": 4.75,
+      "week1_token_payback_days": 4.0,
+      "team_eth": 0.9140945746219894,
+      "drawdown": 0.1362280121144952,
+      "grower_spend_mined": 1.388510807489601,
+      "sinks": {
+        "packs": 70048161.89496067,
+        "repair": 13971856.991243474,
+        "rooms": 33223646.46901756,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 2.491474151611328e-05,
+      "swarm_eth": 0.8792049888987139,
+      "swarm_sold_tokens": 99999999.99999999,
+      "launch_tax_eth": 0.0,
+      "price_floor_vs_open": 0.8638659651354418,
+      "final_vs_open": 1.148981093657093
+    },
+    "hype / 50% in day 1": {
+      "scenario": "hype",
+      "maintain_profit_tokens": 145195055.17970577,
+      "maintain_repair_share": 0.10591332920388855,
+      "week1_payback_days": 3.25,
+      "week1_token_payback_days": 4.0,
+      "team_eth": 5.008183506620293,
+      "drawdown": 0.021555112800895726,
+      "grower_spend_mined": 1.391506210137327,
+      "sinks": {
+        "packs": 137638744.3467202,
+        "repair": 33260686.790393278,
+        "rooms": 72354456.11810477,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 7.772445678710938e-05,
+      "swarm_eth": 0.4901830662739047,
+      "swarm_sold_tokens": 50000000.0,
+      "launch_tax_eth": 0.0,
+      "price_floor_vs_open": 1.0,
+      "final_vs_open": 3.2110986433774853
+    },
+    "hype / 100% over week 1": {
+      "scenario": "hype",
+      "maintain_profit_tokens": 150616372.95241335,
+      "maintain_repair_share": 0.10643275089064813,
+      "week1_payback_days": 3.5,
+      "week1_token_payback_days": 4.0,
+      "team_eth": 4.981667849064213,
+      "drawdown": 0.021141710288874127,
+      "grower_spend_mined": 1.3913763940551196,
+      "sinks": {
+        "packs": 141097300.76737517,
+        "repair": 34719695.91725654,
+        "rooms": 75170606.99624547,
+        "enhance": 0.0,
+        "lobby": 0.0,
+        "billboards": 0.0
+      },
+      "locked_peak": 0.0,
+      "conservation_error": 3.993511199951172e-05,
+      "swarm_eth": 1.4517138470809148,
+      "swarm_sold_tokens": 99999999.99999999,
+      "launch_tax_eth": 0.0,
+      "price_floor_vs_open": 1.0,
+      "final_vs_open": 2.892649511207251
+    }
+  }
+}

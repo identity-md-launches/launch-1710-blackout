@@ -1,0 +1,54 @@
+{
+  "Params": {
+    "runtime_bytes": 1775,
+    "creation_bytes": 2573
+  },
+  "GameRegistry": {
+    "runtime_bytes": 2149,
+    "creation_bytes": 2635
+  },
+  "RewardPool": {
+    "runtime_bytes": 3679,
+    "creation_bytes": 3860
+  },
+  "FarmRewards": {
+    "runtime_bytes": 14960,
+    "creation_bytes": 15162
+  },
+  "FarmCore": {
+    "runtime_bytes": 24207,
+    "creation_bytes": 24458
+  },
+  "FarmItems": {
+    "runtime_bytes": 8081,
+    "creation_bytes": 8690
+  },
+  "PackSale": {
+    "runtime_bytes": 8535,
+    "creation_bytes": 8735
+  },
+  "StarterClaim": {
+    "runtime_bytes": 3730,
+    "creation_bytes": 3925
+  },
+  "FeeRouter": {
+    "runtime_bytes": 5630,
+    "creation_bytes": 5846
+  },
+  "GridOperator": {
+    "runtime_bytes": 7172,
+    "creation_bytes": 7367
+  },
+  "Season": {
+    "runtime_bytes": 7416,
+    "creation_bytes": 7618
+  },
+  "FarmEngine": {
+    "runtime_bytes": 11649,
+    "creation_bytes": 11833
+  },
+  "V4Market": {
+    "runtime_bytes": 9954,
+    "creation_bytes": 10679
+  }
+}

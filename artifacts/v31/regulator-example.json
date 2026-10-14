@@ -1,0 +1,73 @@
+{
+  "dryRun": true,
+  "runwayDays": 12.5,
+  "proposals": [
+    {
+      "key": "EmissionBps",
+      "current": 350,
+      "proposed": 315,
+      "eligibleAt": 86400,
+      "ready": true,
+      "letter": "Runway below fourteen days: slow outflow and pack supply, recycle a higher tariff. Event losses approach ten percent: favor positive events and reduce severity."
+    },
+    {
+      "key": "TariffBps",
+      "current": 1500,
+      "proposed": 1650,
+      "eligibleAt": 86400,
+      "ready": true,
+      "letter": "Runway below fourteen days: slow outflow and pack supply, recycle a higher tariff. Event losses approach ten percent: favor positive events and reduce severity."
+    },
+    {
+      "key": "DemandTarget",
+      "current": 20,
+      "proposed": 18,
+      "eligibleAt": 86400,
+      "ready": true,
+      "letter": "Runway below fourteen days: slow outflow and pack supply, recycle a higher tariff. Event losses approach ten percent: favor positive events and reduce severity."
+    },
+    {
+      "key": "PositiveWeight",
+      "current": 2500,
+      "proposed": 2750,
+      "eligibleAt": 86400,
+      "ready": true,
+      "letter": "Runway below fourteen days: slow outflow and pack supply, recycle a higher tariff. Event losses approach ten percent: favor positive events and reduce severity."
+    }
+  ],
+  "nextTwoEpochs": [
+    {
+      "epoch": 13,
+      "kind": "Green",
+      "severity": 5000,
+      "randomNumber": "operator must supply before shift",
+      "letter": "Runway below fourteen days: slow outflow and pack supply, recycle a higher tariff. Event losses approach ten percent: favor positive events and reduce severity."
+    },
+    {
+      "epoch": 14,
+      "kind": "Cheap",
+      "severity": 5000,
+      "randomNumber": "operator must supply before shift",
+      "letter": "Runway below fourteen days: slow outflow and pack supply, recycle a higher tariff. Event losses approach ten percent: favor positive events and reduce severity."
+    }
+  ],
+  "operatorActions": [
+    "Flush held hook fees after the one-time bind.",
+    "Capture each shifted epoch, paid receipt and starter entropy before native block history expires.",
+    "Process every closed epoch in bounded batches, including audit; then permit the next shift.",
+    "Use gas reimbursement caps and heartbeat balance when quoting useful keeper work.",
+    "Prepare and finalize each nonempty season once; winners claim separately.",
+    "Pay IMD schedule top-ups from an external wallet; heartbeat ETH has no administrative exit.",
+    "Inspect TWAP, available pool excluding locked endowment, realized ETH payback and weekly loss before signing."
+  ],
+  "operations": {
+    "lockedEndowmentTokens": 0,
+    "availableExcludesLocked": true,
+    "keeperRunwayDays": null,
+    "externalScheduleDays": 0.0,
+    "scheduleTopupNeeded": true,
+    "canFundScheduleFromHeartbeat": false,
+    "salePausedUntil": 0,
+    "keepersAndClaimsAlwaysEnabled": true
+  }
+}

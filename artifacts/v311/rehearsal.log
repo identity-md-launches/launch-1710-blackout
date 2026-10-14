@@ -1,0 +1,377 @@
+# BLACKOUT v3.11 fork rehearsal 2026-10-12T17:56:00Z
+# upstream https://robinhood.drpc.org, anvil fork block 86865884, basefee 20610000 wei
+# toolchain: solc 0.8.26, optimizer 200, cancun, FOUNDRY_VIA_IR=false FOUNDRY_BYTECODE_HASH=none
+Compiling 1 files with Solc 0.8.26
+Solc 0.8.26 finished in 3.58s
+Compiler run successful with warnings:
+Warning (2519): This declaration shadows an existing declaration.
+Note: The shadowed declaration is here:
+Warning (8760): This declaration has the same name as another declaration.
+Note: The other declaration is here:
+Warning (2018): Function state mutability can be restricted to pure
+Warning (2018): Function state mutability can be restricted to pure
+Warning (2018): Function state mutability can be restricted to pure
+Ran 5 tests for test/fork/RehearsalV311.t.sol:RehearsalV311Test
+[PASS] testRehearsalAttestedAnswerChangesPlanWithinBand() (gas: 2074114)
+Logs:
+  == BLACKOUT v3.11 fork rehearsal, chain 4663 fork block 26178023
+  deployer (impersonated) 0xcECc29B037f5064fCdF45a5C318F132ef76aA551
+  gameConfigHash (test roots) 0x0c1b3bc9fc66dcdf5be41e61ce4428680d1062fcadb9dfccdebed0675212f11b
+  M1 SwarmDesk bootstrap via ProjectFactory, launch 777001
+    [0] SwarmDesk 0x473012BcF51745a59542E04dAbb202E4FDbaB72f
+        creationCodeHash 0x276c0dc5faa99c56857ebed4abeb45063aea0bf356bf5f7c5d9fa8b69a42feec
+    launchContracts gas 5415993 wei at basefee 111623615730000
+    check Desk.registry() == 0: ok; attester (fork only) 0x5AA9cD67feB662b605f439cfc94109764FEba3F9
+  M2 EndowmentEscrow via ProjectFactory, launch 777002
+    [0] EndowmentEscrow 0xeBA867d37642Ccd55F56B79Ef9C4C0b262d4d773
+        creationCodeHash 0xf4661dfb6c59539d3bc2e37e9d73b0db28a402b4fac2c27c7a2a5967ebdf41e2
+    launchContracts gas 1743701 wei at basefee 35937677610000
+  M3 token launch via LaunchFactory (univ4_hook), launch 777003
+    token 0x4ac8Fd98Cf322a25a3166EA6E2A6F09b2FB8ef1F
+    hook 0x48E1acD17B9C31bDCEf31c541443F56dCB3D10CC salt 0x00000000000bdb2b000000000000000000000000000000000000000000000eab
+    launch gas 7220053 wei at basefee 148805292330000
+    escrow balance 200560364483485855247003633 surplus over endowment 560364483485855247003633
+    check escrow balance >= 200,000,000e18: ok; initializedAt 1791827759
+  M4 job A via ProjectFactory, launch 777004
+    [0] Params 0x17c8121584F4A5cee8856064B31216b1cF592179
+        creationCodeHash 0x6259e6d90aec038f88d6991f019b162504085b8715ce6a257e5a7377d417c115
+    [1] GameRegistry 0x9C9568B838920A2BF35b40A5F5606C8eFA6b4a2B
+        creationCodeHash 0xa3b155d76007b7786c3a80bbe05982c0850157b9d0f8a1ed81631487025acdc2
+    [2] RewardPool 0xe6cC52746C5554e207b6C53cde7134953e355E1E
+        creationCodeHash 0xdd6cff104e9a3510da6ca28d82095208346815bf78f37f7a9f2b7a5529779585
+    [3] FarmRewards 0x2E0113EdF6DD0F93A6e85DbE2e092d5fe7b9FbA4
+        creationCodeHash 0x6b36784d19fa5c281a7a0410ea5e54c13a9d79b581a4acec92d2775b8a32dbeb
+    [4] FarmCore 0x891e40e47a58064388235cb3119470B5852636e3
+        creationCodeHash 0x9c20b8810332f5cd34dbeec9d5f9b300ce56a9dd0030e297cb3c1faf0d36d808
+    [5] FarmItems 0xCAba57e624855A64Fe82b3052EBDA5Cb8da1176C
+        creationCodeHash 0x4d36bf220f61919c5b3f9dc72bd1ecf52b0d515988dcc026472e4813a2a09259
+    [6] PackSale 0xAaE8C8E377a885C99d699aEdb443f7d8690aED20
+        creationCodeHash 0x241010916f3db7f25ca22472dc61f831b5d8a2af35c8f466270528af065aca75
+    [7] StarterClaim 0xB8f527ce1714b6BcE4ba32b56CCBA76f2514e81e
+        creationCodeHash 0x7d74bb6f6313b4aea6e70e0a3d009e67d7b9a2ef570d5779ee364d810ae59338
+    launchContracts gas 21411808 wei at basefee 441297362880000
+    toolchain: IMD launch (viaIR false)
+  M5 Desk.bind (permissionless)
+    check Desk.registry() == REGISTRY: ok 0x9C9568B838920A2BF35b40A5F5606C8eFA6b4a2B
+  M6 register roles 0-5 with launch 777004
+    check module(0..5) == job A addresses: ok
+  M7 job B via ProjectFactory, launch 777005
+    [0] FeeRouter 0xc233C9e4CaAd23698893729552Faf6BdD4866D8C
+        creationCodeHash 0xc54e06157454f72c7c795eca02affccd9b49ce27ddd78e94dcb0a6e74b5951d2
+    [1] GridOperator 0xEED9D1F0465bcf5717290d6fC6f11Bae42aD0C78
+        creationCodeHash 0x78e17aa3f83f966553f1fbef23bb4ee3521b04bd23222ec3d25edee4bcd94a45
+    [2] Season 0xC34715FeF23732512FACb747bD9af0054C79A9cF
+        creationCodeHash 0xd47127611fb8fe6b7da244157aa8d19ec0be28f6aa2e3ef91f3b303b59be8cdf
+    [3] FarmEngine 0x5766F6EF184cC2d2b3AE4a2491821d1002D50Bdf
+        creationCodeHash 0x466d85c3ba147a107b0a1004b615d452680880916b176cc0d6fd9744a7431e0e
+    [4] Economy 0xa894bA02137A226c280782a08190B6a7B3354280
+        creationCodeHash 0xfa65c6f8c6d5df7a5b8ecc7e7fcf1859ff55ea0daa98d68575e54f00a565017d
+    [5] Enhancement 0x61cee64C299Ee9Bc80940b0f3d02995C096790de
+        creationCodeHash 0xf36f0abcaa90d83675585fd77c4ee78bce4058d9f084474c2dfd4c67eb9ee395
+    [6] Civic 0xD922ae7f784592C8ED30d03b08c78674b38226B4
+        creationCodeHash 0xdbbf44dec3ba58f3406bfa423a86142e9a5e679ba5133290109085393b510fd0
+    [7] Billboards 0xd8b0C9045FcB5260f95712DE056938C2bB480E6d
+        creationCodeHash 0xcf4fd5db73cf4d1bb2d4f06a60ca20638c562e9d837c1f5df6943e98b5a43a01
+    launchContracts gas 19523888 wei at basefee 402387331680000
+    check module(6..13) == job B addresses: ok
+  M8 V4Market.bindFeeRouter (permissionless)
+    check fees()/params(): ok 0xc233C9e4CaAd23698893729552Faf6BdD4866D8C
+  M9 EndowmentEscrow.forward (permissionless)
+    check forwarded, pool balance 200,000,000e18: ok 0xe6cC52746C5554e207b6C53cde7134953e355E1E
+  M10 RewardPool.fundEndowment (permissionless)
+    check endowed, drip period 3628800
+    SwarmDesk.submit relayed by 0x022a70D64AD71E7Cb615a0df171A916987a6b372 plan severity 7000
+[PASS] testRehearsalGasPerLaunchUnderPlatformCeiling() (gas: 75841)
+Logs:
+  == BLACKOUT v3.11 fork rehearsal, chain 4663 fork block 26178023
+  deployer (impersonated) 0xcECc29B037f5064fCdF45a5C318F132ef76aA551
+  gameConfigHash (test roots) 0x0c1b3bc9fc66dcdf5be41e61ce4428680d1062fcadb9dfccdebed0675212f11b
+  M1 SwarmDesk bootstrap via ProjectFactory, launch 777001
+    [0] SwarmDesk 0x473012BcF51745a59542E04dAbb202E4FDbaB72f
+        creationCodeHash 0x276c0dc5faa99c56857ebed4abeb45063aea0bf356bf5f7c5d9fa8b69a42feec
+    launchContracts gas 5415993 wei at basefee 111623615730000
+    check Desk.registry() == 0: ok; attester (fork only) 0x5AA9cD67feB662b605f439cfc94109764FEba3F9
+  M2 EndowmentEscrow via ProjectFactory, launch 777002
+    [0] EndowmentEscrow 0xeBA867d37642Ccd55F56B79Ef9C4C0b262d4d773
+        creationCodeHash 0xf4661dfb6c59539d3bc2e37e9d73b0db28a402b4fac2c27c7a2a5967ebdf41e2
+    launchContracts gas 1743701 wei at basefee 35937677610000
+  M3 token launch via LaunchFactory (univ4_hook), launch 777003
+    token 0x4ac8Fd98Cf322a25a3166EA6E2A6F09b2FB8ef1F
+    hook 0x48E1acD17B9C31bDCEf31c541443F56dCB3D10CC salt 0x00000000000bdb2b000000000000000000000000000000000000000000000eab
+    launch gas 7220053 wei at basefee 148805292330000
+    escrow balance 200560364483485855247003633 surplus over endowment 560364483485855247003633
+    check escrow balance >= 200,000,000e18: ok; initializedAt 1791827759
+  M4 job A via ProjectFactory, launch 777004
+    [0] Params 0x17c8121584F4A5cee8856064B31216b1cF592179
+        creationCodeHash 0x6259e6d90aec038f88d6991f019b162504085b8715ce6a257e5a7377d417c115
+    [1] GameRegistry 0x9C9568B838920A2BF35b40A5F5606C8eFA6b4a2B
+        creationCodeHash 0xa3b155d76007b7786c3a80bbe05982c0850157b9d0f8a1ed81631487025acdc2
+    [2] RewardPool 0xe6cC52746C5554e207b6C53cde7134953e355E1E
+        creationCodeHash 0xdd6cff104e9a3510da6ca28d82095208346815bf78f37f7a9f2b7a5529779585
+    [3] FarmRewards 0x2E0113EdF6DD0F93A6e85DbE2e092d5fe7b9FbA4
+        creationCodeHash 0x6b36784d19fa5c281a7a0410ea5e54c13a9d79b581a4acec92d2775b8a32dbeb
+    [4] FarmCore 0x891e40e47a58064388235cb3119470B5852636e3
+        creationCodeHash 0x9c20b8810332f5cd34dbeec9d5f9b300ce56a9dd0030e297cb3c1faf0d36d808
+    [5] FarmItems 0xCAba57e624855A64Fe82b3052EBDA5Cb8da1176C
+        creationCodeHash 0x4d36bf220f61919c5b3f9dc72bd1ecf52b0d515988dcc026472e4813a2a09259
+    [6] PackSale 0xAaE8C8E377a885C99d699aEdb443f7d8690aED20
+        creationCodeHash 0x241010916f3db7f25ca22472dc61f831b5d8a2af35c8f466270528af065aca75
+    [7] StarterClaim 0xB8f527ce1714b6BcE4ba32b56CCBA76f2514e81e
+        creationCodeHash 0x7d74bb6f6313b4aea6e70e0a3d009e67d7b9a2ef570d5779ee364d810ae59338
+    launchContracts gas 21411808 wei at basefee 441297362880000
+    toolchain: IMD launch (viaIR false)
+  M5 Desk.bind (permissionless)
+    check Desk.registry() == REGISTRY: ok 0x9C9568B838920A2BF35b40A5F5606C8eFA6b4a2B
+  M6 register roles 0-5 with launch 777004
+    check module(0..5) == job A addresses: ok
+  M7 job B via ProjectFactory, launch 777005
+    [0] FeeRouter 0xc233C9e4CaAd23698893729552Faf6BdD4866D8C
+        creationCodeHash 0xc54e06157454f72c7c795eca02affccd9b49ce27ddd78e94dcb0a6e74b5951d2
+    [1] GridOperator 0xEED9D1F0465bcf5717290d6fC6f11Bae42aD0C78
+        creationCodeHash 0x78e17aa3f83f966553f1fbef23bb4ee3521b04bd23222ec3d25edee4bcd94a45
+    [2] Season 0xC34715FeF23732512FACb747bD9af0054C79A9cF
+        creationCodeHash 0xd47127611fb8fe6b7da244157aa8d19ec0be28f6aa2e3ef91f3b303b59be8cdf
+    [3] FarmEngine 0x5766F6EF184cC2d2b3AE4a2491821d1002D50Bdf
+        creationCodeHash 0x466d85c3ba147a107b0a1004b615d452680880916b176cc0d6fd9744a7431e0e
+    [4] Economy 0xa894bA02137A226c280782a08190B6a7B3354280
+        creationCodeHash 0xfa65c6f8c6d5df7a5b8ecc7e7fcf1859ff55ea0daa98d68575e54f00a565017d
+    [5] Enhancement 0x61cee64C299Ee9Bc80940b0f3d02995C096790de
+        creationCodeHash 0xf36f0abcaa90d83675585fd77c4ee78bce4058d9f084474c2dfd4c67eb9ee395
+    [6] Civic 0xD922ae7f784592C8ED30d03b08c78674b38226B4
+        creationCodeHash 0xdbbf44dec3ba58f3406bfa423a86142e9a5e679ba5133290109085393b510fd0
+    [7] Billboards 0xd8b0C9045FcB5260f95712DE056938C2bB480E6d
+        creationCodeHash 0xcf4fd5db73cf4d1bb2d4f06a60ca20638c562e9d837c1f5df6943e98b5a43a01
+    launchContracts gas 19523888 wei at basefee 402387331680000
+    check module(6..13) == job B addresses: ok
+  M8 V4Market.bindFeeRouter (permissionless)
+    check fees()/params(): ok 0xc233C9e4CaAd23698893729552Faf6BdD4866D8C
+  M9 EndowmentEscrow.forward (permissionless)
+    check forwarded, pool balance 200,000,000e18: ok 0xe6cC52746C5554e207b6C53cde7134953e355E1E
+  M10 RewardPool.fundEndowment (permissionless)
+    check endowed, drip period 3628800
+  gas: Desk 5415993 Escrow 1743701
+  gas: token+hook 7220053 jobA 21411808
+  gas: jobB 19523888 basefee wei 20610000
+    launch 0 cost wei at fork basefee 112056425730000
+    launch 1 cost wei at fork basefee 36370487610000
+    launch 2 cost wei at fork basefee 149238102330000
+    launch 3 cost wei at fork basefee 441730172880000
+    launch 4 cost wei at fork basefee 402820141680000
+    largest launch fits up to basefee wei 466574421
+[PASS] testRehearsalKeeperPassAdvancesEpochsRevealsEntropyAndClaimFeesPaysTeam() (gas: 4415338)
+Logs:
+  == BLACKOUT v3.11 fork rehearsal, chain 4663 fork block 26178023
+  deployer (impersonated) 0xcECc29B037f5064fCdF45a5C318F132ef76aA551
+  gameConfigHash (test roots) 0x0c1b3bc9fc66dcdf5be41e61ce4428680d1062fcadb9dfccdebed0675212f11b
+  M1 SwarmDesk bootstrap via ProjectFactory, launch 777001
+    [0] SwarmDesk 0x473012BcF51745a59542E04dAbb202E4FDbaB72f
+        creationCodeHash 0x276c0dc5faa99c56857ebed4abeb45063aea0bf356bf5f7c5d9fa8b69a42feec
+    launchContracts gas 5415993 wei at basefee 111623615730000
+    check Desk.registry() == 0: ok; attester (fork only) 0x5AA9cD67feB662b605f439cfc94109764FEba3F9
+  M2 EndowmentEscrow via ProjectFactory, launch 777002
+    [0] EndowmentEscrow 0xeBA867d37642Ccd55F56B79Ef9C4C0b262d4d773
+        creationCodeHash 0xf4661dfb6c59539d3bc2e37e9d73b0db28a402b4fac2c27c7a2a5967ebdf41e2
+    launchContracts gas 1743701 wei at basefee 35937677610000
+  M3 token launch via LaunchFactory (univ4_hook), launch 777003
+    token 0x4ac8Fd98Cf322a25a3166EA6E2A6F09b2FB8ef1F
+    hook 0x48E1acD17B9C31bDCEf31c541443F56dCB3D10CC salt 0x00000000000bdb2b000000000000000000000000000000000000000000000eab
+    launch gas 7220053 wei at basefee 148805292330000
+    escrow balance 200560364483485855247003633 surplus over endowment 560364483485855247003633
+    check escrow balance >= 200,000,000e18: ok; initializedAt 1791827759
+  M4 job A via ProjectFactory, launch 777004
+    [0] Params 0x17c8121584F4A5cee8856064B31216b1cF592179
+        creationCodeHash 0x6259e6d90aec038f88d6991f019b162504085b8715ce6a257e5a7377d417c115
+    [1] GameRegistry 0x9C9568B838920A2BF35b40A5F5606C8eFA6b4a2B
+        creationCodeHash 0xa3b155d76007b7786c3a80bbe05982c0850157b9d0f8a1ed81631487025acdc2
+    [2] RewardPool 0xe6cC52746C5554e207b6C53cde7134953e355E1E
+        creationCodeHash 0xdd6cff104e9a3510da6ca28d82095208346815bf78f37f7a9f2b7a5529779585
+    [3] FarmRewards 0x2E0113EdF6DD0F93A6e85DbE2e092d5fe7b9FbA4
+        creationCodeHash 0x6b36784d19fa5c281a7a0410ea5e54c13a9d79b581a4acec92d2775b8a32dbeb
+    [4] FarmCore 0x891e40e47a58064388235cb3119470B5852636e3
+        creationCodeHash 0x9c20b8810332f5cd34dbeec9d5f9b300ce56a9dd0030e297cb3c1faf0d36d808
+    [5] FarmItems 0xCAba57e624855A64Fe82b3052EBDA5Cb8da1176C
+        creationCodeHash 0x4d36bf220f61919c5b3f9dc72bd1ecf52b0d515988dcc026472e4813a2a09259
+    [6] PackSale 0xAaE8C8E377a885C99d699aEdb443f7d8690aED20
+        creationCodeHash 0x241010916f3db7f25ca22472dc61f831b5d8a2af35c8f466270528af065aca75
+    [7] StarterClaim 0xB8f527ce1714b6BcE4ba32b56CCBA76f2514e81e
+        creationCodeHash 0x7d74bb6f6313b4aea6e70e0a3d009e67d7b9a2ef570d5779ee364d810ae59338
+    launchContracts gas 21411808 wei at basefee 441297362880000
+    toolchain: IMD launch (viaIR false)
+  M5 Desk.bind (permissionless)
+    check Desk.registry() == REGISTRY: ok 0x9C9568B838920A2BF35b40A5F5606C8eFA6b4a2B
+  M6 register roles 0-5 with launch 777004
+    check module(0..5) == job A addresses: ok
+  M7 job B via ProjectFactory, launch 777005
+    [0] FeeRouter 0xc233C9e4CaAd23698893729552Faf6BdD4866D8C
+        creationCodeHash 0xc54e06157454f72c7c795eca02affccd9b49ce27ddd78e94dcb0a6e74b5951d2
+    [1] GridOperator 0xEED9D1F0465bcf5717290d6fC6f11Bae42aD0C78
+        creationCodeHash 0x78e17aa3f83f966553f1fbef23bb4ee3521b04bd23222ec3d25edee4bcd94a45
+    [2] Season 0xC34715FeF23732512FACb747bD9af0054C79A9cF
+        creationCodeHash 0xd47127611fb8fe6b7da244157aa8d19ec0be28f6aa2e3ef91f3b303b59be8cdf
+    [3] FarmEngine 0x5766F6EF184cC2d2b3AE4a2491821d1002D50Bdf
+        creationCodeHash 0x466d85c3ba147a107b0a1004b615d452680880916b176cc0d6fd9744a7431e0e
+    [4] Economy 0xa894bA02137A226c280782a08190B6a7B3354280
+        creationCodeHash 0xfa65c6f8c6d5df7a5b8ecc7e7fcf1859ff55ea0daa98d68575e54f00a565017d
+    [5] Enhancement 0x61cee64C299Ee9Bc80940b0f3d02995C096790de
+        creationCodeHash 0xf36f0abcaa90d83675585fd77c4ee78bce4058d9f084474c2dfd4c67eb9ee395
+    [6] Civic 0xD922ae7f784592C8ED30d03b08c78674b38226B4
+        creationCodeHash 0xdbbf44dec3ba58f3406bfa423a86142e9a5e679ba5133290109085393b510fd0
+    [7] Billboards 0xd8b0C9045FcB5260f95712DE056938C2bB480E6d
+        creationCodeHash 0xcf4fd5db73cf4d1bb2d4f06a60ca20638c562e9d837c1f5df6943e98b5a43a01
+    launchContracts gas 19523888 wei at basefee 402387331680000
+    check module(6..13) == job B addresses: ok
+  M8 V4Market.bindFeeRouter (permissionless)
+    check fees()/params(): ok 0xc233C9e4CaAd23698893729552Faf6BdD4866D8C
+  M9 EndowmentEscrow.forward (permissionless)
+    check forwarded, pool balance 200,000,000e18: ok 0xe6cC52746C5554e207b6C53cde7134953e355E1E
+  M10 RewardPool.fundEndowment (permissionless)
+    check endowed, drip period 3628800
+    keeper pass: epoch 2, event 1 resolved, seed 0x34a0beb998a090e53b1598ab573118bdd54a0cfdf03520dd7987fe696400a2be
+    LaunchFactory.claimFees paid the paying wallet wei 19799999999999999
+[PASS] testRehearsalLaunchTaxThenOnePercentAndSurcharge() (gas: 3576043)
+Logs:
+  == BLACKOUT v3.11 fork rehearsal, chain 4663 fork block 26178023
+  deployer (impersonated) 0xcECc29B037f5064fCdF45a5C318F132ef76aA551
+  gameConfigHash (test roots) 0x0c1b3bc9fc66dcdf5be41e61ce4428680d1062fcadb9dfccdebed0675212f11b
+  M1 SwarmDesk bootstrap via ProjectFactory, launch 777001
+    [0] SwarmDesk 0x473012BcF51745a59542E04dAbb202E4FDbaB72f
+        creationCodeHash 0x276c0dc5faa99c56857ebed4abeb45063aea0bf356bf5f7c5d9fa8b69a42feec
+    launchContracts gas 5415993 wei at basefee 111623615730000
+    check Desk.registry() == 0: ok; attester (fork only) 0x5AA9cD67feB662b605f439cfc94109764FEba3F9
+  M2 EndowmentEscrow via ProjectFactory, launch 777002
+    [0] EndowmentEscrow 0xeBA867d37642Ccd55F56B79Ef9C4C0b262d4d773
+        creationCodeHash 0xf4661dfb6c59539d3bc2e37e9d73b0db28a402b4fac2c27c7a2a5967ebdf41e2
+    launchContracts gas 1743701 wei at basefee 35937677610000
+  M3 token launch via LaunchFactory (univ4_hook), launch 777003
+    token 0x4ac8Fd98Cf322a25a3166EA6E2A6F09b2FB8ef1F
+    hook 0x48E1acD17B9C31bDCEf31c541443F56dCB3D10CC salt 0x00000000000bdb2b000000000000000000000000000000000000000000000eab
+    launch gas 7220053 wei at basefee 148805292330000
+    escrow balance 200560364483485855247003633 surplus over endowment 560364483485855247003633
+    check escrow balance >= 200,000,000e18: ok; initializedAt 1791827759
+  M4 job A via ProjectFactory, launch 777004
+    [0] Params 0x17c8121584F4A5cee8856064B31216b1cF592179
+        creationCodeHash 0x6259e6d90aec038f88d6991f019b162504085b8715ce6a257e5a7377d417c115
+    [1] GameRegistry 0x9C9568B838920A2BF35b40A5F5606C8eFA6b4a2B
+        creationCodeHash 0xa3b155d76007b7786c3a80bbe05982c0850157b9d0f8a1ed81631487025acdc2
+    [2] RewardPool 0xe6cC52746C5554e207b6C53cde7134953e355E1E
+        creationCodeHash 0xdd6cff104e9a3510da6ca28d82095208346815bf78f37f7a9f2b7a5529779585
+    [3] FarmRewards 0x2E0113EdF6DD0F93A6e85DbE2e092d5fe7b9FbA4
+        creationCodeHash 0x6b36784d19fa5c281a7a0410ea5e54c13a9d79b581a4acec92d2775b8a32dbeb
+    [4] FarmCore 0x891e40e47a58064388235cb3119470B5852636e3
+        creationCodeHash 0x9c20b8810332f5cd34dbeec9d5f9b300ce56a9dd0030e297cb3c1faf0d36d808
+    [5] FarmItems 0xCAba57e624855A64Fe82b3052EBDA5Cb8da1176C
+        creationCodeHash 0x4d36bf220f61919c5b3f9dc72bd1ecf52b0d515988dcc026472e4813a2a09259
+    [6] PackSale 0xAaE8C8E377a885C99d699aEdb443f7d8690aED20
+        creationCodeHash 0x241010916f3db7f25ca22472dc61f831b5d8a2af35c8f466270528af065aca75
+    [7] StarterClaim 0xB8f527ce1714b6BcE4ba32b56CCBA76f2514e81e
+        creationCodeHash 0x7d74bb6f6313b4aea6e70e0a3d009e67d7b9a2ef570d5779ee364d810ae59338
+    launchContracts gas 21411808 wei at basefee 441297362880000
+    toolchain: IMD launch (viaIR false)
+  M5 Desk.bind (permissionless)
+    check Desk.registry() == REGISTRY: ok 0x9C9568B838920A2BF35b40A5F5606C8eFA6b4a2B
+  M6 register roles 0-5 with launch 777004
+    check module(0..5) == job A addresses: ok
+  M7 job B via ProjectFactory, launch 777005
+    [0] FeeRouter 0xc233C9e4CaAd23698893729552Faf6BdD4866D8C
+        creationCodeHash 0xc54e06157454f72c7c795eca02affccd9b49ce27ddd78e94dcb0a6e74b5951d2
+    [1] GridOperator 0xEED9D1F0465bcf5717290d6fC6f11Bae42aD0C78
+        creationCodeHash 0x78e17aa3f83f966553f1fbef23bb4ee3521b04bd23222ec3d25edee4bcd94a45
+    [2] Season 0xC34715FeF23732512FACb747bD9af0054C79A9cF
+        creationCodeHash 0xd47127611fb8fe6b7da244157aa8d19ec0be28f6aa2e3ef91f3b303b59be8cdf
+    [3] FarmEngine 0x5766F6EF184cC2d2b3AE4a2491821d1002D50Bdf
+        creationCodeHash 0x466d85c3ba147a107b0a1004b615d452680880916b176cc0d6fd9744a7431e0e
+    [4] Economy 0xa894bA02137A226c280782a08190B6a7B3354280
+        creationCodeHash 0xfa65c6f8c6d5df7a5b8ecc7e7fcf1859ff55ea0daa98d68575e54f00a565017d
+    [5] Enhancement 0x61cee64C299Ee9Bc80940b0f3d02995C096790de
+        creationCodeHash 0xf36f0abcaa90d83675585fd77c4ee78bce4058d9f084474c2dfd4c67eb9ee395
+    [6] Civic 0xD922ae7f784592C8ED30d03b08c78674b38226B4
+        creationCodeHash 0xdbbf44dec3ba58f3406bfa423a86142e9a5e679ba5133290109085393b510fd0
+    [7] Billboards 0xd8b0C9045FcB5260f95712DE056938C2bB480E6d
+        creationCodeHash 0xcf4fd5db73cf4d1bb2d4f06a60ca20638c562e9d837c1f5df6943e98b5a43a01
+    launchContracts gas 19523888 wei at basefee 402387331680000
+    check module(6..13) == job B addresses: ok
+  M8 V4Market.bindFeeRouter (permissionless)
+    check fees()/params(): ok 0xc233C9e4CaAd23698893729552Faf6BdD4866D8C
+  M9 EndowmentEscrow.forward (permissionless)
+    check forwarded, pool balance 200,000,000e18: ok 0xe6cC52746C5554e207b6C53cde7134953e355E1E
+  M10 RewardPool.fundEndowment (permissionless)
+    check endowed, drip period 3628800
+  Swaps through the real PoolManager 0x8366a39CC670B4001A1121B8F6A443A643e40951
+    buy 1 ETH at +min 5 tax bps 9000
+    buy 1 ETH at +min 15 tax bps 5000
+    buy 1 ETH at +min 25 tax bps 2500
+    buy 1 ETH at +min 31 tax bps 100
+    sell: base 13047671100954290 surcharge 112340448179216442
+    flushFees -> FeeRouter.rewardETH 1771907265498664760
+[PASS] testRehearsalPacksOpenOneHourAfterLaunch() (gas: 4093526)
+Logs:
+  == BLACKOUT v3.11 fork rehearsal, chain 4663 fork block 26178023
+  deployer (impersonated) 0xcECc29B037f5064fCdF45a5C318F132ef76aA551
+  gameConfigHash (test roots) 0x0c1b3bc9fc66dcdf5be41e61ce4428680d1062fcadb9dfccdebed0675212f11b
+  M1 SwarmDesk bootstrap via ProjectFactory, launch 777001
+    [0] SwarmDesk 0x473012BcF51745a59542E04dAbb202E4FDbaB72f
+        creationCodeHash 0x276c0dc5faa99c56857ebed4abeb45063aea0bf356bf5f7c5d9fa8b69a42feec
+    launchContracts gas 5415993 wei at basefee 111623615730000
+    check Desk.registry() == 0: ok; attester (fork only) 0x5AA9cD67feB662b605f439cfc94109764FEba3F9
+  M2 EndowmentEscrow via ProjectFactory, launch 777002
+    [0] EndowmentEscrow 0xeBA867d37642Ccd55F56B79Ef9C4C0b262d4d773
+        creationCodeHash 0xf4661dfb6c59539d3bc2e37e9d73b0db28a402b4fac2c27c7a2a5967ebdf41e2
+    launchContracts gas 1743701 wei at basefee 35937677610000
+  M3 token launch via LaunchFactory (univ4_hook), launch 777003
+    token 0x4ac8Fd98Cf322a25a3166EA6E2A6F09b2FB8ef1F
+    hook 0x48E1acD17B9C31bDCEf31c541443F56dCB3D10CC salt 0x00000000000bdb2b000000000000000000000000000000000000000000000eab
+    launch gas 7220053 wei at basefee 148805292330000
+    escrow balance 200560364483485855247003633 surplus over endowment 560364483485855247003633
+    check escrow balance >= 200,000,000e18: ok; initializedAt 1791827759
+  M4 job A via ProjectFactory, launch 777004
+    [0] Params 0x17c8121584F4A5cee8856064B31216b1cF592179
+        creationCodeHash 0x6259e6d90aec038f88d6991f019b162504085b8715ce6a257e5a7377d417c115
+    [1] GameRegistry 0x9C9568B838920A2BF35b40A5F5606C8eFA6b4a2B
+        creationCodeHash 0xa3b155d76007b7786c3a80bbe05982c0850157b9d0f8a1ed81631487025acdc2
+    [2] RewardPool 0xe6cC52746C5554e207b6C53cde7134953e355E1E
+        creationCodeHash 0xdd6cff104e9a3510da6ca28d82095208346815bf78f37f7a9f2b7a5529779585
+    [3] FarmRewards 0x2E0113EdF6DD0F93A6e85DbE2e092d5fe7b9FbA4
+        creationCodeHash 0x6b36784d19fa5c281a7a0410ea5e54c13a9d79b581a4acec92d2775b8a32dbeb
+    [4] FarmCore 0x891e40e47a58064388235cb3119470B5852636e3
+        creationCodeHash 0x9c20b8810332f5cd34dbeec9d5f9b300ce56a9dd0030e297cb3c1faf0d36d808
+    [5] FarmItems 0xCAba57e624855A64Fe82b3052EBDA5Cb8da1176C
+        creationCodeHash 0x4d36bf220f61919c5b3f9dc72bd1ecf52b0d515988dcc026472e4813a2a09259
+    [6] PackSale 0xAaE8C8E377a885C99d699aEdb443f7d8690aED20
+        creationCodeHash 0x241010916f3db7f25ca22472dc61f831b5d8a2af35c8f466270528af065aca75
+    [7] StarterClaim 0xB8f527ce1714b6BcE4ba32b56CCBA76f2514e81e
+        creationCodeHash 0x7d74bb6f6313b4aea6e70e0a3d009e67d7b9a2ef570d5779ee364d810ae59338
+    launchContracts gas 21411808 wei at basefee 441297362880000
+    toolchain: IMD launch (viaIR false)
+  M5 Desk.bind (permissionless)
+    check Desk.registry() == REGISTRY: ok 0x9C9568B838920A2BF35b40A5F5606C8eFA6b4a2B
+  M6 register roles 0-5 with launch 777004
+    check module(0..5) == job A addresses: ok
+  M7 job B via ProjectFactory, launch 777005
+    [0] FeeRouter 0xc233C9e4CaAd23698893729552Faf6BdD4866D8C
+        creationCodeHash 0xc54e06157454f72c7c795eca02affccd9b49ce27ddd78e94dcb0a6e74b5951d2
+    [1] GridOperator 0xEED9D1F0465bcf5717290d6fC6f11Bae42aD0C78
+        creationCodeHash 0x78e17aa3f83f966553f1fbef23bb4ee3521b04bd23222ec3d25edee4bcd94a45
+    [2] Season 0xC34715FeF23732512FACb747bD9af0054C79A9cF
+        creationCodeHash 0xd47127611fb8fe6b7da244157aa8d19ec0be28f6aa2e3ef91f3b303b59be8cdf
+    [3] FarmEngine 0x5766F6EF184cC2d2b3AE4a2491821d1002D50Bdf
+        creationCodeHash 0x466d85c3ba147a107b0a1004b615d452680880916b176cc0d6fd9744a7431e0e
+    [4] Economy 0xa894bA02137A226c280782a08190B6a7B3354280
+        creationCodeHash 0xfa65c6f8c6d5df7a5b8ecc7e7fcf1859ff55ea0daa98d68575e54f00a565017d
+    [5] Enhancement 0x61cee64C299Ee9Bc80940b0f3d02995C096790de
+        creationCodeHash 0xf36f0abcaa90d83675585fd77c4ee78bce4058d9f084474c2dfd4c67eb9ee395
+    [6] Civic 0xD922ae7f784592C8ED30d03b08c78674b38226B4
+        creationCodeHash 0xdbbf44dec3ba58f3406bfa423a86142e9a5e679ba5133290109085393b510fd0
+    [7] Billboards 0xd8b0C9045FcB5260f95712DE056938C2bB480E6d
+        creationCodeHash 0xcf4fd5db73cf4d1bb2d4f06a60ca20638c562e9d837c1f5df6943e98b5a43a01
+    launchContracts gas 19523888 wei at basefee 402387331680000
+    check module(6..13) == job B addresses: ok
+  M8 V4Market.bindFeeRouter (permissionless)
+    check fees()/params(): ok 0xc233C9e4CaAd23698893729552Faf6BdD4866D8C
+  M9 EndowmentEscrow.forward (permissionless)
+    check forwarded, pool balance 200,000,000e18: ok 0xe6cC52746C5554e207b6C53cde7134953e355E1E
+  M10 RewardPool.fundEndowment (permissionless)
+    check endowed, drip period 3628800
+    first pack at +1h, id 1 price 15000000000000000000000
+    pack entropy captured at L2 block 1000003
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 17.96s (1.62s CPU time)
+Ran 1 test suite in 17.99s (17.96s CPU time): 5 tests passed, 0 failed, 0 skipped (5 total tests)

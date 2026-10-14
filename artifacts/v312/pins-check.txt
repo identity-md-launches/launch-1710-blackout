@@ -1,0 +1,2 @@
+All fourteen module creation-code pins match both toolchains; every runtime fits EIP-170.
+SwarmDesk registry/Params creation-code pins match both toolchains.

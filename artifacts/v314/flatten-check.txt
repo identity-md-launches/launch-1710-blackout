@@ -1,0 +1,2 @@
+PASS: standalone flattened V4Market creation bytecode equals the repository build
+0xb3a295abe415ce500a185349e2b831e67d06993d647b3831babacdfc96fb00d3

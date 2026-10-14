@@ -1,0 +1,38 @@
+{
+  "source": "launch/V4Market.sol",
+  "sourceSha256": "f82366c8725370ae7f75913047764ebb425ab5da3935d2f8884eaba49c02f622",
+  "solc": "0.8.26",
+  "optimizerRuns": 200,
+  "viaIR": true,
+  "evmVersion": "cancun",
+  "constructorArgs": [
+    {
+      "internalType": "address",
+      "name": "manager_",
+      "type": "address"
+    },
+    {
+      "internalType": "address",
+      "name": "token_",
+      "type": "address"
+    },
+    {
+      "internalType": "address",
+      "name": "network_",
+      "type": "address"
+    },
+    {
+      "internalType": "uint24",
+      "name": "fee_",
+      "type": "uint24"
+    },
+    {
+      "internalType": "int24",
+      "name": "spacing_",
+      "type": "int24"
+    }
+  ],
+  "runtimeBytes": 9954,
+  "creationBytes": 10679,
+  "errors": 0
+}

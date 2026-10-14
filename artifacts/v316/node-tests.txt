@@ -1,0 +1,7 @@
+ℹ pass 4
+ℹ fail 0
+5 independent protocol hash vectors; commitments, eight-word constructor packing (v3.16 binder), field limits, dynamic keeper ABI and log recovery passed.
+keeper v3.9 relay and wiring encoders match cast vectors; attestation document checks pass.
+oracle-v310 ok
+Reveal: captured receipt and expired/rearmed receipt complete from one invocation.
+v3.5 UI: precise amounts, address validation, static/dynamic ABI encoding and metadata decoding passed.

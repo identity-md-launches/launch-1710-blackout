@@ -1,0 +1,25 @@
+test_reject_missing_or_duplicate_snapshot (test_merkle.MerkleTests.test_reject_missing_or_duplicate_snapshot) ... ok
+test_solidity_abi_single_leaf_and_odd_tree (test_merkle.MerkleTests.test_solidity_abi_single_leaf_and_odd_tree) ... ok
+test_cooldown_is_not_permission (test_regulator.RegulatorTest.test_cooldown_is_not_permission) ... ok
+test_empty_pool_is_not_infinite_runway (test_regulator.RegulatorTest.test_empty_pool_is_not_infinite_runway) ... ok
+test_good_state_no_unnecessary_changes (test_regulator.RegulatorTest.test_good_state_no_unnecessary_changes) ... ok
+test_holding_pace_keeps_daily_emission_response (test_regulator.RegulatorTest.test_holding_pace_keeps_daily_emission_response) ... ok
+test_invalid_policy_rejected (test_regulator.RegulatorTest.test_invalid_policy_rejected) ... ok
+test_runway_response_and_steps (test_regulator.RegulatorTest.test_runway_response_and_steps) ... ok
+test_each_receipt_costs_a_transaction (test_v31.V31ModelTest.test_each_receipt_costs_a_transaction) ... ok
+test_external_runs_are_separate_from_locked_balance (test_v31.V31ModelTest.test_external_runs_are_separate_from_locked_balance) ... ok
+test_filled_sale_cannot_consume_virtual_eth (test_v31.V31ModelTest.test_filled_sale_cannot_consume_virtual_eth) ... ok
+test_instant_is_only_sensitivity (test_v31.V31ModelTest.test_instant_is_only_sensitivity) ... ok
+test_no_eth_to_sell_against_at_open (test_v31.V31ModelTest.test_no_eth_to_sell_against_at_open) ... ok
+test_shortfalls_not_erased_by_partial_payment (test_v31.V31ModelTest.test_shortfalls_not_erased_by_partial_payment) ... ok
+test_bounty_shortfall_is_observable_even_when_calls_continue (test_v32.V32ModelTest.test_bounty_shortfall_is_observable_even_when_calls_continue) ... ok
+test_destroyed_item_cannot_supply_phantom_combo (test_v32.V32ModelTest.test_destroyed_item_cannot_supply_phantom_combo) ... ok
+test_ghost_envelopes_and_final_dust_cannot_fund_scrap (test_v32.V32ModelTest.test_ghost_envelopes_and_final_dust_cannot_fund_scrap) ... ok
+test_heartbeat_at_cap_overflows_into_rewards (test_v32.V32ModelTest.test_heartbeat_at_cap_overflows_into_rewards) ... ok
+test_lazy_and_delayed_season_reserves_are_in_conservation (test_v32.V32ModelTest.test_lazy_and_delayed_season_reserves_are_in_conservation) ... ok
+test_season_lottery_is_rare_or_legendary_with_ten_percent_legendary (test_v32.V32ModelTest.test_season_lottery_is_rare_or_legendary_with_ten_percent_legendary) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.562s
+
+OK

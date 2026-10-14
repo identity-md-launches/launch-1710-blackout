@@ -1,0 +1,468 @@
+No files changed, compilation skipped
+
+Ran 3 tests for test/Pause.t.sol:PauseTest
+[PASS] testOnlySwarmBoundedDurationAndCannotExtendPause() (gas: 242972)
+[PASS] testSalePausedWhileEntropyClaimsWithdrawalsAndEpochsContinue() (gas: 15156588)
+[PASS] testUnpauseCannotResetNextPauseCooldown() (gas: 194647)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 71.45ms (55.76ms CPU time)
+
+Ran 2 tests for test/AutoRepairReviewV35.t.sol:IndependentAutoRepairReview
+[PASS] testAutomaticRepairRecordsHistoricalWeekBeforeCompletion() (gas: 5402724)
+[PASS] testLateAutomaticRepairCannotReopenSeasonEligibility() (gas: 4266739)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 102.93ms (47.65ms CPU time)
+
+Ran 8 tests for test/PhasedReleaseV36.t.sol:PhasedReleaseV36Test
+[PASS] testBillboardsDisabledThenEnabled() (gas: 414502)
+[PASS] testEnableIsNoticedOnceNeverOffAndSwarmOnly() (gas: 355991)
+[PASS] testEnhancementDisabledThenEnabledOnce() (gas: 1096283)
+[PASS] testEverythingDeploysDisabledAndCoreStillWorks() (gas: 8162777)
+[PASS] testFuzzUnannouncedFeatureCannotBeEnabled(uint256) (runs: 256, μ: 30092, ~: 29944)
+[PASS] testLocksStakeAndLobbyDisabledThenEnabled() (gas: 2849495)
+[PASS] testPotDisabledFollowsV34RoutingThenEnabled() (gas: 455827)
+[PASS] testReservedEventsDisabledThenEnabled() (gas: 557613)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 76.91ms (64.03ms CPU time)
+
+Ran 3 tests for test/PotV35.t.sol:PotV35Test
+[PASS] testPotDepositRequiresActualTokensAndAuthority() (gas: 256924)
+[PASS] testPotSplitDistinctLotteryDistrictAndRollbackOnFullInventory() (gas: 11488024)
+[PASS] testPotUnclaimedRolloverOnlyAfterFourWeeksNoDoubleClaim() (gas: 6429645)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 50.81ms (36.41ms CPU time)
+
+Ran 8 tests for test/FeesParams.t.sol:FeesParamsTest
+[PASS] testAllDefaultParamsWithinHardBounds() (gas: 1255771)
+[PASS] testBuyBackPoolOnlySlippageFailureRollbackAndDustGriefBlocked() (gas: 774066)
+[PASS] testExactEthSplitsHeartbeatCapAndPullPayments() (gas: 512724)
+[PASS] testFuzzNoStepAboveTenPercent(uint96) (runs: 256, μ: 44934, ~: 45115)
+[PASS] testFuzzSplitsConserveEveryWei(uint96) (runs: 256, μ: 207793, ~: 210856)
+[PASS] testHeartbeatCapFixedAtOneEth() (gas: 207904)
+[PASS] testParamsStepCooldownBoundsAuthorityAndLetter() (gas: 195823)
+[PASS] testPoolNoPublicReserveRecycleOrPayment() (gas: 135304)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 201.85ms (156.24ms CPU time)
+
+Ran 1 test for test/PredictionV34.t.sol:PredictionV34Test
+[PASS] testFullGraphPredictsPoolBeforeRegistryDeployment() (gas: 4190905)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 15.53ms (1.27ms CPU time)
+
+Ran 5 tests for test/Registry.t.sol:RegistryTest
+[PASS] testAllModulePinsMatchExactPinnedCompilerArtifacts() (gas: 1064523)
+[PASS] testAuthenticatedEnrollmentRejectsUncreatedWrongCodeAndWrongRegistry() (gas: 3270493)
+[PASS] testConstructorAcceptsEmptyGraphWithoutExternalCalls() (gas: 13657)
+[PASS] testCounterfeitRuntimeAtAnotherFactoryCannotEnroll() (gas: 1882067)
+[PASS] testCounterfeitRuntimeWithPoisonedCreditCannotEnroll() (gas: 6217486)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 22.58ms (7.74ms CPU time)
+
+Ran 10 tests for test/Bounties.t.sol:BountiesTest
+[PASS] testBuyBountyProportionalCapNoDustCreditAndFailureRollback() (gas: 680020)
+[PASS] testEmptyRosterAndInvalidBatchReceiveNothing() (gas: 1419146)
+[PASS] testEveryWorkKindBoundedByHeartbeatAndAuthorizedProducer() (gas: 64315585)
+[PASS] testLazySettlementUnpaidAndCannotReplay() (gas: 6957525)
+[PASS] testOnlyFinalizePaidOnceAndEmptyWeekUnpaid() (gas: 2292196)
+[PASS] testPackEntropyCapturedOnceWithFullInventoryAndThroughPause() (gas: 3710376)
+[PASS] testPlanResolutionPaidOnceIncludingAdvanceForwarding() (gas: 2931539)
+[PASS] testRemovedWorkBountiesRejectedEvenFromOldProducer() (gas: 179981)
+[PASS] testStarterEntropySurvivesFullInventoryExpiryAndPauseWithoutReplayPayment() (gas: 5321268)
+[PASS] testWorkCreditRespectsZeroGasPricePriceCeilingAndUnitCap() (gas: 333726)
+Suite result: ok. 10 passed; 0 failed; 0 skipped; finished in 184.52ms (171.83ms CPU time)
+
+Ran 6 tests for test/CivicV35.t.sol:CivicV35Test
+[PASS] testBillboardsBidRefundTextRulesAndPoolOnly() (gas: 945542)
+[PASS] testBlackMarketDescendingLimitedAndPause() (gas: 3822256)
+[PASS] testCollapseSuccessAndSingleOutageFailure() (gas: 810718)
+[PASS] testDormantDisabledAndNoticeOnce() (gas: 303076)
+[PASS] testOnceSeasonBoostBoundsAndSnapshot() (gas: 1722426)
+[PASS] testWarFreezeScoresConservationAndPayoutOnlyOnce() (gas: 1365360)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 51.41ms (31.83ms CPU time)
+
+Ran 2 tests for test/Clock.t.sol:ClockTest
+[PASS] testLocalEvmFutureBlockAnd256BlockBoundary() (gas: 225376)
+[PASS] testRobinhoodUsesArbSysNotL1EstimateAndHandlesExpiry() (gas: 238560)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 297.99µs (151.15µs CPU time)
+
+Ran 2 tests for test/StandardMarket.t.sol:StandardMarketTest
+[PASS] testFuzzStandardSellNeverAddsProgressiveSurcharge(uint96) (runs: 256, μ: 1805235, ~: 1813935)
+[PASS] testStandardBuyOnePercentAllToRewards() (gas: 1673242)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 356.42ms (327.93ms CPU time)
+
+Ran 3 tests for test/Deployment.t.sol:DeploymentTest
+[PASS] testConstructorRejectsMissingInputsAndDoesNotCallExternalContracts() (gas: 3994)
+[PASS] testForeignCallerDoesNotGetAnyAuthority() (gas: 42642091)
+[PASS] testImmutableGraphAndEip170Sizes() (gas: 187323)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 29.53ms (12.27ms CPU time)
+
+Ran 1 test for test/StandardV4Integration.t.sol:StandardV4IntegrationTest
+[PASS] testStandardAdapterRealPoolPaysExistingHookExactlyOnce() (gas: 1948176)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 55.11ms (2.19ms CPU time)
+
+Ran 18 tests for test/EconomyV35.t.sol:EconomyV35Test
+[PASS] testAllEnhancementTableEndpointsAndGlobalBonusCap() (gas: 1477953)
+[PASS] testDurabilityBoundariesAndIdleNoWear() (gas: 38102739)
+[PASS] testEnhanceBurnFailureAndLevelGate() (gas: 1218555)
+[PASS] testEnhanceCapsNoticeUpwardOnlyAndThirtyDays() (gas: 355782)
+[PASS] testEnhanceCommitCannotPlaceScrapOrRetryAndCanRearm() (gas: 1798751)
+[PASS] testFeeSalesDepthSlippageCadenceAndNormalFeePot() (gas: 1734752)
+[PASS] testFreeAllowlistOnceWindowStarterScrapAndMetadata() (gas: 2989149)
+[PASS] testFreeRootRemainsFrozenAfterSevenDays() (gas: 43976)
+[PASS] testFreeRootWindowAndIndexLimit() (gas: 55991)
+[PASS] testFuzzPriceCurveDaysBounds(uint32,uint32) (runs: 256, μ: 88778, ~: 90122)
+[PASS] testLockBonusRedistributesWithinReservedEmission() (gas: 11653052)
+[PASS] testLockEscrowNoEarlyExitAndWalletCap() (gas: 5377416)
+[PASS] testQuoteScalesLastSettlementAndHasFloor() (gas: 4278490)
+[PASS] testRepairYieldQuoteAndAutoRepairCreditsOnly() (gas: 10789523)
+[PASS] testRoomsChargeYieldDaysAndRetainAgeGates() (gas: 2600055)
+[PASS] testSystemSellDustCannotOccupyCadenceAndCappedHeartbeatReturnsTokens() (gas: 1556688)
+[PASS] testTokenOnlyGiftSplitsNoEthPeg() (gas: 1734609)
+[PASS] testZapAtomicMinOutPauseAndRefund() (gas: 1438033)
+Suite result: ok. 18 passed; 0 failed; 0 skipped; finished in 525.08ms (511.80ms CPU time)
+
+Ran 6 tests for test/Endowment.t.sol:EndowmentTest
+[PASS] testDirectTransferCannotBypassOrBackdateDrip() (gas: 368166)
+[PASS] testExactFundingFullLinearDripAndConservation() (gas: 832168)
+[PASS] testFuzzCumulativePaymentsCannotExceedVestedPrincipal(uint32,uint128) (runs: 256, μ: 523133, ~: 524739)
+[PASS] testNoTeamDonorOrSwarmWithdrawalOrReserveAuthority() (gas: 614309)
+[PASS] testParamsSnapshotCannotAccelerateOrRelockExistingEndowment() (gas: 303686)
+[PASS] testUnderfundingCannotActivateAndDonationsStayConserved() (gas: 453428)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 344.73ms (328.74ms CPU time)
+
+Ran 20 tests for test/SwarmDeskV37.t.sol:SwarmDeskV37Test
+[PASS] testBackupFailureUnknownFailureDeadlineAndPriceCap() (gas: 751172)
+[PASS] testBackupPullsExactPriceRecordsRequestAndRestrictsBodyAndCadence() (gas: 1199464)
+[PASS] testDeskSetHeartbeatBpsMovesFeeRouterShare() (gas: 937778)
+[PASS] testEmptyChainConstructorAndAuthenticatedBindingRejectSpoofs() (gas: 12471225)
+[PASS] testEventClampingAndFallbackWithoutAnswer() (gas: 1047688)
+[PASS] testExpiredOldSlotOldEpochAndUnexecutedAnswersNeverAct() (gas: 828312)
+[PASS] testFlatConstructorRejectsUnusedPackedBits() (gas: 6688433)
+[PASS] testForgedTamperedWrongSignerWrongDomainAndCallerRejected() (gas: 345940)
+[PASS] testFutureIssueWrongTypeMalformedLengthAndPriceNeverConsume() (gas: 311556)
+[PASS] testFuzzEveryParamHardBoundsAndTenPercentStep(uint8,uint248) (runs: 256, μ: 468270, ~: 469691)
+[PASS] testNextSlotAcceptsSameQuestionAndChangedExecutionBytesReject() (gas: 1129615)
+[PASS] testNoAdminPathsAndEntireGraphUsesDesk() (gas: 388087)
+[PASS] testNoopRegulatorAcceptedAndParamsCooldownPreserved() (gas: 444622)
+[PASS] testRegulatorClampsParamsAnnouncesPhasesAndThirtyDayCaps() (gas: 1130422)
+[PASS] testReplayDifferentSourceAndSecondAnswerSameSlotIgnored() (gas: 1051768)
+[PASS] testRobinhoodNativeClockCallbackWithin200k() (gas: 344786)
+[PASS] testScheduleDeliveryStoresUnder200kThenExecutesTwoPlans() (gas: 976035)
+[PASS] testSubmitRelayAcceptsAttestedAnswerFromAnyoneOnce() (gas: 1075619)
+[PASS] testSubmitRelayRejectsForgedWrongQuestionStaleAndMalformed() (gas: 1808092)
+[PASS] testWrongQuestionUnknownRequestWeakPanelAndWindowRejected() (gas: 364606)
+Suite result: ok. 20 passed; 0 failed; 0 skipped; finished in 844.71ms (828.59ms CPU time)
+
+Ran 6 tests for test/EndowmentEscrowV38.t.sol:EndowmentEscrowV38Test
+[PASS] testConstructorRejectsMissingInputs() (gas: 6182)
+[PASS] testForwardRejectsBadProofs() (gas: 2663621)
+[PASS] testForwardRequiresBalance() (gas: 752051)
+[PASS] testForwardSendsWholeBalanceOnceToAuthenticatedPoolAndFundsEndowment() (gas: 1713359)
+[PASS] testForwardWithRealEndowmentActivatesDrip() (gas: 12550408)
+[PASS] testTwinWithForeignTokenCannotDrainEscrow() (gas: 12456243)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 57.41ms (36.65ms CPU time)
+
+Ran 3 tests for test/TwinCaptureV312.t.sol:TwinCaptureV312Test
+[PASS] testHonestBindThenForwardReachesHonestPool() (gas: 6020873)
+[PASS] testTwinCaptureCannotPayAttacker() (gas: 11367879)
+[PASS] testTwinCaptureOrphansHonestGame() (gas: 11350429)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 61.38ms (26.23ms CPU time)
+
+Ran 2 tests for test/V310.t.sol:ToolchainPinsV310Test
+[PASS] testEveryModuleOfThisBuildMatchesOneToolchainPin() (gas: 167162)
+[PASS] testPinsAreOneToolchainAndRejectUnknownCode() (gas: 162929)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 3.03ms (1.53ms CPU time)
+
+Ran 7 tests for test/V33.t.sol:LaunchProtectionTest
+[PASS] testBuyTaxHasImmutableSteps() (gas: 97524)
+[PASS] testLaunchTaxChargedAndRoutedEntirelyToPool() (gas: 227992)
+[PASS] testNoBuySizeLimitAtAnyLaunchStep() (gas: 1690997)
+[PASS] testNormalBuyAfterDecayHasNoLaunchTax() (gas: 1479403)
+[PASS] testSellsPayNormalFeeDuringLaunch() (gas: 339655)
+[PASS] testSnipersSplittingBuysStillPayTheCurve() (gas: 655730)
+[PASS] testViewsBeforeInitialization() (gas: 4725627)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 33.67ms (7.32ms CPU time)
+
+Ran 3 tests for test/Gas.t.sol:GasTest
+[PASS] testGasCommonActions() (gas: 10843346)
+[PASS] testGasFullFarmLongIdleBoundedChunks() (gas: 119172460)
+[PASS] testGasTypicalFarmSettlementHasNoBounty() (gas: 8924872)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 1.43s (1.41s CPU time)
+
+Ran 2 tests for test/GridV35.t.sol:GridV35Test
+[PASS] testGreenAndCheapBothFavorTheStableDistrict() (gas: 4116213)
+[PASS] testReservedEventsHaveZeroLaunchWeightAndPlanOnlyWhenEnabled() (gas: 721158)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 36.97ms (20.67ms CPU time)
+
+Ran 1 test for test/EndowmentGame.t.sol:EndowmentGameTest
+[PASS] testRealMiningCannotSpendFutureEndowment() (gas: 130414629)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 484.82ms (422.33ms CPU time)
+
+Ran 6 tests for test/Regression.t.sol:RegressionTest
+[PASS] testCableRepairRestoresOnlyRemainingHalfEpoch() (gas: 11794355)
+[PASS] testEmptyEpochPreservesLastSettledRateButResetsScrapAllowance() (gas: 10984120)
+[PASS] testFuzzCableRepairBlendHandlesNonMonotonicRarityBonuses(uint16) (runs: 256, μ: 1374184, ~: 1374014)
+[PASS] testRegisterOnlyAccountsDoNotAddSettlementWorkAndEmptyFarmCanRetire() (gas: 2025433)
+[PASS] testRepairAndPaidPackCannotRetroactivelyBoostEpoch() (gas: 9542820)
+[PASS] testUnlimitedFreshPacksCannotDrainPoolByScrapping() (gas: 9641657)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 2.62s (2.60s CPU time)
+
+Ran 5 tests for test/fork/RehearsalV311.t.sol:RehearsalV311Test
+[SKIP] testRehearsalAttestedAnswerChangesPlanWithinBand() (gas: 0)
+[SKIP] testRehearsalGasPerLaunchUnderPlatformCeiling() (gas: 0)
+[SKIP] testRehearsalKeeperPassAdvancesEpochsRevealsEntropyAndClaimFeesPaysTeam() (gas: 0)
+[SKIP] testRehearsalLaunchTaxThenOnePercentAndSurcharge() (gas: 0)
+[SKIP] testRehearsalPacksOpenOneHourAfterLaunch() (gas: 0)
+Suite result: ok. 0 passed; 0 failed; 5 skipped; finished in 1.18ms (75.44µs CPU time)
+
+Ran 7 tests for test/HeartbeatBpsV313.t.sol:HeartbeatBpsV313Test
+[PASS] testFuzzAnyShareConservesEveryWeiAndNeverMovesTeamOrPot(uint16,uint96) (runs: 256, μ: 1392275, ~: 1609838)
+[PASS] testLaunchDefaultIsTwoPercentAndSplitUnchanged() (gas: 230935)
+[PASS] testLoweredShareBackToFloorAndFloorIsHard() (gas: 401104)
+[PASS] testMaximumShareWithPotEnabledIsClippedToWhatIsLeft() (gas: 1867739)
+[PASS] testOnlyTheSwarmWithinBoundsStepAndCooldownCanMoveTheShare() (gas: 341795)
+[PASS] testRaisedShareStillStopsAtTheOneEthCap() (gas: 480520)
+[PASS] testSwarmSet220CreditsTwoPointTwoPercentOfSurchargeAndTokens() (gas: 543701)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 2.34s (2.27s CPU time)
+
+Ran 3 tests for test/HookBinding.t.sol:HookBindingTest
+[PASS] testHoldBeforeGameExistsThenBindOnceAndFlushExactStreams() (gas: 43111685)
+[PASS] testLookAlikeCannotBindEvenWhenTeamCalls() (gas: 1907686)
+[PASS] testWrongRouterAndMissingCodeRejectedBeforePermanentBind() (gas: 40825860)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 37.26ms (21.36ms CPU time)
+
+Ran 20 tests for test/V33.t.sol:V33Test
+[PASS] testActionBeforeExpiryMovesBucketWithoutDoubleCount() (gas: 25963547)
+[PASS] testAdvanceIsConstantInExpiringFarms() (gas: 38374918)
+[PASS] testAgeCapsAtBoundaries() (gas: 204618)
+[PASS] testClaimDoesNotRecommitWhileBehind() (gas: 37212442)
+[PASS] testClaimRecommitsAndPackRecommits() (gas: 60738557)
+[PASS] testDistrictScoreAveragePerFarmAndTenPercentWalletCap() (gas: 4607489)
+[PASS] testHeartbeatCapExcessGoesToPoolAndBaseFeeIsAllRewards() (gas: 270973)
+[PASS] testIdleFarmLeavesDenominatorAfterTwelveEpochs() (gas: 23496196)
+[PASS] testLaunchTaxDepositIsAllPoolAndMarketOnly() (gas: 137567)
+[PASS] testMergeRemoved() (gas: 512630)
+[PASS] testPackLobbySellSplit88Team10Heartbeat2() (gas: 407960)
+[PASS] testPackSaleOpensSixtyMinutesAfterLaunch() (gas: 1261148)
+[PASS] testPaidXpCannotBypassAgeGates() (gas: 58982706)
+[PASS] testPaidXpCappedPerDayActivityUncapped() (gas: 13235492)
+[PASS] testPartialRoomIsClippedNotReverted() (gas: 2148809)
+[PASS] testRewardsEarnedBeforeExpiryAreNeverLost() (gas: 47642242)
+[PASS] testSingleWhaleDistrictCannotWinAlone() (gas: 4534340)
+[PASS] testSyncRecommitsFromNextEpoch() (gas: 33350114)
+[PASS] testTokenPacksAlsoWaitForOpening() (gas: 59864)
+[PASS] testTopSpenderTrackingIsExact() (gas: 5411751)
+Suite result: ok. 20 passed; 0 failed; 0 skipped; finished in 2.83s (2.81s CPU time)
+
+Ran 14 tests for test/V34.t.sol:V34Test
+[PASS] testBestFarmCapsAbsoluteSpendAndBreaksTiesByAddress() (gas: 4665680)
+[PASS] testBestFarmNeedsTwentyEpochsAndUsesCappedAbsoluteSpend() (gas: 4144210)
+[PASS] testBuybackSlippage150BpsMaxAndIntervalCannotBeBypassed() (gas: 756168)
+[PASS] testDonationsAndOrdinaryInflowsCannotPretendToBeEndowment() (gas: 1520675)
+[PASS] testEntropyAt256BoundaryAndAt257RearmsWithoutPayOrMint() (gas: 3276985)
+[PASS] testFirstRewardStartsCurrentEpochAtHalfTimeAndSnapshotCannotBeReplaced() (gas: 4834300)
+[PASS] testFreeFarmDoesNotDiluteDistrictOrClaimPaidPrize() (gas: 4739665)
+[PASS] testGameReadinessBothChecksRollbackEthAndTokenPurchase() (gas: 3605912)
+[PASS] testHookUninitializedCannotOpenOrStartEpochAndCallerCannotStartClock() (gas: 5887799)
+[PASS] testLaunchTaxExactBoundaries() (gas: 5771057)
+[PASS] testMythicGateEvaluatedAtRevealNotAtPayment() (gas: 1620572)
+[PASS] testPackOpeningFollowsHookAndNotLegacyDeployTimestamp() (gas: 101151)
+[PASS] testRemainderTransferredToPredictedPoolBeforeDeploymentAndNoApprovalNeeded() (gas: 2800290)
+[PASS] testStarterEntropyRearmsAfterClaimWindowAndNoDoubleMint() (gas: 772300)
+Suite result: ok. 14 passed; 0 failed; 0 skipped; finished in 180.37ms (162.55ms CPU time)
+
+Ran 8 tests for test/V39.t.sol:V39Test
+[PASS] testBaseDepositsAreEntirelyRewardEth() (gas: 190166)
+[PASS] testGridAcceptsSeverityFromThreeThousandAndRejectsBelow() (gas: 2946787)
+[PASS] testHookAddsExactlyOnePercentOnBuysAndSellsAfterLaunchWindow() (gas: 2179711)
+[PASS] testHookHasNoNetworkShareRecipientOrWithdrawal() (gas: 583813)
+[PASS] testMarketFactoryConfigHasNoNetworkRecipient() (gas: 12633935)
+[PASS] testRegistryAcceptsEitherToolchainPinAndNothingElse() (gas: 1646586)
+[PASS] testSellSurchargeStillProgressiveAndCappedAtFifteenPercent() (gas: 1832600)
+[PASS] testStepLaunchTaxUnchangedAndFullyToRewards() (gas: 1291729)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 110.48ms (73.94ms CPU time)
+
+Ran 6 tests for test/V4Integration.t.sol:V4IntegrationTest
+[PASS] testRealV4BuyAndSingleSwapSellTaxConserveSettlement() (gas: 2268519)
+[PASS] testRealV4ManipulatedSpotCannotInstantlySetBuybackQuote() (gas: 1909248)
+[PASS] testRealV4SmallBuyPaysPositiveKeeperMargin() (gas: 2072079)
+[PASS] testRealV4SystemBuyUsesTwapAndOnlySystemFunds() (gas: 2077956)
+[PASS] testRealV4SystemSalesUseDepthTwapNormalFeesAndConserveTokens() (gas: 2246438)
+[PASS] testSystemBuybackOffsetsRecordedSellImbalance() (gas: 2508945)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 329.68ms (18.87ms CPU time)
+
+Ran 1 test for test/WarReviewV35.t.sol:IndependentWarReview
+[PASS] testWarWinnerCannotChangeAfterDeadline() (gas: 5734360)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.62ms (1.43ms CPU time)
+
+Ran 1 test for test/YieldFloorReviewV35.t.sol:IndependentYieldFloorReview
+[PASS] testFirstEpochItemQuotesKeepNonzeroFloorAtCorrectScale() (gas: 673277)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.05ms (941.73µs CPU time)
+
+Ran 1 test for test/fork/RobinhoodFork.t.sol:RobinhoodForkTest
+[SKIP] testForkArbSysAndHistoricalHash() (gas: 0)
+Suite result: ok. 0 passed; 0 failed; 1 skipped; finished in 98.88µs (16.08µs CPU time)
+
+Ran 6 tests for test/SeasonAudit.t.sol:SeasonAuditTest
+[PASS] testAuditThresholdStrictAndNoWhaleSoftCap() (gas: 40376130)
+[PASS] testLotteryEntitlementSurvivesFullInventory() (gas: 130888063)
+[PASS] testPackSupplyDropOnlyActiveFarmsAtDoublePace() (gas: 11727425)
+[PASS] testParameterChangesCannotChangeClosedEpochBetweenBatches() (gas: 12490901)
+[PASS] testSeasonCannotFinalizeEarlyAndExpiredLotteryMustRearm() (gas: 123852005)
+[PASS] testWeeklyThreeDistinctTicketWinnersRarePackAndBestPrize() (gas: 124081336)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 3.00s (2.97s CPU time)
+
+Ran 3 tests for test/StandardAdapter.t.sol:StandardAdapterTest
+[PASS] testExistingHookKeyPreservedAndNoExtraFee() (gas: 330662)
+[PASS] testRequiresThirtyMinutesFreshOracleAndAuthorizedCallback() (gas: 198351)
+[PASS] testSettlementSlippageFailurePreservesCredits() (gas: 240594)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 18.07ms (1.93ms CPU time)
+
+Ran 11 tests for test/Items.t.sol:ItemsTest
+[PASS] testComputeHashSupportHashAndBonusesReplaceDuo() (gas: 4700115)
+[PASS] testDurabilityWearRepairAndEnhancementMetadataPreserved() (gas: 8369228)
+[PASS] testEquipRarityGatesAndMythicGate() (gas: 4144858)
+[PASS] testFullStackRarityCapAndRoomFlags() (gas: 7638418)
+[PASS] testInventoryMintCannotExceedCapacityAndExpansionRises() (gas: 3351443)
+[PASS] testLockedItemCannotBeScrappedUntilEpochRolls() (gas: 5971291)
+[PASS] testOffgridSavings() (gas: 2701968)
+[PASS] testPaidXpCannotBypassRoomTwoAgeGate() (gas: 3734443)
+[PASS] testRoomGatesAndLevelProgression() (gas: 78345249)
+[PASS] testScrapPaysPoolYieldAndCannotRepeat() (gas: 7543503)
+[PASS] testSoulboundOnlyOwnFarmAndNoDuplicateTypes() (gas: 2254731)
+Suite result: ok. 11 passed; 0 failed; 0 skipped; finished in 648.57ms (634.00ms CPU time)
+
+Ran 5 tests for test/KeeperProfit.t.sol:KeeperProfitTest
+[PASS] testPaidPackEntropyKeeperProfit() (gas: 1179133)
+[PASS] testPlanEntropyKeeperProfit() (gas: 1665825)
+[PASS] testSeasonFinalizeThreeWinnersAndPrizeKeeperProfit() (gas: 3451176)
+[PASS] testSeasonPrepareIsConstantUnpaidWork() (gas: 1342777)
+[PASS] testStarterEntropyKeeperProfit() (gas: 324553)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 29.80ms (15.50ms CPU time)
+
+Ran 2 tests for test/ReservedEventsV35.t.sol:ReservedEventsV35Test
+[PASS] testFuzzReservedFestivalCannotExceedFifteenPercent(uint16) (runs: 256, μ: 4918901, ~: 4918899)
+[PASS] testReservedHeatwaveExtraCoolingWearAndBothProtections() (gas: 10146981)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 6.72s (6.70s CPU time)
+
+Ran 5 tests for test/ReviewV34.t.sol:ReviewV34Test
+[PASS] testCanonicalCompetingRegistryCannotTakeOverBinding() (gas: 9451528)
+[PASS] testDustBuyCannotConsumeGlobalBuyInterval() (gas: 336156)
+[PASS] testLateGreenEntrySettlesWithinReservedEnvelope() (gas: 4432362)
+[PASS] testMeaningfulSmallBuyCanUseLessThanMaximumBatch() (gas: 263646)
+[PASS] testSameConfigurationAtUncommittedCoordinatesCannotBind() (gas: 9538431)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 37.50ms (22.87ms CPU time)
+
+Ran 6 tests for test/Market.t.sol:MarketTest
+[PASS] testBuyChargesExactlyOnePercentAllToRewards() (gas: 1729871)
+[PASS] testFuzzTotalFeeHardCap(uint96) (runs: 256, μ: 1805757, ~: 1809146)
+[PASS] testOnlyManagerCorrectPoolExactInputAndHookAddress() (gas: 590050)
+[PASS] testSingleDumpIncludesItselfAndFeeDecaysWithoutGriefReset() (gas: 17162149)
+[PASS] testTwapAveragesEthPriceAcrossUnequalPrices() (gas: 2330567)
+[PASS] testTwapWarmupAndFlashManipulationResistance() (gas: 1882285)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 484.74ms (457.05ms CPU time)
+
+Ran 4 tests for test/OracleConformanceV37.t.sol:OracleConformanceV37Test
+[PASS] testAcceptsOriginalProtocolSignature() (gas: 17956)
+[PASS] testDigestMatchesUnmodifiedProtocolVector() (gas: 13636)
+[PASS] testFreshVectorSignerSignature() (gas: 30407)
+[PASS] testSelectorsExactlyMatchLiveProtocol() (gas: 3520)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 1.60ms (565.66µs CPU time)
+
+Ran 9 tests for test/Packs.t.sol:PacksTest
+[PASS] testExactPaymentAndFutureBlockRequired() (gas: 1667747)
+[PASS] testExactRarityThresholdsAndMythicGate() (gas: 282935)
+[PASS] testExpiryRearmsWithoutMintingAndInventoryOpeningLimit() (gas: 3790798)
+[PASS] testFuzzVrgdaAlwaysBounded(uint32,uint32) (runs: 256, μ: 61649, ~: 63041)
+[PASS] testItemTypeDistributionExact() (gas: 626492)
+[PASS] testNoWalletGlobalOrTokenPackDailyLimit() (gas: 4377219)
+[PASS] testStarterWindowProofTokenIdOnceAndInventoryFailureRetry() (gas: 881480)
+[PASS] testTokenPackSameQuoteAndSplitWhenUsingWalletOrCredits() (gas: 76424599)
+[PASS] testVrgdaInitialStepDecayFloorCeilingAndBulkPricing() (gas: 1296506)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 720.76ms (705.69ms CPU time)
+
+Ran 13 tests for test/Events.t.sol:EventsTest
+[PASS] testCheapTariffAppliesCitywide() (gas: 6419970)
+[PASS] testColdPowerFireImmuneAndCleanPowerSurgeImmune() (gas: 7898411)
+[PASS] testFallbackAndExpiredSeedIndependentOfSwarmNumber() (gas: 1683539)
+[PASS] testFireNoCoolingZeroYieldColdPowerImmune() (gas: 6144568)
+[PASS] testGreenWaveRaisesDistrictMiningTenPercent() (gas: 6422047)
+[PASS] testLobbyOwnDistrictSplitDecayAndMinimumWeight() (gas: 1080859)
+[PASS] testOutageAndOffgridRoomMitigation() (gas: 7053841)
+[PASS] testPlansOnlyNextTwoOnceAndBoundedSeverity() (gas: 344816)
+[PASS] testRollingCapsAndInitialPositiveQuotaWithHostilePlans() (gas: 102235868)
+[PASS] testSurgeCanDestroyCommonButNeverLegendary() (gas: 6288094)
+[PASS] testSurgeDamagesExactlyOneItemAndCleanPowerImmune() (gas: 6294034)
+[PASS] testSurgeNeverDestroysLegendaryOrMythic() (gas: 9502005)
+[PASS] testTheftRouterDisabledAndRepairRestores() (gas: 6848091)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 1.01s (987.43ms CPU time)
+
+Ran 2 tests for test/Factory.t.sol:FactoryTest
+[PASS] testFactoryInvalidSearchRange() (gas: 5016)
+[PASS] testHookFactoryFlagsImmutableConfigAndIdempotence() (gas: 17888831)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 411.03ms (384.07ms CPU time)
+
+Ran 9 tests for test/Epochs.t.sol:EpochsTest
+[PASS] testCannotAdvanceEarlyAndBountyOnce() (gas: 2510478)
+[PASS] testClaimsEveryEpochAndRedistributionIsNextEpoch() (gas: 11985703)
+[PASS] testGasAdvanceIndependentOfRoster() (gas: 893047640)
+[PASS] testNoCatchupEmissionDuringGap() (gas: 6257752)
+[PASS] testNoRetroactiveEquipmentAndBoundedBatches() (gas: 5780602)
+[PASS] testNoWhaleCapHashShares() (gas: 10155257)
+[PASS] testReferralOneLevelSetOnceNoSelf() (gas: 7511550)
+[PASS] testTaxCurveExactAndFloor() (gas: 34112)
+[PASS] testWithdrawFailureRollsBackAndReentrancyCannotClaimTwice() (gas: 7428870)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 21.23s (21.57s CPU time)
+
+Ran 9 tests for test/LazyAccounting.t.sol:LazyAccountingTest
+[PASS] testAuditChargesTenPercentEvenAtHalfSeverityAndThresholdIsFrozen() (gas: 6152701)
+[PASS] testClaimCatchesUpWhilePacksPausedAndDoesNotEraseRemainingHistory() (gas: 25659680)
+[PASS] testExhaustedFarmCannotCollectRedistributionByRemainingIdle() (gas: 15152008)
+[PASS] testFuzzLazyEqualsIndependentEagerForRandomFarmsAndAllEvents(uint256) (runs: 256, μ: 45540545, ~: 45557698)
+[PASS] testGlobalAccumulatorAndWeightsAreSnapshottedBeforeMutations() (gas: 9289772)
+[PASS] testLateSeasonSettlementPaysMiningWithoutChangingFrozenWinners() (gas: 59428195)
+[PASS] testOneWeiMiningGreenCannotLockSettlementThroughEnvelopeRounding() (gas: 11045065)
+[PASS] testSparseMatureVintageConsumedBeforeRecentSlotAfterWrap() (gas: 43285171)
+[PASS] testStaleActionsRequireChunksAndNeverBlockGlobalAdvance() (gas: 40513874)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 51.02s (52.09s CPU time)
+
+Ran 1 test for test/Invariants.t.sol:InvariantsTest
+[PASS]
+InvariantsTest invariants:
+[PASS] invariantAllowlistRootAndWalletLimit
+[PASS] invariantInventoryAndEthLiabilities
+[PASS] invariantLocksAndPotAlwaysBacked
+[PASS] invariantPriceAndParamsBounds
+[PASS] invariantReceiptsNeverForfeitOrFixMissingEntropy
+[PASS] invariantReservesBackedAndPendingCovered
+[PASS] invariantTokenConservationNoBurns
+ InvariantsTest invariants (runs: 128, calls: 8192, reverts: 0)
+
+╭-------------+-----------+-------+---------+----------╮
+| Contract    | Selector  | Calls | Reverts | Discards |
++======================================================+
+| GameHandler | advance   | 586   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | buy       | 581   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | claim     | 582   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | equip     | 576   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | expand    | 586   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | freeClaim | 579   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | fundPot   | 609   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | lock      | 580   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | resolve   | 574   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | rollover  | 590   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | settle    | 588   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | tokenPack | 603   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | unlock    | 590   | 0       | 0        |
+|-------------+-----------+-------+---------+----------|
+| GameHandler | unplace   | 568   | 0       | 0        |
+╰-------------+-----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 97.13s (97.04s CPU time)
+
+Ran 48 test suites in 101.21s (195.94s CPU time): 273 tests passed, 0 failed, 6 skipped (279 total tests)

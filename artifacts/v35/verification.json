@@ -1,0 +1,132 @@
+{
+  "compiler": "0.8.26",
+  "evm": "cancun",
+  "optimizer_runs": 200,
+  "via_ir": true,
+  "forge_build": "passed after forge clean",
+  "forge_tests": {
+    "passed": 215,
+    "failed": 0,
+    "skipped": 1,
+    "suites": 39,
+    "skip": "opt-in historical fork"
+  },
+  "fuzz_runs": 256,
+  "invariant_runs": 128,
+  "invariant_depth": 64,
+  "forge_fmt_check": "passed",
+  "module_pins": "all fourteen match final artifacts",
+  "python_tests": 34,
+  "node_test_files": 2,
+  "bytecode": [
+    {
+      "contract": "Params",
+      "creation_bytes": 2627,
+      "runtime_bytes": 1815,
+      "constructor_arguments": 3
+    },
+    {
+      "contract": "GameRegistry",
+      "creation_bytes": 2890,
+      "runtime_bytes": 2432,
+      "constructor_arguments": 7
+    },
+    {
+      "contract": "RewardPool",
+      "creation_bytes": 3910,
+      "runtime_bytes": 3750,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "FarmRewards",
+      "creation_bytes": 19312,
+      "runtime_bytes": 19152,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "FarmCore",
+      "creation_bytes": 24510,
+      "runtime_bytes": 24330,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "FarmItems",
+      "creation_bytes": 14978,
+      "runtime_bytes": 14397,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "PackSale",
+      "creation_bytes": 13400,
+      "runtime_bytes": 13224,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "StarterClaim",
+      "creation_bytes": 5474,
+      "runtime_bytes": 5314,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "FeeRouter",
+      "creation_bytes": 10614,
+      "runtime_bytes": 10454,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "GridOperator",
+      "creation_bytes": 7619,
+      "runtime_bytes": 7459,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "Season",
+      "creation_bytes": 12287,
+      "runtime_bytes": 12127,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "FarmEngine",
+      "creation_bytes": 13750,
+      "runtime_bytes": 13594,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "Economy",
+      "creation_bytes": 9387,
+      "runtime_bytes": 9227,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "Enhancement",
+      "creation_bytes": 5896,
+      "runtime_bytes": 5719,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "Civic",
+      "creation_bytes": 11731,
+      "runtime_bytes": 11563,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "Billboards",
+      "creation_bytes": 5524,
+      "runtime_bytes": 5364,
+      "constructor_arguments": 1
+    },
+    {
+      "contract": "V4Market",
+      "creation_bytes": 19814,
+      "runtime_bytes": 18861,
+      "constructor_arguments": 8
+    },
+    {
+      "contract": "MarketFactory",
+      "creation_bytes": 21416,
+      "runtime_bytes": 21390,
+      "constructor_arguments": 0
+    }
+  ],
+  "scope": "local only; no deployment, broadcast, live token actions, or configuration/dependency edits"
+}

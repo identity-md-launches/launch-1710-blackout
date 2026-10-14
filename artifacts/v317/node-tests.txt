@@ -1,0 +1,14 @@
+== test/deploy-gate-v314.test.mjs
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 52.738663
+== test/keeper-v39.test.mjs
+keeper v3.9 relay and wiring encoders match cast vectors; attestation document checks pass.
+== test/oracle-v310.test.mjs
+oracle-v310 ok
+== test/oracle-v37.test.mjs
+5 independent protocol hash vectors; commitments, eight-word constructor packing (v3.16 binder), field limits, dynamic keeper ABI and log recovery passed.
+== test/reveal.test.mjs
+Reveal: captured receipt and expired/rearmed receipt complete from one invocation.
+== test/ui-v35.test.mjs
+v3.5 UI: precise amounts, address validation, static/dynamic ABI encoding and metadata decoding passed.

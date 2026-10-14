@@ -1,0 +1,1 @@
+No owner, upgrade, root setter, profile selector, moderation or arbitrary-call authority in src; Desk execution commits exact oracle bytes.

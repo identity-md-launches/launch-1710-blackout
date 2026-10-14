@@ -1,0 +1,13 @@
+{
+  "baseCases": 48,
+  "enhancedCases": 48,
+  "stressCases": 18,
+  "enhancedFailures": [],
+  "baseMaxConservationError": 0.00020241737365722656,
+  "enhancedMaxConservationError": 0.00017559528350830078,
+  "baseMaxWeeklyLoss": 0.05984885858727718,
+  "enhancedMaxWeeklyLoss": 0.09005854973957,
+  "stressMaxWeeklyLoss": 0.1049081541106432,
+  "minimumEnhancedHeadroom": 0.10907174539073275,
+  "minimumStressHeadroom": 0.10907174539073275
+}

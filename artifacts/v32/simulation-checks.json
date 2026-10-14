@@ -1,0 +1,11 @@
+{
+  "model_sha256": "b6feed5a0c97734def6dc6f690f965b671553d022e04b656fe8ba52319cba0b8",
+  "full_runs": 72,
+  "baseline_runs": 6,
+  "sensitivity_runs": 66,
+  "baseline_and_operating_stress_fully_paid": true,
+  "maximum_token_conservation_error": 0.00014209747314453125,
+  "minimum_baseline_headroom": 0.006012298089724692,
+  "minimum_operating_stress_headroom": 0.005813337814167145,
+  "hypothetical_lever_shortfalls": []
+}
